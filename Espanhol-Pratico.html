@@ -1,0 +1,1576 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8E1B1B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Espanhol Prático">
+<meta name="description" content="Espanhol da Espanha para vida pessoal, trabalho e escola, do A1 ao C2, com áudio.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Espanhol Prático</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Patrick+Hand&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: caderno de estudo no celular. Cabeçalho azul-marinho fixo, abas grandes, cartões tipo caderno desenhado à mão para os mapas. */
+:root{
+  --bg:#F3F5F8; --paper:#FFFFFF; --ink:#152238; --muted:#5A6577; --line:#D9DEE6;
+  --navy:#8E1B1B; --navy-ink:#FFFFFF; --mustard:#F2C230; --mustard-ink:#2A2100; --red:#C2352B;
+  --m1:#2E7D4F; --m2:#2C5DA8; --m3:#6B3FA0; --m4:#C2352B; --m5:#C9681C; --m6:#1F7A7A;
+  --soft:#EEF2F8;
+  --f-display:"Bricolage Grotesque",system-ui,sans-serif;
+  --f-body:"Source Sans 3",system-ui,-apple-system,sans-serif;
+  --f-hand:"Patrick Hand","Comic Sans MS",cursive;
+  --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1420; --paper:#172133; --ink:#E8EDF5; --muted:#9AA6B8; --line:#2A3650;
+  --navy:#5E1212; --navy-ink:#FFFFFF; --mustard:#F2C230; --mustard-ink:#2A2100; --red:#F07368;
+  --m1:#5FC48A; --m2:#7AA7F0; --m3:#B48AE8; --m4:#F07368; --m5:#F0A15E; --m6:#5CC4C4;
+  --soft:#1D2940; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1420; --paper:#172133; --ink:#E8EDF5; --muted:#9AA6B8; --line:#2A3650;
+  --navy:#5E1212; --navy-ink:#FFFFFF; --mustard:#F2C230; --mustard-ink:#2A2100; --red:#F07368;
+  --m1:#5FC48A; --m2:#7AA7F0; --m3:#B48AE8; --m4:#F07368; --m5:#F0A15E; --m6:#5CC4C4;
+  --soft:#1D2940; color-scheme:dark}
+html,body{background:var(--bg)}
+body{color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:var(--navy-ink)}
+header .wrap{padding-block:14px 0}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-family:var(--f-display);font-weight:800;font-size:1.55rem;margin:0;letter-spacing:-.01em}
+h1 span{background:var(--mustard);color:var(--mustard-ink);padding:0 .25em;border-radius:4px}
+.day{font-family:var(--f-mono);font-size:.8rem;opacity:.9;font-variant-numeric:tabular-nums}
+.ver{display:inline-block;margin-top:8px;font:700 .78rem var(--f-mono);background:rgba(255,255,255,.14);color:#fff;padding:3px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+.bar{height:6px;background:rgba(255,255,255,.18);border-radius:3px;margin:10px 0 0;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--mustard)}
+nav{display:flex;gap:4px;overflow-x:auto;margin-top:10px;scrollbar-width:none}
+nav button{flex:1 0 auto;background:none;border:0;color:var(--navy-ink);opacity:.7;font:600 .95rem var(--f-body);padding:10px 12px 12px;border-bottom:3px solid transparent;cursor:pointer}
+nav button[aria-selected="true"]{opacity:1;border-bottom-color:var(--mustard)}
+nav button:focus-visible,button:focus-visible{outline:3px solid var(--mustard);outline-offset:2px}
+main .wrap{padding-block:20px 48px}
+h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 18px;font-size:.98rem}
+.eyebrow{font:600 .75rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.speed{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 16px;font-size:.92rem;color:var(--muted)}
+.speed button{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:6px 12px;font:600 .88rem var(--f-body);cursor:pointer}
+.speed button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* Aula */
+.lesson-pick{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px}
+.lesson-pick button{flex:0 0 auto;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:8px 12px;font:600 .9rem var(--f-body);cursor:pointer}
+.lesson-pick button[aria-current="true"]{background:var(--mustard);color:var(--mustard-ink);border-color:var(--mustard)}
+.lesson-pick button.done::after{content:" ✓"}
+.phrase{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 14px 14px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center}
+.phrase+.phrase{margin-top:10px}
+.phrase .en{font-family:var(--f-display);font-weight:700;font-size:1.25rem;line-height:1.25;min-width:0}
+.phrase .pt{color:var(--muted);font-size:.98rem}
+.phrase .pr{font-family:var(--f-mono);font-weight:600;font-size:.9rem;color:var(--m2);letter-spacing:.02em}
+.phrase .play{grid-row:1/4;grid-column:2}
+.play{width:52px;height:52px;border-radius:50%;border:0;background:var(--navy);color:#fff;cursor:pointer;display:grid;place-items:center;flex:0 0 auto}
+.play svg{width:22px;height:22px;fill:currentColor}
+.play.sm{width:38px;height:38px}.play.sm svg{width:16px;height:16px}
+.steps{margin:20px 0 0;padding:16px;background:var(--soft);border-radius:12px}
+.steps h3{margin:0 0 8px;font:700 1rem var(--f-body)}
+.steps ol{margin:0;padding-left:1.2em}
+.steps li+li{margin-top:6px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{border:0;border-radius:10px;padding:12px 16px;font:700 1rem var(--f-body);cursor:pointer;background:var(--mustard);color:var(--mustard-ink)}
+.btn.ghost{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+.tip{margin-top:14px;font-size:.92rem;color:var(--muted)}
+/* Mapas */
+.maps{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.map{--c:var(--m1);background:var(--paper);border:2.5px solid var(--c);border-radius:16px 14px 18px 12px;padding:14px 14px 12px;font-family:var(--f-hand);box-shadow:3px 3px 0 color-mix(in srgb,var(--c) 22%,transparent);min-width:0}
+.map h3{display:flex;align-items:center;gap:8px;margin:0 0 4px;font:400 1.4rem/1.15 var(--f-hand);color:var(--c)}
+.map h3 b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--c);color:var(--paper);font-size:1rem;flex:0 0 auto}
+.map .why{font-size:1.05rem;color:var(--muted);margin:0 0 8px;line-height:1.25}
+.map ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.map li{display:flex;align-items:center;gap:8px;font-size:1.2rem;line-height:1.25;padding:3px 0;border-bottom:1px dashed var(--line);min-width:0}
+.map li:last-child{border-bottom:0}
+.map li .t{flex:1;min-width:0}
+.map li .t small{display:block;font-size:.95rem;color:var(--muted)}
+.map li .ic{flex:0 0 auto;width:40px;height:30px}
+.map li .dot{width:16px;height:16px;border-radius:50%;flex:0 0 auto;border:1.5px solid var(--ink)}
+.map .say{border:0;background:none;color:var(--c);cursor:pointer;padding:6px;border-radius:50%}
+.map .say svg{width:20px;height:20px;fill:currentColor;display:block}
+/* Palavras */
+.wtools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.wtools button{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:7px 12px;font:600 .9rem var(--f-body);cursor:pointer}
+.wtools button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;min-height:250px;display:grid;place-items:center;text-align:center;padding:24px 16px;cursor:pointer;user-select:none}
+.card .big{font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1.1;word-break:break-word}
+.card .back{margin-top:12px}
+.card .back .pt{font-size:1.3rem;font-weight:600}
+.card .back .pr{font-family:var(--f-mono);color:var(--m2);font-weight:600;margin-top:4px}
+.card .hint{color:var(--muted);font-size:.9rem;margin-top:14px}
+.wcount{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:.82rem;color:var(--muted);margin:10px 2px;font-variant-numeric:tabular-nums}
+.wbtns{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+.wbtns .btn{width:100%}
+.wbtns .rev{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+.wmode{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.wmode button{border:0;background:var(--paper);color:var(--ink);padding:11px;font:700 .98rem var(--f-body);cursor:pointer}
+.wmode button[aria-pressed="true"]{background:var(--navy);color:#fff}
+#wsearch{width:100%;box-sizing:border-box;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:11px 12px;font:600 1rem var(--f-body);margin-bottom:12px}
+.wl-head,.wrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.wl-head span{font:800 .82rem var(--f-display);text-transform:uppercase;letter-spacing:.04em;padding:8px 8px;border-radius:8px 8px 0 0;text-align:left}
+.wl-head span:nth-child(1){background:var(--paper);color:var(--ink);border:1px solid var(--line);border-bottom:0}
+.wl-head span:nth-child(2){background:var(--mustard);color:var(--mustard-ink)}
+.wl-head span:nth-child(3){background:#2B7FD4;color:#fff}
+.wrow{border:0;background:none;padding:0;width:100%;cursor:pointer;text-align:left;font:inherit}
+.wrow span{font:700 1rem/1.2 var(--f-display);text-transform:uppercase;padding:7px 8px;min-width:0;overflow-wrap:anywhere}
+.wrow span:nth-child(1){background:var(--paper);color:var(--ink);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.wrow span:nth-child(2){background:var(--mustard);color:var(--mustard-ink)}
+.wrow span:nth-child(3){background:#2B7FD4;color:#fff}
+.wrow:active span,.wrow.on span{filter:brightness(.9)}
+.wcat{font:800 .8rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:14px 2px 6px}
+.ngroup{margin-top:22px}.ngroup:first-child{margin-top:0}.ngroup h3{font-family:var(--f-display);font-weight:800;font-size:1.12rem;margin:0 0 2px}.ngroup p{margin:0 0 10px;color:var(--muted);font-size:.95rem}
+.lvh{font-family:var(--f-display);font-weight:800;font-size:1.15rem;margin:26px 0 0;padding:8px 12px;background:var(--navy);color:#fff;border-radius:10px}.lvh:first-child{margin-top:4px}
+.mlv{margin-left:auto;font:700 .75rem var(--f-mono);background:var(--c);color:var(--paper);padding:2px 8px;border-radius:999px}
+.wempty{padding:16px;color:var(--muted)}
+.sech{font-family:var(--f-display);font-weight:800;font-size:1.05rem;margin:18px 0 10px}.ag{margin:8px 0 0;font:700 .95rem var(--f-body);color:var(--m2)}
+.unitbar{font:600 .85rem var(--f-mono);color:var(--muted);margin:-6px 0 12px}
+.unit{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.unit>summary{list-style:none;display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:12px 14px;cursor:pointer}
+.unit>summary::-webkit-details-marker{display:none}
+.unit .num{display:grid;place-items:center;width:40px;height:40px;font-size:.9rem!important;border-radius:10px;background:var(--navy);color:#fff;font:800 1rem var(--f-display)}
+.unit.ok .num{background:var(--m1)}
+.unit .ut{min-width:0}.unit .ut b{display:block;font-size:1.02rem}.unit .ut span{color:var(--muted);font-size:.9rem}
+.unit .chev{color:var(--muted);font-size:1.2rem}
+.unit[open] .chev{transform:rotate(90deg)}
+.ubody{padding:0 14px 14px;display:grid;gap:10px}
+.ubody .phrase{margin:0}
+.uchecks{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.95rem}
+.uchecks label{display:flex;align-items:center;gap:6px}
+.uchecks input,.songs input,#phoneChecks input,.steps3 input{width:22px;height:22px;accent-color:var(--m1)}
+.ulink{border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:6px 12px;font:600 .88rem var(--f-body);cursor:pointer;justify-self:start}
+.rbox{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
+.rbox h3{font-family:var(--f-display);font-weight:800;font-size:1.12rem;margin:0 0 4px}
+.rbox p{margin:0 0 12px}
+.rrow{display:grid;gap:4px;margin-bottom:12px}
+.rrow label{font-weight:700;font-size:.92rem}
+.rrow input{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:10px 12px;font:600 1rem var(--f-body);min-width:0}
+.songs{display:grid;grid-template-columns:1fr;gap:8px}
+.song{display:flex;align-items:center;gap:8px;background:var(--soft);border-radius:10px;padding:8px 10px;min-width:0}
+.song input[type=text]{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:600 .95rem var(--f-body);padding:4px 0}
+.song .w{font:600 .75rem var(--f-mono);color:var(--muted);white-space:nowrap}
+.steps3{display:grid;gap:8px;margin-bottom:12px}
+.steps3 label{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;background:var(--soft);border-radius:10px;padding:10px 12px}
+.steps3 label>span{color:var(--ink)}.steps3 b{display:block}.steps3 b+span{color:var(--muted);font-size:.9rem;display:block}
+#phoneChecks{display:grid;gap:8px;margin-bottom:8px}
+#phoneChecks label{display:flex;gap:10px;align-items:center;background:var(--soft);border-radius:10px;padding:10px 12px}
+@media (max-width:380px){.songs{grid-template-columns:1fr}}
+.credit{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font:600 .85rem var(--f-body)}
+.stairs{display:grid;gap:6px}
+.step{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;border:0;border-radius:10px;padding:10px 12px;background:var(--sc);color:#fff;text-align:left;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.18);min-width:0;box-sizing:border-box}
+.step .sn{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--sc);font:800 1rem var(--f-display)}
+.step .st{min-width:0}.step b{display:block;font:800 1rem var(--f-display);letter-spacing:.02em}
+.step small{display:block;font-size:.8rem;opacity:.92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.step .sp{font:700 .8rem var(--f-mono);background:rgba(255,255,255,.2);padding:2px 8px;border-radius:999px}
+.step.on{outline:3px solid var(--mustard);outline-offset:2px}
+.step[style*="#C9A100"] .sn{color:#5a4700}
+.pguide{background:var(--soft);border-radius:12px;padding:10px 14px;margin:0 0 14px}.pguide summary{font-weight:700;cursor:pointer}.pguide ul{margin:8px 0 0;padding-left:1.1em}.pguide li+li{margin-top:6px}
+/* Histórias */
+.story{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
+.story+.story{margin-top:16px}
+.story h3{font-family:var(--f-display);font-weight:800;font-size:1.2rem;margin:0 0 2px}
+.story .meta{color:var(--muted);font-size:.9rem;margin-bottom:10px}
+.line{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line);align-items:start}
+.line .txt{min-width:0}
+.line .en{font-weight:700;font-size:1.08rem}
+.line .pt{color:var(--muted);font-size:.95rem}
+.hidept .line .pt{visibility:hidden}
+/* Plano */
+.month{margin-top:22px}
+.month h3{font-family:var(--f-display);font-weight:800;font-size:1.1rem;margin:0 0 2px}
+.month p{margin:0 0 10px;color:var(--muted);font-size:.95rem}
+.weeks{display:grid;gap:8px}
+.week{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.week .n{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.week .t{min-width:0}
+.week .t b{display:block}
+.week .t span{color:var(--muted);font-size:.9rem}
+.tgo{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.tgb{border:0;border-radius:999px;background:var(--navy);color:#fff;font:700 .85rem var(--f-body);padding:7px 12px;cursor:pointer;text-align:left}
+.wkc{display:grid;place-items:center;padding:6px;cursor:pointer}
+.week input{width:24px;height:24px;accent-color:var(--m1)}
+.week.now{border-color:var(--mustard);box-shadow:0 0 0 2px var(--mustard)}
+.note{margin-top:18px;padding:14px 16px;border-left:4px solid var(--mustard);background:var(--soft);border-radius:0 10px 10px 0;font-size:.95rem}
+.warn{display:none;margin:0 0 14px;padding:10px 12px;border-radius:10px;background:var(--soft);font-size:.92rem}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .15s}.card:active{transform:scale(.98)}}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <h1>Espanhol <span>Prático</span></h1>
+      <div class="day" id="day"></div>
+      <button id="installBtn" hidden style="border:0;border-radius:999px;background:var(--mustard);color:var(--mustard-ink);font:700 .9rem var(--f-body);padding:7px 14px;cursor:pointer">Instalar app</button>
+    </div>
+    <div class="ver" id="ver"></div>
+    <div class="bar" aria-hidden="true"><i id="barfill"></i></div>
+    <nav role="tablist" aria-label="Seções">
+      <button role="tab" data-tab="aula" aria-selected="true">Aula</button>
+      <button role="tab" data-tab="niveis" aria-selected="false">Níveis</button>
+      <button role="tab" data-tab="livro" aria-selected="false">Livro</button>
+      <button role="tab" data-tab="rotina" aria-selected="false">Rotina</button>
+      <button role="tab" data-tab="mapas" aria-selected="false">Mapas</button>
+      <button role="tab" data-tab="palavras" aria-selected="false">Palavras</button>
+      <button role="tab" data-tab="nativo" aria-selected="false">Nativo</button>
+      <button role="tab" data-tab="historias" aria-selected="false">Histórias</button>
+      <button role="tab" data-tab="plano" aria-selected="false">Trilha</button>
+    </nav>
+  </div>
+</header>
+
+<main><div class="wrap">
+  <p class="warn" id="warn">Seu navegador não liberou a voz em espanhol. No Android, abra Configurações, Idiomas, Saída de texto em voz, e instale o espanhol (Espanha).</p>
+  <div class="speed"><label for="uname">Seu nome:</label><input id="uname" type="text" autocomplete="given-name" placeholder="Digite seu nome" style="flex:1;min-width:0;max-width:220px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:8px 10px;font:600 1rem var(--f-body)"></div>
+  <div class="speed" role="group" aria-label="Velocidade da voz">
+    Voz:
+    <button data-rate="0.6" aria-pressed="false">Bem devagar</button>
+    <button data-rate="0.8" aria-pressed="true">Calma</button>
+    <button data-rate="1" aria-pressed="false">Normal</button>
+  </div>
+
+  <section id="aula" data-panel>
+    <h2>Uma situação por vez</h2>
+    <p class="sub">Escolha onde vai usar: vida pessoal, trabalho ou escola. Cada aula mostra o nível, do 1 (mais simples) ao 4. Ouça, repita três vezes e avance quando quiser.</p>
+    <details class="pguide"><summary>Como ler a pronúncia</summary>
+      <ul>
+        <li><b>TH</b>: língua entre os dentes, como no inglês "think". É o Z e o C antes de E e I: <i>gracias</i> = GRÁTHIAS.</li>
+        <li><b>RR</b>: som forte da garganta, como o R de "rato". É o J e o G antes de E e I: <i>trabajo</i> = TRABÁRRO.</li>
+        <li><b>R</b>: sempre vibrado na ponta da língua, nunca da garganta. No começo da palavra e no RR escrito, vibre mais: <i>perro</i> = PÊRRO.</li>
+        <li><b>B</b>: o V também soa como B: <i>vale</i> = BÁLE. O <b>H</b> não tem som: <i>hola</i> = ÔLA.</li>
+        <li>A sílaba com acento é a mais forte.</li>
+      </ul>
+    </details>
+    <div class="wmode" id="ctxPick" role="group" aria-label="Contexto" style="grid-template-columns:1fr 1fr 1fr">
+      <button data-c="p">Vida pessoal</button><button data-c="w">Trabalho</button><button data-c="s">Escola</button>
+    </div>
+    <div class="lesson-pick" id="lessonPick"></div>
+    <div class="eyebrow" id="lessonNum"></div>
+    <h2 id="lessonTitle" style="margin-top:2px"></h2>
+    <p class="sub" id="lessonScene"></p>
+    <div id="phrases"></div>
+    <div class="cta">
+      <button class="btn" id="playAll">Ouvir todas, com pausa</button>
+      <button class="btn ghost" id="markDone">Marcar como feita</button>
+    </div>
+    <div class="steps">
+      <h3>Sugestão para uma sessão (use o tempo que quiser)</h3>
+      <ol>
+        <li><b>5 min:</b> revisão da aula anterior (toque na aba dela acima e ouça de novo).</li>
+        <li><b>10 min:</b> ouça cada frase, repita em voz alta, grave no WhatsApp e compare.</li>
+        <li><b>10 min:</b> abra o mapa e as palavras do dia; leia a história em voz alta.</li>
+        <li><b>5 min:</b> monte a cena sozinho, como se estivesse no balcão na Espanha.</li>
+      </ol>
+    </div>
+    <p class="tip">Cada celular guarda o próprio progresso, então o mesmo link serve para qualquer pessoa. Errou a pronúncia? Sem problema. Ouça de novo na velocidade "Bem devagar" e repita junto.</p>
+  </section>
+
+  <section id="niveis" data-panel hidden>
+    <h2>Do zero ao avançado</h2>
+    <p class="sub">Seis degraus, do A1 ao C2, a mesma escala do Español en Marcha e das provas DELE do Instituto Cervantes. Suba um degrau por vez: toque no nível, ouça as frases e marque o que já sabe.</p>
+    <div class="stairs" id="stairs"></div>
+    <div id="nvHead" style="margin-top:20px"></div>
+    <div id="nvLessons"></div>
+    <p class="tip">O nível A1 combina com o Español en Marcha A1 das aulas com a professora. Os próximos degraus preparam o que vem depois.</p>
+  </section>
+
+  <section id="livro" data-panel hidden>
+    <h2>Junto com o livro</h2>
+    <p class="sub">Segue o Español en Marcha A1, o livro das aulas com a professora. Primeiro vem o que foi visto em cada aula, para revisar com áudio. Depois vêm as 11 unidades do livro (da 0 à 10), com as páginas e frases extras para treinar o mesmo tema. Os textos, exercícios e áudios do livro continuam no próprio livro e no caderno.</p>
+    <h3 class="sech">Minhas aulas com a professora</h3>
+    <div id="aulasProf"></div>
+    <h3 class="sech">Unidades do livro</h3>
+    <div class="unitbar"><span id="uProg"></span></div>
+    <div id="units"></div>
+  </section>
+
+  <section id="rotina" data-panel hidden>
+    <h2>Rotina da professora</h2>
+    <p class="sub">As dicas do caderno, transformadas em tarefas para marcar.</p>
+
+    <div class="rbox">
+      <h3>1. Música: um cantor por mês</h3>
+      <p>Escolha um cantor que canta em espanhol. Duas músicas por semana, de manhã e à tarde, somando 8 músicas no mês. Ouça com a letra aberta no Spotify ou no YouTube.</p>
+      <div class="rrow"><label for="singer">Cantor do mês</label><input id="singer" type="text" placeholder="Ex.: o cantor que você escolheu"></div>
+      <div class="songs" id="songs"></div>
+      <p class="tip">Prefira cantores da Espanha, porque o foco é o espanhol de lá: Alejandro Sanz, Pablo Alborán, Rosalía, Estopa, La Oreja de Van Gogh. A Shakira, por exemplo, é colombiana, então o sotaque é diferente.</p>
+    </div>
+
+    <div class="rbox">
+      <h3>2. Série e filme: foco no idioma</h3>
+      <p>Não assista para acompanhar a história. Escolha um trecho de 5 a 10 minutos e repita o mesmo trecho em três passos.</p>
+      <div class="steps3" id="steps3"></div>
+      <div class="rrow"><label for="clip">Trecho de hoje</label><input id="clip" type="text" placeholder="Ex.: La Casa de Papel, temporada 1, episódio 1, 0:00 a 8:00"></div>
+      <div class="cta"><button class="btn ghost" id="resetClip">Começar trecho novo</button></div>
+    </div>
+
+    <div class="rbox">
+      <h3>3. Celular em espanhol</h3>
+      <p>Mude o idioma do celular e do Waze para espanhol. Assim você aprende sem perceber, várias vezes por dia.</p>
+      <div id="phoneChecks"></div>
+      <p class="tip">No Android, o caminho é Configurações, Sistema, Idiomas, Español (España). No Waze, toque em Configurações, Voz e idioma, e escolha Español (España).</p>
+    </div>
+  </section>
+
+  <section id="mapas" data-panel hidden>
+    <h2>Mapas visuais</h2>
+    <p class="sub">Do iniciante (A1) ao avançado (C2), na mesma escada da aba Níveis. Filtre pelo seu nível, siga a numeração e toque no alto-falante para ouvir.</p>
+    <div class="wtools" id="mapFilter"></div>
+    <div class="maps" id="maps"></div>
+  </section>
+
+  <section id="palavras" data-panel hidden>
+    <h2>Palavras do dia a dia</h2>
+    <p class="sub" id="wsub">As palavras que mais aparecem nas conversas comuns na Espanha.</p>
+    <div class="wmode" role="group" aria-label="Modo">
+      <button id="mList" aria-pressed="true">Lista completa</button>
+      <button id="mCards" aria-pressed="false">Cartões</button>
+    </div>
+    <div class="wtools" id="wtools"></div>
+    <div id="listView">
+      <input id="wsearch" type="search" placeholder="Buscar em português ou espanhol" aria-label="Buscar palavra">
+      <div class="wl-head"><span>Português</span><span>English</span><span>Pronúncia</span></div>
+      <div class="wl" id="wlist"></div>
+      <p class="tip">Toque em qualquer linha para ouvir. A pronúncia escrita é aproximada; o áudio é a referência.</p>
+    </div>
+    <div id="cardView" hidden>
+    <div class="card" id="card" role="button" tabindex="0" aria-label="Virar cartão"></div>
+    <div class="wcount"><span id="wpos"></span><span id="wknown"></span></div>
+    <div class="wbtns">
+      <button class="btn rev" id="wAgain">Rever depois</button>
+      <button class="play" id="wSay" aria-label="Ouvir palavra"></button>
+      <button class="btn" id="wKnow">Já sei</button>
+    </div>
+    </div>
+  </section>
+
+  <section id="nativo" data-panel hidden>
+    <h2>Fale como nativo</h2>
+    <p class="sub">Do nível 1 ao 4. Mais palavras não deixam você com cara de nativo. O que faz isso é ter respostas prontas, as gírias e o som da Espanha. Toque numa linha para ouvir.</p>
+    <div id="nativeList"></div>
+  </section>
+
+  <section id="historias" data-panel hidden>
+    <h2>Histórias lado a lado</h2>
+    <p class="sub">Histórias curtas com as frases das aulas. Leia o espanhol em voz alta, depois esconda o português e teste se entende.</p>
+    <div class="cta" style="margin:0 0 14px"><button class="btn ghost" id="togglePt">Esconder português</button></div>
+    <div id="stories"></div>
+  </section>
+
+  <section id="plano" data-panel hidden>
+    <h2>Trilha livre</h2>
+    <p class="sub">Sem prazo e sem ordem obrigatória. Toque no botão azul do tema para abrir a aula, repita quantas vezes quiser e marque o quadrinho quando se sentir seguro.</p>
+    <div id="plan"></div>
+    <div class="note"><b>Música, série e celular:</b> veja a aba Rotina, com as dicas da professora para marcar. Ouça a letra no Spotify ou no YouTube com legenda; aqui ficam só as frases das aulas.</div>
+  </section>
+  <footer class="credit">Desenvolvido por Carlos André</footer>
+</div></main>
+
+<script>
+const PLAY='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+const store={get(k,d){try{const v=localStorage.getItem('es_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('es_'+k,JSON.stringify(v))}catch(e){}}};
+
+/* ---------- Voz ---------- */
+let rate=store.get('rate',0.8),voice=null;
+function pickVoice(){const vs=speechSynthesis.getVoices();const es=v=>v.lang&&v.lang.replace('_','-').toLowerCase();voice=vs.find(v=>es(v)==='es-es'&&/Google|Monica|Mónica|Elvira|Alvaro/i.test(v.name))||vs.find(v=>es(v)==='es-es')||vs.find(v=>es(v)&&es(v).startsWith('es'))||null}
+if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}else{document.getElementById('warn').style.display='block'}
+function say(t,r){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='es-ES';if(voice)u.voice=voice;u.rate=r||rate;speechSynthesis.speak(u)}
+function sayQueue(list){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();list.forEach(t=>{const u=new SpeechSynthesisUtterance(t);u.lang='es-ES';if(voice)u.voice=voice;u.rate=rate;speechSynthesis.speak(u);const p=new SpeechSynthesisUtterance('. . . . . . . .');p.lang='es-ES';p.volume=0;p.rate=0.5;speechSynthesis.speak(p)})}
+document.querySelectorAll('.speed button').forEach(b=>{b.setAttribute('aria-pressed',String(+b.dataset.rate===rate));b.onclick=()=>{rate=+b.dataset.rate;store.set('rate',rate);document.querySelectorAll('.speed button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));say('This is my speed.')}});
+
+/* ---------- Progresso livre (sem prazo) ---------- */
+let studyDays=store.get('days',[]);
+function touchDay(){const d=new Date().toISOString().slice(0,10);if(!studyDays.includes(d)){studyDays.push(d);store.set('days',studyDays)}}
+function updateStats(){
+  const doneN=(store.get('done',[])).length,knownN=(store.get('known',[])).length,daysN=studyDays.length;
+  document.getElementById('day').textContent=daysN+(daysN===1?' dia':' dias')+' de estudo · '+doneN+' aulas · '+knownN+' palavras';
+  const total=L.length+Object.values(W).reduce((a,b)=>a+b.length,0);
+  document.getElementById('barfill').style.width=Math.min(100,(doneN+knownN)/total*100)+'%';
+}
+
+/* ---------- Abas ---------- */
+const tabs=document.querySelectorAll('nav button');
+function show(id){tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.tab===id)));document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.id!==id);store.set('tab',id);window.scrollTo(0,0)}
+tabs.forEach(t=>t.onclick=()=>show(t.dataset.tab));
+
+/* ---------- Nome ---------- */
+let uname=store.get('name','');
+const nameIn=document.getElementById('uname');nameIn.value=uname;
+function nm(t){const n=uname.trim()||'Alex';return t.replace(/\{NP\}/g,n.toUpperCase()).replace(/\{N\}/g,n)}
+nameIn.oninput=()=>{uname=nameIn.value;store.set('name',uname);renderLesson();renderStories();if(typeof renderNiveis==='function')renderNiveis()};
+/* ---------- Aulas ---------- */
+const L=[
+{c:'p',lv:1,t:'Pedir um café',s:'Você entra numa cafeteria em Madri e vai até o balcão.',p:[
+['¡Hola! ¿Qué tal?','Oi! Tudo bem?','ÔLA! KÊ TÁL?'],
+['Un café con leche, por favor.','Um café com leite, por favor.','UN KAFÊ KON LÊTCHE, POR FAVÔR.'],
+['Para llevar, por favor.','Para viagem, por favor.','PARA IEVÁR, POR FAVÔR.'],
+['¡Gracias, hasta luego!','Obrigado, até logo!','GRÁTHIAS, ÁSTA LUÊGO!']]},
+{c:'p',lv:1,t:'Pagar a conta',s:'O garçom traz a conta e espera você pagar.',p:[
+['¿Cuánto es?','Quanto é?','KUÁNTO ÊS?'],
+['¿Puedo pagar con tarjeta?','Posso pagar com cartão?','PUÊDO PAGÁR KON TARRÊTA?'],
+['Aquí tiene.','Aqui está.','AKÍ TIÊNE.'],
+['Quédese con el cambio.','Pode ficar com o troco.','KÊDESE KON EL KÁMBIO.']]},
+{c:'p',lv:1,t:'Cumprimentar o vizinho',s:'De manhã, você encontra o vizinho no elevador.',p:[
+['¡Buenos días!','Bom dia!','BUÊNOS DÍAS!'],
+['Encantado de conocerte.','Prazer em te conhecer.','ENKANTÁDO DE KONOTHÊRTE.'],
+['Soy {N}, vivo en el tercero.','Sou {N}, moro no terceiro andar.','SÔI {NP}, BÍBO EN EL TERTHÊRO.'],
+['¡Hasta luego!','Até mais!','ÁSTA LUÊGO!']]},
+{c:'p',lv:1,t:'Falar do tempo',s:'Na fila da padaria, alguém comenta sobre o tempo.',p:[
+['Hoy hace mucho calor.','Hoje está muito calor.','ÔI ÁTHE MÚTCHO KALÔR.'],
+['Hace frío fuera.','Está frio lá fora.','ÁTHE FRÍO FUÊRA.'],
+['Parece que va a llover.','Parece que vai chover.','PARÊTHE KE BA A IOBÊR.'],
+['¡Qué día tan bonito!','Que dia lindo!','KÊ DÍA TAN BONÍTO!']]},
+{c:'p',lv:2,t:'No supermercado',s:'Você procura um produto e depois passa no caixa.',p:[
+['¿Dónde está la leche?','Onde fica o leite?','DÔNDE ESTÁ LA LÊTCHE?'],
+['¿Tienen pan integral?','Vocês têm pão integral?','TIÊNEN PAN INTEGRÁL?'],
+['Solo esto, gracias.','Só isso, obrigado.','SÔLO ÊSTO, GRÁTHIAS.'],
+['No necesito bolsa.','Não preciso de sacola.','NO NETHESÍTO BÔLSA.']]},
+{c:'p',lv:2,t:'No restaurante',s:'É hora do almoço e você quer o menu do dia.',p:[
+['Una mesa para dos, por favor.','Uma mesa para dois, por favor.','UNA MÊSA PARA DÔS, POR FAVÔR.'],
+['¿Qué lleva el menú del día?','O que vem no prato do dia?','KÊ IÊBA EL MENÚ DEL DÍA?'],
+['De primero, una ensalada.','De entrada, uma salada.','DE PRIMÊRO, UNA ENSALÁDA.'],
+['La cuenta, por favor.','A conta, por favor.','LA KUÊNTA, POR FAVÔR.']]},
+{c:'p',lv:2,t:'Check-in no hotel',s:'Você chega na recepção com a mala.',p:[
+['Tengo una reserva.','Tenho uma reserva.','TÊNGO UNA RESÊRBA.'],
+['A nombre de {N}.','No nome de {N}.','A NÔMBRE DE {NP}.'],
+['¿A qué hora es el desayuno?','Que horas é o café da manhã?','A KÊ ÔRA ÊS EL DESAIÚNO?'],
+['¿Cuál es la contraseña del wifi?','Qual é a senha do Wi-Fi?','KUÁL ÊS LA KONTRASÊNHA DEL UÍFI?']]},
+{c:'p',lv:2,t:'Pedir informação',s:'Você está no centro e precisa achar o metrô.',p:[
+['Perdone, ¿dónde está el metro?','Com licença, onde fica o metrô?','PERDÔNE, DÔNDE ESTÁ EL MÊTRO?'],
+['¿Está lejos?','É longe?','ESTÁ LÊRROS?'],
+['Siga todo recto.','Siga reto.','SÍGA TÔDO RÉKTO.'],
+['¿Puede repetirlo más despacio?','Pode repetir mais devagar?','PUÊDE REPETÍRLO MÁS DESPÁTHIO?']]},
+{c:'p',lv:3,t:'Conversa rápida',s:'Num bar de tapas, alguém puxa conversa com você.',p:[
+['¿A qué te dedicas?','Você trabalha com o quê?','A KÊ TE DEDÍKAS?'],
+['Soy ingeniero.','Sou engenheiro.','SÔI INRRENIÊRO.'],
+['¿De dónde eres?','De onde você é?','DE DÔNDE ÊRES?'],
+['Soy de Brasil.','Sou do Brasil.','SÔI DE BRASÍL.']]},
+{c:'p',lv:3,t:'Na farmácia',s:'Você está com dor de cabeça e vai até o balcão.',p:[
+['Necesito algo para el dolor de cabeza.','Preciso de algo para dor de cabeça.','NETHESÍTO ÁLGO PARA EL DOLÔR DE KABÊTHA.'],
+['¿Necesito receta?','Preciso de receita?','NETHESÍTO RETHÊTA?'],
+['¿Cada cuánto lo tomo?','De quanto em quanto tempo eu tomo?','KÁDA KUÁNTO LO TÔMO?'],
+['Gracias por su ayuda.','Obrigado pela ajuda.','GRÁTHIAS POR SU AIÚDA.']]},
+{c:'p',lv:3,t:'Fazer um convite',s:'Você quer chamar um amigo para sair no sábado.',p:[
+['¿Estás libre el sábado?','Você está livre no sábado?','ESTÁS LÍBRE EL SÁBADO?'],
+['¿Quedamos para cenar?','Vamos nos encontrar para jantar?','KEDÁMOS PARA THENÁR?'],
+['¡Me encantaría!','Eu adoraria!','ME ENKANTARÍA!'],
+['Mejor otro día.','Melhor outro dia.','MERRÔR ÔTRO DÍA.']]},
+{c:'p',lv:4,t:'Contar como foi',s:'Na segunda, alguém pergunta do seu fim de semana.',p:[
+['¿Qué tal el fin de semana?','Como foi o fim de semana?','KÊ TÁL EL FIN DE SEMÁNA?'],
+['Genial, fuimos a la playa.','Ótimo, fomos à praia.','RRENIÁL, FUÍMOS A LA PLÁIA.'],
+['Me quedé en casa descansando.','Fiquei em casa descansando.','ME KEDÊ EN KÁSA DESKANSÁNDO.'],
+['¿Y tú?','E você?','I TÚ?']]},
+{c:'w',lv:1,t:'Primeiro dia no trabalho',s:'Você chega na empresa e conhece a equipe.',p:[
+['Hola, soy {N}. Soy nuevo aquí.','Oi, sou {N}. Sou novo aqui.','ÔLA, SÔI {NP}. SÔI NUÊBO AKÍ.'],
+['¿Cómo te llamas?','Como você se chama?','KÔMO TE IÁMAS?'],
+['¿En qué departamento trabajas?','Em que departamento você trabalha?','EN KÊ DEPARTAMÊNTO TRABÁRRAS?'],
+['Encantado de trabajar contigo.','Prazer em trabalhar com você.','ENKANTÁDO DE TRABARRÁR KONTÍGO.']]},
+{c:'w',lv:1,t:'Pedir ajuda a um colega',s:'Você precisa de ajuda com uma tarefa simples.',p:[
+['¿Me puedes ayudar?','Pode me ajudar?','ME PUÊDES AIUDÁR?'],
+['Tengo una pregunta.','Tenho uma pergunta.','TÊNGO UNA PREGÚNTA.'],
+['¿Dónde está la impresora?','Onde fica a impressora?','DÔNDE ESTÁ LA IMPRESÔRA?'],
+['Gracias, te lo agradezco.','Obrigado, agradeço.','GRÁTHIAS, TE LO AGRADÊTHKO.']]},
+{c:'w',lv:2,t:'Na reunião',s:'A reunião já começou e você entra na sala.',p:[
+['Perdón por llegar tarde.','Desculpe o atraso.','PERDÔN POR IEGÁR TÁRDE.'],
+['¿Puedes compartir la pantalla?','Pode compartilhar a tela?','PUÊDES KOMPARTÍR LA PANTÁIA?'],
+['Estoy de acuerdo.','Concordo.','ESTÔI DE AKUÊRDO.'],
+['Pasemos al siguiente punto.','Vamos ao próximo ponto.','PASÊMOS AL SIGUIÊNTE PÚNTO.']]},
+{c:'w',lv:2,t:'E-mail e telefone',s:'Um cliente liga e você precisa retornar depois.',p:[
+['Te mando un correo.','Te mando um e-mail.','TE MÁNDO UN KORRÊO.'],
+['¿Te puedo llamar más tarde?','Posso te ligar mais tarde?','TE PUÊDO IAMÁR MÁS TÁRDE?'],
+['Lo miro y te digo algo.','Vou ver e te digo.','LO MÍRO I TE DÍGO ÁLGO.'],
+['Hablamos pronto.','Falamos em breve.','ABLÁMOS PRÔNTO.']]},
+{c:'w',lv:3,t:'Combinar prazos',s:'O chefe pergunta quando o relatório fica pronto.',p:[
+['¿Para cuándo lo necesitas?','Para quando você precisa?','PARA KUÁNDO LO NETHESÍTAS?'],
+['Lo tendré listo el viernes.','Vai estar pronto na sexta.','LO TENDRÊ LÍSTO EL BIÊRNES.'],
+['¿Podemos dejarlo para la semana que viene?','Podemos deixar para a semana que vem?','PODÊMOS DERRÁRLO PARA LA SEMÁNA KE BIÊNE?'],
+['Me parece bien.','Para mim está bem.','ME PARÊTHE BIÊN.']]},
+{c:'w',lv:3,t:'Dar sua opinião',s:'A equipe está decidindo algo e pede sua opinião.',p:[
+['Creo que deberíamos esperar.','Acho que deveríamos esperar.','KRÊO KE DEBERÍAMOS ESPERÁR.'],
+['Tienes razón.','Você tem razão.','TIÊNES RATHÔN.'],
+['No estoy seguro.','Não tenho certeza.','NO ESTÔI SEGÚRO.'],
+['¿Tú qué opinas?','O que você acha?','TÚ KÊ OPÍNAS?']]},
+{c:'w',lv:4,t:'Entrevista de emprego',s:'O entrevistador quer conhecer você.',p:[
+['Háblame un poco de ti.','Fale um pouco sobre você.','ÁBLAME UN PÔKO DE TÍ.'],
+['Tengo diez años de experiencia.','Tenho dez anos de experiência.','TÊNGO DIÊTH ÁNHOS DE EKSPERIÊNTHIA.'],
+['Mi punto fuerte es resolver problemas.','Meu ponto forte é resolver problemas.','MI PÚNTO FUÊRTE ÊS RESOLBÊR PROBLÊMAS.'],
+['Gracias por su tiempo.','Obrigado pelo seu tempo.','GRÁTHIAS POR SU TIÊMPO.']]},
+{c:'w',lv:4,t:'Resolver um problema',s:'O sistema parou e você precisa avisar todo mundo.',p:[
+['Hay un problema con el sistema.','Tem um problema no sistema.','ÁI UN PROBLÊMA KON EL SISTÊMA.'],
+['No funciona.','Não está funcionando.','NO FUNTHIÔNA.'],
+['Tenemos que arreglarlo hoy.','Temos que consertar hoje.','TENÊMOS KE AREGLÁRLO ÔI.'],
+['Os mantengo informados.','Mantenho vocês informados.','OS MANTÊNGO INFORMÁDOS.']]},
+{c:'s',lv:1,t:'Primeiro dia de aula',s:'Você chega numa turma nova.',p:[
+['Hola, soy nuevo en clase.','Oi, sou novo na turma.','ÔLA, SÔI NUÊBO EN KLÁSE.'],
+['¿Dónde está el aula diez?','Onde fica a sala dez?','DÔNDE ESTÁ EL ÁULA DIÊTH?'],
+['¿Me puedo sentar aquí?','Posso sentar aqui?','ME PUÊDO SENTÁR AKÍ?'],
+['¿Cómo te llamas?','Como você se chama?','KÔMO TE IÁMAS?']]},
+{c:'s',lv:1,t:'Na sala de aula',s:'O professor explica algo e você não entendeu.',p:[
+['No entiendo.','Não entendo.','NO ENTIÊNDO.'],
+['¿Puede repetir, por favor?','Pode repetir, por favor?','PUÊDE REPETÍR, POR FAVÔR?'],
+['¿Cómo se escribe?','Como se escreve?','KÔMO SE ESKRÍBE?'],
+['¿Qué significa?','O que significa?','KÊ SIGNIFÍKA?']]},
+{c:'s',lv:2,t:'Lição de casa',s:'No fim da aula, você confere o que precisa fazer.',p:[
+['¿Qué hay de deberes?','O que tem de lição de casa?','KÊ ÁI DE DEBÊRES?'],
+['¿Para cuándo es?','Para quando é?','PARA KUÁNDO ÊS?'],
+['¿Me dejas un boli?','Me empresta uma caneta?','ME DÊRRAS UN BÔLI?'],
+['Me he olvidado el libro.','Esqueci o livro.','ME Ê OLBIDÁDO EL LÍBRO.']]},
+{c:'s',lv:2,t:'Com os colegas',s:'Tem prova na semana que vem.',p:[
+['¿Estudiamos juntos?','Vamos estudar juntos?','ESTUDIÁMOS RRÚNTOS?'],
+['Quedamos en la biblioteca.','Nos encontramos na biblioteca.','KEDÁMOS EN LA BIBLIOTÊKA.'],
+['¿Has terminado?','Você terminou?','ÁS TERMINÁDO?'],
+['¡Suerte en el examen!','Boa sorte na prova!','SUÊRTE EN EL EKSÁMEN!']]},
+{c:'s',lv:3,t:'Falar com o professor',s:'Depois da aula, você vai até a mesa do professor.',p:[
+['¿Tiene un momento?','Tem um minuto?','TIÊNE UN MOMÊNTO?'],
+['Necesito ayuda con esto.','Preciso de ajuda com isto.','NETHESÍTO AIÚDA KON ÊSTO.'],
+['¿Lo puedo entregar mañana?','Posso entregar amanhã?','LO PUÊDO ENTREGÁR MANHÁNA?'],
+['Gracias por la explicación.','Obrigado pela explicação.','GRÁTHIAS POR LA EKSPLIKATHIÔN.']]},
+{c:'s',lv:4,t:'Reunião de pais',s:'Você conversa com a professora sobre sua filha.',p:[
+['¿Qué tal va mi hija?','Como minha filha está indo?','KÊ TÁL BA MI ÍRRA?'],
+['¿Necesita clases de refuerzo?','Ela precisa de reforço?','NETHESÍTA KLÁSES DE REFUÊRTHO?'],
+['¿Qué podemos hacer en casa?','O que podemos fazer em casa?','KÊ PODÊMOS ATHÊR EN KÁSA?'],
+['Manténgame informado, por favor.','Me mantenha informado, por favor.','MANTÊNGAME INFORMÁDO, POR FAVÔR.']]}
+];
+const CTX={p:'Vida pessoal',w:'Trabalho',s:'Escola'};
+let ctx=store.get('ctx','p');
+let done=store.get('done',[]),cur=store.get('cur',0);
+function renderLesson(){
+  const lp=document.getElementById('lessonPick');
+  if(L[cur].c!==ctx)ctx=L[cur].c;
+  document.querySelectorAll('#ctxPick button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.c===ctx)));
+  const idx=L.map((l,i)=>i).filter(i=>L[i].c===ctx).sort((a,b)=>L[a].lv-L[b].lv||a-b);
+  lp.innerHTML=idx.map(i=>`<button data-i="${i}" aria-current="${i===cur}" class="${done.includes(i)?'done':''}">${L[i].lv} · ${L[i].t}</button>`).join('');
+  lp.querySelectorAll('button').forEach(b=>b.onclick=()=>{cur=+b.dataset.i;store.set('cur',cur);renderLesson()});
+  const l=L[cur];
+  document.getElementById('lessonNum').textContent=CTX[l.c]+' · Nível '+l.lv;
+  document.getElementById('lessonTitle').textContent=l.t;
+  document.getElementById('lessonScene').textContent=l.s;
+  document.getElementById('phrases').innerHTML=l.p.map((p,i)=>`<div class="phrase"><div class="en">${nm(p[0])}</div><button class="play" data-i="${i}" aria-label="Ouvir: ${nm(p[0]).replace(/"/g,'')}">${PLAY}</button><div class="pt">${nm(p[1])}</div><div class="pr">${nm(p[2])}</div></div>`).join('');
+  document.querySelectorAll('#phrases .play').forEach(b=>b.onclick=()=>say(nm(l.p[+b.dataset.i][0])));
+  document.getElementById('markDone').textContent=done.includes(cur)?'Feita ✓':'Marcar como feita';
+}
+document.querySelectorAll('#ctxPick button').forEach(b=>b.onclick=()=>{ctx=b.dataset.c;store.set('ctx',ctx);cur=L.map((l,i)=>i).filter(i=>L[i].c===ctx).sort((a,b)=>L[a].lv-L[b].lv||a-b)[0];store.set('cur',cur);renderLesson()});
+document.getElementById('playAll').onclick=()=>sayQueue(L[cur].p.map(p=>nm(p[0])));
+document.getElementById('markDone').onclick=()=>{if(!done.includes(cur)){done.push(cur);touchDay()}else done=done.filter(x=>x!==cur);store.set('done',done);renderLesson();updateStats()};
+renderLesson();
+
+/* ---------- Mapas ---------- */
+function pos(k){const box='<rect x="13" y="9" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>';
+ const ball=(x,y)=>`<circle cx="${x}" cy="${y}" r="4.5" fill="var(--m4)"/>`;
+ const m={in:box+ball(21,18),on:box+ball(21,4),under:box+ball(21,29),next:box+ball(36,20),between:'<rect x="2" y="11" width="12" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="11" width="12" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>'+ball(20,19),behind:ball(27,13)+'<rect x="13" y="9" width="16" height="16" rx="2" fill="var(--paper)" stroke="currentColor" stroke-width="2"/>'};
+ return `<svg class="ic" viewBox="0 0 40 34" aria-hidden="true">${m[k]}</svg>`}
+const M=[
+{lv:'A1',c:'--m4',t:'Cores',w:'Para roupas, carros e frutas.',col:true,i:[['rojo','vermelho','#D33B2F'],['azul','azul','#2C5DA8'],['verde','verde','#2E7D4F'],['amarillo','amarelo','#F2C230'],['negro','preto','#111111'],['blanco','branco','#FFFFFF']]},
+{lv:'A1',c:'--m1',t:'Números',w:'Preços, horários e endereços. Atenção ao som de TH no 5 e no 10.',i:[['uno, dos, tres','1, 2, 3'],['cuatro, cinco, seis','4, 5, 6'],['siete, ocho, nueve, diez','7, 8, 9, 10'],['veinte','20'],['cincuenta','50'],['cien','100']]},
+{lv:'A1',c:'--m4',t:'Família',w:'Para falar de quem mora com você.',i:[['mi mujer','minha esposa'],['mi hijo','meu filho'],['mi hija','minha filha'],['mis padres','meus pais'],['mi hermano','meu irmão'],['mi hermana','minha irmã']]},
+{lv:'A1',c:'--m6',t:'Dias da semana',w:'Em espanhol, os dias são escritos com letra minúscula.',i:[['lunes','segunda'],['martes','terça'],['miércoles','quarta'],['jueves','quinta'],['viernes','sexta'],['sábado, domingo','sábado, domingo']]},
+{lv:'A1',c:'--m2',t:'Perguntas',w:'Toda pergunta abre com ¿ e fecha com ?. As palavras de pergunta levam acento.',i:[['¿Qué?','O quê? / Qual?'],['¿Dónde?','Onde?'],['¿Cuándo?','Quando?'],['¿Quién?','Quem?'],['¿Cómo?','Como?'],['¿Por qué?','Por quê?']]},
+{lv:'A1',c:'--m3',t:'Onde está?',w:'A bolinha vermelha mostra o lugar. Unidade 2 do livro.',pos:true,i:[['en / dentro de','dentro','in'],['encima de','em cima','on'],['debajo de','embaixo','under'],['al lado de','ao lado','next'],['entre','entre','between'],['detrás de','atrás','behind']]},
+{lv:'A1',c:'--m1',t:'Minha rotina',w:'Verbos com "me": eu me levanto, eu me ducho. Unidade 3 do livro.',i:[['Me levanto a las siete.','Eu me levanto às sete.'],['Me ducho.','Tomo banho.'],['Desayuno café con tostadas.','Tomo café com torradas.'],['Voy al trabajo en metro.','Vou ao trabalho de metrô.'],['Me acuesto a las once.','Vou dormir às onze.']]},
+{lv:'A1',c:'--m5',t:'Ser e estar',w:'Ser é o que a coisa é. Estar é como ou onde ela está agora.',i:[['Soy brasileño.','Sou brasileiro. (ser)'],['Soy ingeniero.','Sou engenheiro. (ser)'],['Estoy cansado.','Estou cansado. (estar)'],['Estoy en Madrid.','Estou em Madri. (estar)'],['El café está frío.','O café está frio. (estar)']]},
+{lv:'A1',c:'--m2',t:'Tú e usted',w:'"Tú" com amigos e colegas. "Usted" com pessoas mais velhas e em situações formais.',i:[['¿Cómo estás? (tú)','Como você está? (informal)'],['¿Cómo está usted?','Como o senhor está? (formal)'],['¿Cómo os llamáis? (vosotros)','Como vocês se chamam? (Espanha)'],['¿Cómo se llaman ustedes?','Como os senhores se chamam?']]},
+{lv:'A2',c:'--m5',t:'O que eu fiz ontem',w:'O passado dos verbos mais usados. Muitos mudam bastante.',i:[['ir → fui','ir → fui'],['tener → tuve','ter → tive'],['hacer → hice','fazer → fiz'],['estar → estuve','estar → estive'],['ver → vi','ver → vi'],['comer → comí','comer → comi']]},
+{lv:'A2',c:'--m2',t:'Meus planos',w:'"Ir a" mais o verbo, para o que você já decidiu. Unidade 10 do livro.',i:[['Voy a estudiar esta noche.','Vou estudar hoje à noite.'],['Ella va a viajar.','Ela vai viajar.'],['Vamos a comprar un coche.','Vamos comprar um carro.'],['¿Vas a venir?','Você vai vir?'],['No voy a trabajar mañana.','Não vou trabalhar amanhã.']]},
+{lv:'A2',c:'--m6',t:'Comparar',w:'Para escolher entre coisas. Unidade 9 do livro.',i:[['más grande que','maior que'],['menos caro que','menos caro que'],['tan bonito como','tão bonito quanto'],['mejor / peor','melhor / pior'],['el más barato','o mais barato']]},
+{lv:'A2',c:'--m1',t:'Com que frequência',w:'Do sempre ao nunca.',i:[['Siempre tomo café.','Sempre tomo café.'],['Normalmente voy andando.','Normalmente vou a pé.'],['A menudo veo la tele.','Vejo TV com frequência.'],['A veces cocino.','Às vezes cozinho.'],['Casi nunca como fuera.','Quase nunca como fora.'],['Nunca fumo.','Nunca fumo.']]},
+{lv:'A2',c:'--m4',t:'Gostar',w:'Em espanhol, é a coisa que "agrada" você. Unidade 5 do livro.',i:[['Me gusta el cine.','Gosto de cinema.'],['Me gustan las películas.','Gosto dos filmes. (plural)'],['¿Te gusta bailar?','Você gosta de dançar?'],['A mí también.','Eu também.'],['A mí tampoco.','Eu também não.']]},
+{lv:'B1',c:'--m2',t:'Já fiz / nunca fiz',w:'Na Espanha, o "he hecho" é usado para o que aconteceu hoje ou na vida.',i:[['¿Has estado en Barcelona?','Você já esteve em Barcelona?'],['He estado dos veces.','Já estive duas vezes.'],['Nunca lo he probado.','Nunca experimentei.'],['Hoy he comido paella.','Hoje comi paella.'],['Todavía no he terminado.','Ainda não terminei.']]},
+{lv:'B1',c:'--m5',t:'Há quanto tempo',w:'"Desde hace" para o tempo que passou. "Desde" para quando começou.',i:[['Vivo aquí desde hace diez años.','Moro aqui há dez anos.'],['Vivo aquí desde 2016.','Moro aqui desde 2016.'],['¿Cuánto tiempo llevas aquí?','Há quanto tempo você está aqui?'],['Hace mucho que no lo veo.','Faz tempo que não o vejo.'],['Somos amigos desde el colegio.','Somos amigos desde a escola.']]},
+{lv:'B1',c:'--m4',t:'Conselhos e obrigações',w:'Do conselho leve à obrigação forte.',i:[['Deberías descansar.','Você deveria descansar.'],['Tienes que ir al médico.','Você tem que ir ao médico.'],['Hay que llevar casco.','É preciso usar capacete.'],['No hace falta pagar.','Não precisa pagar.'],['Te aconsejo que duermas.','Te aconselho a dormir.']]},
+{lv:'B1',c:'--m3',t:'Ligar as frases',w:'Palavras que juntam duas ideias.',i:[['porque','porque'],['así que','então / por isso'],['pero','mas'],['aunque','embora'],['sin embargo','porém'],['mientras','enquanto']]},
+{lv:'B1',c:'--m6',t:'Falsos amigos',w:'Parecem português, mas significam outra coisa. Cuidado!',i:[['exquisito','delicioso (não é "esquisito")'],['embarazada','grávida (não é "embaraçada")'],['oficina','escritório (não é "oficina")'],['rato','momento (não é "rato")'],['polvo','pó (não é "polvo"; polvo é "pulpo")'],['apellido','sobrenome (não é "apelido")']]},
+{lv:'B2',c:'--m3',t:'Expressões com verbo',w:'Juntam dois verbos e mudam o sentido.',i:[['acabar de','acabar de (Acabo de llegar.)'],['volver a','fazer de novo (Vuelvo a llamar.)'],['dejar de','parar de (Dejé de fumar.)'],['seguir + -ando','continuar (Sigo trabajando.)'],['ponerse a','começar a (Se puso a llorar.)']]},
+{lv:'B2',c:'--m2',t:'Imaginar',w:'Para situações que não são reais, ou ainda não são.',i:[['Si fuera tú, iría.','Se eu fosse você, iria.'],['Si tuviera dinero, lo compraría.','Se eu tivesse dinheiro, compraria.'],['¿Qué harías?','O que você faria?'],['Si llueve, nos quedamos en casa.','Se chover, ficamos em casa.'],['A no ser que te des prisa, lo perderás.','A menos que se apresse, vai perder.']]},
+{lv:'B2',c:'--m4',t:'Desejos (ojalá)',w:'Depois de "ojalá" e "quiero que", o verbo muda de forma.',i:[['Ojalá venga.','Tomara que ele venha.'],['Quiero que lo sepas.','Quero que você saiba.'],['Espero que estés bien.','Espero que você esteja bem.'],['Me alegro de que estés aquí.','Fico feliz que você esteja aqui.'],['Cuando puedas, llámame.','Quando puder, me liga.']]},
+{lv:'B2',c:'--m1',t:'Pedir com educação',w:'Do pedido direto ao mais educado.',i:[['¿Me ayudas?','Me ajuda?'],['¿Me podrías ayudar?','Você poderia me ajudar?'],['¿Le importaría ayudarme?','O senhor se importaria de me ajudar?'],['¿Sería tan amable de...?','Seria tão gentil de...?'],['Te lo agradecería mucho.','Eu agradeceria muito.']]},
+{lv:'C1',c:'--m4',t:'Conectores de fluência',w:'Ligam as ideias e dão ritmo de fluente.',i:[['o sea','ou seja'],['la verdad es que','a verdade é que'],['por lo tanto','portanto'],['aun así','mesmo assim'],['encima','ainda por cima'],['es decir','isto é']]},
+{lv:'C1',c:'--m6',t:'Suavizar o que diz',w:'Para discordar ou pedir sem soar grosso.',i:[['Quería saber si...','Eu queria saber se...'],['Parece que...','Parece que...'],['Igual sería mejor...','Talvez fosse melhor...'],['No estoy del todo seguro.','Não tenho total certeza.'],['más o menos','mais ou menos'],['Con todo respeto...','Com todo o respeito...']]},
+{lv:'C1',c:'--m5',t:'Expressões da Espanha',w:'O sentido não está nas palavras. Aprenda como um bloco só.',i:[['Es pan comido.','É moleza.'],['Estar en las nubes.','Estar distraído.'],['Tomar el pelo.','Tirar sarro / enganar.'],['Costar un ojo de la cara.','Custar os olhos da cara.'],['Ponerse las pilas.','Se esforçar, se ligar.'],['No tener pelos en la lengua.','Falar o que pensa.']]},
+{lv:'C1',c:'--m2',t:'Dar ênfase',w:'Para destacar o que mais importa na frase.',i:[['¡Sí que me gusta!','Eu gosto, sim!'],['Lo que necesito es descansar.','O que eu preciso é descansar.'],['Fue Ana quien llamó.','Foi a Ana quem ligou.'],['La cuestión es que llegamos tarde.','A questão é que chegamos tarde.'],['¡De ninguna manera!','De jeito nenhum!']]},
+{lv:'C2',c:'--m3',t:'Formas elegantes',w:'Construções que deixam a frase mais culta.',i:[['De haberlo sabido...','Se eu soubesse...'],['Jamás había visto...','Nunca tinha visto...'],['No solo... sino también...','Não só... como também...'],['De necesitar ayuda...','Caso precise de ajuda...'],['Poco me imaginaba...','Mal sabia eu...']]},
+{lv:'C2',c:'--m1',t:'Precisão',w:'Expressões para dizer exatamente o que você quer.',i:[['Eso no viene al caso.','Isso não vem ao caso.'],['A grandes rasgos...','De modo geral...'],['Ni que decir tiene.','Nem precisa dizer.'],['Por si sirve de algo...','Se serve de algo...'],['Hasta cierto punto...','Até certo ponto...']]},
+{lv:'C2',c:'--m4',t:'A palavra muda o tom',w:'O mesmo sentido, com efeito diferente em quem ouve.',i:[['delgado · flaco','magro · magricela'],['barato · económico','barato · com preço bom'],['viejo · antiguo','velho · antigo, de valor'],['cabezota · decidido','cabeça-dura · decidido'],['curioso · cotilla','curioso · fofoqueiro']]},
+{lv:'C2',c:'--m6',t:'Ironia e humor',w:'O espanhol usa muito. O tom de voz faz toda a diferença.',i:[['Pues qué bien.','Que ótimo. (irônico)'],['¡A mí me lo vas a contar!','Nem me fale!'],['Y que lo digas.','Pode crer.'],['Hasta que no lo vea, no me lo creo.','Só acredito vendo.'],['Lo que faltaba.','Era só o que faltava.']]}
+];
+const LVO=['A1','A2','B1','B2','C1','C2'];M.sort((a,b)=>LVO.indexOf(a.lv)-LVO.indexOf(b.lv));
+let mapLv=store.get('mapLv','Todos');
+function renderMaps(){document.querySelectorAll('#mapFilter button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===mapLv)));
+document.getElementById('maps').innerHTML=M.map((m,n)=>(mapLv!=='Todos'&&m.lv!==mapLv)?'':`<article class="map" style="--c:var(${m.c})"><h3><b>${n+1}</b>${m.t}<span class="mlv">${m.lv}</span></h3><p class="why">${m.w}</p><ul>${m.i.map(it=>{const en=it[0];const lead=m.pos?pos(it[2]):m.col?`<span class="dot" style="background:${it[2]}"></span>`:'';const spoken=en.replace(/\s*[→·]\s*/g,', ').replace(/\s*\/\s*/g,', ');return `<li>${lead}<span class="t">${en}<small>${it[1]}</small></span><button class="say" data-s="${spoken.replace(/"/g,'&quot;')}" aria-label="Ouvir ${spoken.replace(/"/g,'')}">${PLAY}</button></li>`}).join('')}</ul></article>`).join('');
+document.querySelectorAll('.map .say').forEach(b=>b.onclick=()=>say(b.dataset.s));}
+document.getElementById('mapFilter').innerHTML=['Todos',...LVO].map(l=>`<button data-l="${l}">${l}</button>`).join('');
+document.querySelectorAll('#mapFilter button').forEach(b=>b.onclick=()=>{mapLv=b.dataset.l;store.set('mapLv',mapLv);renderMaps()});
+renderMaps();
+
+/* ---------- Palavras ---------- */
+const RAW={
+'Básicas':`por favor|por favor|POR FAVÔR
+sí|sim|SÍ
+no|não|NÔ
+quizás|talvez|KITHÁS
+hola|olá|ÔLA
+adiós|tchau / adeus|ADIÔS
+hasta luego|até logo|ÁSTA LUÊGO
+gracias|obrigado|GRÁTHIAS
+de nada|de nada|DE NÁDA
+perdón|desculpa|PERDÔN
+perdone|com licença (formal)|PERDÔNE
+vale|tá bom / ok|BÁLE
+claro|claro|KLÁRO
+genial|ótimo|RRENIÁL
+aquí|aqui|AKÍ
+allí|ali / lá|AIÍ
+esto|isto|ÊSTO
+eso|isso|ÊSO
+muy|muito (antes de adjetivo)|MÚI
+mucho|muito|MÚTCHO
+también|também|TAMBIÊN
+tampoco|também não|TAMPÔKO
+solo|só|SÔLO
+otra vez|de novo|ÔTRA BÊTH
+casi|quase|KÁSI
+más|mais|MÁS
+menos|menos|MÊNOS
+todo|tudo / todo|TÔDO
+algo|algo|ÁLGO
+nada|nada|NÁDA
+alguien|alguém|ÁLGUIEN
+nadie|ninguém|NÁDIE
+siempre|sempre|SIÊMPRE
+nunca|nunca|NÚNKA
+ya|já|IÁ
+todavía|ainda|TODABÍA`,
+'Números':`cero|zero|THÊRO
+uno|um|ÚNO
+dos|dois|DÔS
+tres|três|TRÊS
+cuatro|quatro|KUÁTRO
+cinco|cinco|THÍNKO
+seis|seis|SÊIS
+siete|sete|SIÊTE
+ocho|oito|ÔTCHO
+nueve|nove|NUÊBE
+diez|dez|DIÊTH
+once|onze|ÔNTHE
+doce|doze|DÔTHE
+quince|quinze|KÍNTHE
+dieciséis|dezesseis|DIETHISÊIS
+veinte|vinte|BÊINTE
+veintiuno|vinte e um|BEINTIÚNO
+treinta|trinta|TRÊINTA
+cuarenta|quarenta|KUARÊNTA
+cincuenta|cinquenta|THINKUÊNTA
+sesenta|sessenta|SESÊNTA
+setenta|setenta|SETÊNTA
+ochenta|oitenta|OTCHÊNTA
+noventa|noventa|NOBÊNTA
+cien|cem|THIÊN
+quinientos|quinhentos|KINIÊNTOS
+mil|mil|MÍL
+millón|milhão|MIIÔN
+primero|primeiro|PRIMÊRO
+segundo|segundo|SEGÚNDO
+tercero|terceiro|TERTHÊRO
+último|último|ÚLTIMO
+la mitad|a metade|LA MITÁD
+el doble|o dobro|EL DÔBLE`,
+'Pessoas e família':`yo|eu|IÔ
+tú|você (informal)|TÚ
+usted|o senhor / a senhora|USTÊD
+él|ele|ÊL
+ella|ela|ÊIA
+nosotros|nós|NOSÔTROS
+vosotros|vocês (Espanha)|BOSÔTROS
+ellos|eles|ÊIOS
+hombre|homem|ÔMBRE
+mujer|mulher / esposa|MURRÊR
+niño|menino / criança|NÍNHO
+niña|menina|NÍNHA
+bebé|bebê|BEBÊ
+amigo|amigo|AMÍGO
+vecino|vizinho|BETHÍNO
+gente|pessoas|RRÊNTE
+familia|família|FAMÍLIA
+madre|mãe|MÁDRE
+padre|pai|PÁDRE
+padres|pais|PÁDRES
+hijo|filho|ÍRRO
+hija|filha|ÍRRA
+hermano|irmão|ERMÁNO
+hermana|irmã|ERMÁNA
+marido|marido|MARÍDO
+abuela|avó|ABUÊLA
+abuelo|avô|ABUÊLO
+tío|tio|TÍO
+tía|tia|TÍA
+primo|primo|PRÍMO
+novio|namorado / noivo|NÔBIO
+novia|namorada / noiva|NÔBIA
+jefe|chefe|RRÊFE
+compañero|colega|KOMPANHÊRO
+cliente|cliente|KLIÊNTE
+médico|médico|MÉDIKO
+camarero|garçom|KAMARÊRO`,
+'Comida e bebida':`comida|comida|KOMÍDA
+agua|água|ÁGUA
+café|café|KAFÊ
+café con leche|café com leite|KAFÊ KON LÊTCHE
+té|chá|TÊ
+leche|leite|LÊTCHE
+zumo|suco (Espanha)|THÚMO
+cerveza|cerveja|THERBÊTHA
+vino|vinho|BÍNO
+pan|pão|PÁN
+mantequilla|manteiga|MANTEKÍIA
+queso|queijo|KÊSO
+jamón|presunto|RRAMÔN
+huevo|ovo|UÊBO
+carne|carne|KÁRNE
+pollo|frango|PÔIO
+pescado|peixe (prato)|PESKÁDO
+arroz|arroz|ARRÔTH
+patata|batata (Espanha)|PATÁTA
+tortilla|omelete de batata|TORTÍIA
+ensalada|salada|ENSALÁDA
+sopa|sopa|SÔPA
+bocadillo|sanduíche de pão|BOKADÍIO
+fruta|fruta|FRÚTA
+manzana|maçã|MANTHÁNA
+naranja|laranja|NARÁNRRA
+fresa|morango|FRÊSA
+azúcar|açúcar|ATHÚKAR
+sal|sal|SÁL
+aceite|azeite|ATHÊITE
+desayuno|café da manhã|DESAIÚNO
+la comida|o almoço (Espanha)|LA KOMÍDA
+cena|jantar|THÊNA
+tapa|petisco|TÁPA
+la cuenta|a conta|LA KUÊNTA
+propina|gorjeta|PROPÍNA
+para llevar|para viagem|PARA IEBÁR
+tenedor|garfo|TENEDÔR
+cuchillo|faca|KUTCHÍIO
+cuchara|colher|KUTCHÁRA
+vaso|copo|BÁSO`,
+'Cores e roupas':`color|cor|KOLÔR
+rojo|vermelho|RÔRRO
+azul|azul|ATHÚL
+verde|verde|BÊRDE
+amarillo|amarelo|AMARÍIO
+negro|preto|NÊGRO
+blanco|branco|BLÁNKO
+gris|cinza|GRÍS
+marrón|marrom|MARRÔN
+rosa|rosa|RÔSA
+morado|roxo|MORÁDO
+naranja|laranja (cor)|NARÁNRRA
+ropa|roupa|RÔPA
+camisa|camisa|KAMÍSA
+camiseta|camiseta|KAMISÊTA
+pantalones|calça|PANTALÔNES
+vaqueros|calça jeans|BAKÊROS
+falda|saia|FÁLDA
+vestido|vestido|BESTÍDO
+chaqueta|jaqueta|TCHAKÊTA
+abrigo|casaco|ABRÍGO
+zapatos|sapatos|THAPÁTOS
+zapatillas|tênis|THAPATÍIAS
+calcetines|meias|KALTHETÍNES
+corbata|gravata|KORBÁTA
+gafas|óculos|GÁFAS
+reloj|relógio|RELÔ
+talla|tamanho|TÁIA
+pequeño|pequeno|PEKÊNHO
+mediano|médio|MEDIÁNO
+grande|grande|GRÁNDE`,
+'Tempo e calendário':`hoy|hoje|ÔI
+mañana|amanhã / manhã|MANHÁNA
+ayer|ontem|AIÊR
+ahora|agora|AÔRA
+luego|depois / logo|LUÊGO
+pronto|logo / cedo|PRÔNTO
+antes|antes|ÁNTES
+después|depois|DESPUÊS
+tarde|tarde|TÁRDE
+noche|noite|NÔTCHE
+mediodía|meio-dia|MEDIODÍA
+medianoche|meia-noite|MEDIANÔTCHE
+hora|hora|ÔRA
+minuto|minuto|MINÚTO
+día|dia|DÍA
+semana|semana|SEMÁNA
+fin de semana|fim de semana|FÍN DE SEMÁNA
+mes|mês|MÊS
+año|ano|ÁNHO
+lunes|segunda-feira|LÚNES
+martes|terça-feira|MÁRTES
+miércoles|quarta-feira|MIÊRKOLES
+jueves|quinta-feira|RRUÊBES
+viernes|sexta-feira|BIÊRNES
+sábado|sábado|SÁBADO
+domingo|domingo|DOMÍNGO
+enero|janeiro|ENÊRO
+febrero|fevereiro|FEBRÊRO
+marzo|março|MÁRTHO
+abril|abril|ABRÍL
+mayo|maio|MÁIO
+junio|junho|RRÚNIO
+julio|julho|RRÚLIO
+agosto|agosto|AGÔSTO
+septiembre|setembro|SEPTIÊMBRE
+octubre|outubro|OKTÚBRE
+noviembre|novembro|NOBIÊMBRE
+diciembre|dezembro|DITHIÊMBRE
+cumpleaños|aniversário|KUMPLEÁNHOS
+vacaciones|férias|BAKATHIÔNES`,
+'Casa':`casa|casa|KÁSA
+piso|apartamento (Espanha)|PÍSO
+habitación|quarto|ABITATHIÔN
+dormitorio|dormitório|DORMITÔRIO
+cuarto de baño|banheiro|KUÁRTO DE BÁNHO
+cocina|cozinha|KOTHÍNA
+salón|sala|SALÔN
+puerta|porta|PUÊRTA
+ventana|janela|BENTÁNA
+pared|parede|PARÊD
+suelo|chão|SUÊLO
+escalera|escada|ESKALÊRA
+ascensor|elevador|ASTHENSÔR
+terraza|varanda|TERRÁTHA
+garaje|garagem|GARÁRRE
+cama|cama|KÁMA
+mesa|mesa|MÊSA
+silla|cadeira|SÍIA
+sofá|sofá|SOFÁ
+armario|armário|ARMÁRIO
+lámpara|luminária|LÁMPARA
+llave|chave|IÁBE
+ducha|chuveiro|DÚTCHA
+toalla|toalha|TOÁIA
+jabón|sabonete|RRABÔN
+espejo|espelho|ESPÊRRO
+nevera|geladeira|NEBÊRA
+lavadora|máquina de lavar|LABADÔRA
+basura|lixo|BASÚRA
+móvil|celular (Espanha)|MÔBIL
+ordenador|computador (Espanha)|ORDENADÔR
+tele|TV|TÊLE
+caja|caixa|KÁRRA
+bolsa|sacola|BÔLSA
+libro|livro|LÍBRO`,
+'Cidade e lugares':`ciudad|cidade|THIUDÁD
+pueblo|cidade pequena / vila|PUÊBLO
+calle|rua|KÁIE
+plaza|praça|PLÁTHA
+avenida|avenida|ABENÍDA
+esquina|esquina|ESKÍNA
+barrio|bairro|BÁRRIO
+centro|centro|THÊNTRO
+tienda|loja|TIÊNDA
+supermercado|supermercado|SUPERMERKÁDO
+centro comercial|shopping|THÊNTRO KOMERTHIÁL
+panadería|padaria|PANADERÍA
+cafetería|cafeteria|KAFETERÍA
+restaurante|restaurante|RESTAURÁNTE
+bar|bar|BÁR
+banco|banco|BÁNKO
+farmacia|farmácia|FARMÁTHIA
+correos|correio|KORRÊOS
+colegio|escola|KOLÊRRIO
+iglesia|igreja|IGLÊSIA
+parque|parque|PÁRKE
+playa|praia|PLÁIA
+gimnasio|academia|RRIMNÁSIO
+oficina|escritório|OFITHÍNA
+hospital|hospital|OSPITÁL
+hotel|hotel|OTÊL
+aeropuerto|aeroporto|AEROPUÊRTO
+estación|estação|ESTATHIÔN
+gasolinera|posto de gasolina|GASOLINÊRA
+aparcamiento|estacionamento|APARKAMIÊNTO
+servicios|banheiro (público)|SERBÍTHIOS
+entrada|entrada|ENTRÁDA
+salida|saída|SALÍDA
+izquierda|esquerda|ITHKIÊRDA
+derecha|direita|DERÊTCHA
+recto|reto|RÉKTO
+cerca|perto|THÊRKA
+lejos|longe|LÊRROS`,
+'Clima e natureza':`tiempo|tempo (clima)|TIÊMPO
+calor|calor|KALÔR
+frío|frio|FRÍO
+sol|sol|SÔL
+lluvia|chuva|IÚBIA
+llover|chover|IOBÊR
+nieve|neve|NIÊBE
+viento|vento|BIÊNTO
+nube|nuvem|NÚBE
+nublado|nublado|NUBLÁDO
+tormenta|tempestade|TORMÊNTA
+paraguas|guarda-chuva|PARÁGUAS
+cielo|céu|THIÊLO
+árbol|árvore|ÁRBOL
+flor|flor|FLÔR
+río|rio|RÍO
+mar|mar|MÁR
+montaña|montanha|MONTÁNHA
+primavera|primavera|PRIMABÊRA
+verano|verão|BERÁNO
+otoño|outono|OTÔNHO
+invierno|inverno|INBIÊRNO
+perro|cachorro|PÊRRO
+gato|gato|GÁTO
+pájaro|pássaro|PÁRRARO`,
+'Sentimentos':`contento|contente|KONTÊNTO
+feliz|feliz|FELÍTH
+triste|triste|TRÍSTE
+cansado|cansado|KANSÁDO
+enfadado|bravo (Espanha)|ENFADÁDO
+nervioso|nervoso|NERBIÔSO
+preocupado|preocupado|PREOKUPÁDO
+tranquilo|tranquilo|TRANKÍLO
+aburrido|entediado|ABURRÍDO
+emocionado|empolgado|EMOTHIONÁDO
+sorprendido|surpreso|SORPRENDÍDO
+orgulloso|orgulhoso|ORGUIÔSO
+asustado|assustado|ASUSTÁDO
+solo|sozinho|SÔLO
+tener sueño|ter sono|TENÊR SUÊNHO
+tener hambre|ter fome|TENÊR ÁMBRE
+tener sed|ter sede|TENÊR SÊD
+tener miedo|ter medo|TENÊR MIÊDO`,
+'Ações':`ser|ser|SÊR
+estar|estar|ESTÁR
+tener|ter|TENÊR
+hacer|fazer|ATHÊR
+ir|ir|ÍR
+venir|vir|BENÍR
+volver|voltar|BOLBÊR
+dar|dar|DÁR
+coger|pegar (Espanha)|KORRÊR
+llevar|levar|IEBÁR
+traer|trazer|TRAÊR
+poner|colocar|PONÊR
+querer|querer|KERÊR
+necesitar|precisar|NETHESITÁR
+gustar|gostar|GUSTÁR
+saber|saber|SABÊR
+conocer|conhecer|KONOTHÊR
+pensar|pensar|PENSÁR
+creer|acreditar / achar|KREÊR
+entender|entender|ENTENDÊR
+recordar|lembrar|REKORDÁR
+olvidar|esquecer|OLBIDÁR
+aprender|aprender|APRENDÊR
+estudiar|estudar|ESTUDIÁR
+ver|ver|BÊR
+mirar|olhar|MIRÁR
+oír|ouvir|OÍR
+escuchar|escutar|ESKUTCHÁR
+decir|dizer|DETHÍR
+hablar|falar|ABLÁR
+preguntar|perguntar|PREGUNTÁR
+contestar|responder|KONTESTÁR
+llamar|ligar / chamar|IAMÁR
+leer|ler|LEÊR
+escribir|escrever|ESKRIBÍR
+comer|comer|KOMÊR
+beber|beber|BEBÊR
+cocinar|cozinhar|KOTHINÁR
+dormir|dormir|DORMÍR
+levantarse|levantar-se|LEBANTÁRSE
+trabajar|trabalhar|TRABARRÁR
+jugar|jogar / brincar|RRUGÁR
+andar|andar|ANDÁR
+correr|correr|KORRÊR
+conducir|dirigir|KONDUTHÍR
+sentarse|sentar-se|SENTÁRSE
+parar|parar|PARÁR
+empezar|começar|EMPETHÁR
+terminar|terminar|TERMINÁR
+abrir|abrir|ABRÍR
+cerrar|fechar|THERRÁR
+encender|ligar (aparelho)|ENTHENDÊR
+apagar|desligar|APAGÁR
+comprar|comprar|KOMPRÁR
+vender|vender|BENDÊR
+pagar|pagar|PAGÁR
+gastar|gastar|GASTÁR
+buscar|procurar|BUSKÁR
+encontrar|encontrar|ENKONTRÁR
+perder|perder|PERDÊR
+ayudar|ajudar|AIUDÁR
+probar|provar / experimentar|PROBÁR
+usar|usar|USÁR
+esperar|esperar|ESPERÁR
+quedarse|ficar|KEDÁRSE
+quedar|combinar (encontro)|KEDÁR
+salir|sair|SALÍR
+llegar|chegar|IEGÁR
+vivir|morar / viver|BIBÍR
+viajar|viajar|BIARRÁR
+enseñar|ensinar / mostrar|ENSENHÁR
+enviar|enviar|ENBIÁR
+cambiar|mudar / trocar|KAMBIÁR
+llevar puesto|vestir (roupa)|IEBÁR PUÊSTO
+lavar|lavar|LABÁR
+limpiar|limpar|LIMPIÁR
+sentir|sentir|SENTÍR
+arreglar|consertar|AREGLÁR
+romper|quebrar|ROMPÊR
+elegir|escolher|ELERRÍR
+ganar|ganhar|GANÁR
+reír|rir|REÍR
+llorar|chorar|IORÁR
+bailar|dançar|BAILÁR
+cantar|cantar|KANTÁR
+nadar|nadar|NADÁR
+descansar|descansar|DESKANSÁR
+pedir|pedir|PEDÍR
+compartir|compartilhar|KOMPARTÍR`,
+'Descrever':`bueno|bom|BUÊNO
+malo|ruim|MÁLO
+grande|grande|GRÁNDE
+pequeño|pequeno|PEKÊNHO
+largo|comprido|LÁRGO
+corto|curto|KÓRTO
+alto|alto|ÁLTO
+bajo|baixo|BÁRRO
+rápido|rápido|RÁPIDO
+lento|lento|LÊNTO
+nuevo|novo|NUÊBO
+viejo|velho|BIÊRRO
+joven|jovem|RRÔBEN
+fácil|fácil|FÁTHIL
+difícil|difícil|DIFÍTHIL
+correcto|certo|KORRÉKTO
+igual|igual|IGUÁL
+distinto|diferente|DISTÍNTO
+bonito|bonito|BONÍTO
+feo|feio|FÊO
+limpio|limpo|LÍMPIO
+sucio|sujo|SÚTHIO
+lleno|cheio|IÊNO
+vacío|vazio|BATHÍO
+abierto|aberto|ABIÊRTO
+cerrado|fechado|THERRÁDO
+ocupado|ocupado|OKUPÁDO
+listo|pronto / esperto|LÍSTO
+caro|caro|KÁRO
+barato|barato|BARÁTO
+importante|importante|IMPORTÁNTE
+seguro|seguro|SEGÚRO
+peligroso|perigoso|PELIGRÔSO
+fuerte|forte|FUÊRTE
+pesado|pesado / chato|PESÁDO
+ruidoso|barulhento|RUIDÔSO
+tranquilo|tranquilo|TRANKÍLO
+simpático|simpático|SIMPÁTIKO
+majo|legal (pessoa, Espanha)|MÁRRO
+gracioso|engraçado|GRATHIÔSO
+guapo|bonito (pessoa)|GUÁPO
+increíble|incrível|INKREÍBLE
+perfecto|perfeito|PERFÉKTO
+favorito|favorito|FABORÍTO
+dulce|doce|DÚLTHE
+picante|apimentado|PIKÁNTE`,
+'Perguntas e ligações':`qué|o quê / qual|KÊ
+dónde|onde|DÔNDE
+cuándo|quando|KUÁNDO
+quién|quem|KIÊN
+por qué|por quê|POR KÊ
+cómo|como|KÔMO
+cuánto|quanto|KUÁNTO
+cuál|qual|KUÁL
+y|e|Í
+o|ou|Ô
+pero|mas|PÊRO
+porque|porque|PÔRKE
+así que|então|ASÍ KE
+si|se|SÍ
+con|com|KÔN
+sin|sem|SÍN
+para|para|PÁRA
+de|de|DÊ
+en|em|ÊN
+sobre|sobre|SÔBRE
+encima de|em cima de|ENTHÍMA DE
+debajo de|embaixo de|DEBÁRRO DE
+al lado de|ao lado de|AL LÁDO DE
+entre|entre|ÊNTRE
+detrás de|atrás de|DETRÁS DE
+delante de|na frente de|DELÁNTE DE
+dentro|dentro|DÊNTRO
+fuera|fora|FUÊRA`,
+'Transporte e viagem':`coche|carro (Espanha)|KÔTCHE
+autobús|ônibus|AUTOBÚS
+tren|trem|TRÊN
+metro|metrô|MÊTRO
+avión|avião|ABIÔN
+taxi|táxi|TÁKSI
+bici|bicicleta|BÍTHI
+billete|passagem / bilhete|BIIÊTE
+viaje|viagem|BIÁRRE
+vuelo|voo|BUÊLO
+puerta de embarque|portão de embarque|PUÊRTA DE EMBÁRKE
+asiento|assento|ASIÊNTO
+equipaje|bagagem|EKIPÁRRE
+maleta|mala|MALÊTA
+pasaporte|passaporte|PASAPÔRTE
+reserva|reserva|RESÊRBA
+llegada|chegada|IEGÁDA
+salida|partida|SALÍDA
+retraso|atraso|RETRÁSO
+tráfico|trânsito|TRÁFIKO
+gasolina|gasolina|GASOLÍNA
+turista|turista|TURÍSTA
+mapa|mapa|MÁPA
+dirección|endereço|DIREKTHIÔN`,
+'Escola e estudo':`colegio|escola|KOLÊRRIO
+clase|aula / turma|KLÁSE
+aula|sala de aula|ÁULA
+profesor|professor|PROFESÔR
+alumno|aluno|ALÚMNO
+compañero de clase|colega de classe|KOMPANHÊRO DE KLÁSE
+deberes|lição de casa|DEBÊRES
+examen|prova|EKSÁMEN
+nota|nota|NÔTA
+aprobar|passar (na prova)|APROBÁR
+suspender|reprovar (Espanha)|SUSPENDÊR
+cuaderno|caderno|KUADÊRNO
+boli|caneta (Espanha)|BÔLI
+lápiz|lápis|LÁPITH
+goma|borracha|GÔMA
+mochila|mochila|MOTCHÍLA
+biblioteca|biblioteca|BIBLIOTÊKA
+pizarra|quadro|PITHÁRRA
+asignatura|matéria|ASIGNATÚRA
+palabra|palavra|PALÁBRA
+frase|frase|FRÁSE
+pregunta|pergunta|PREGÚNTA
+ejemplo|exemplo|ERRÊMPLO
+error|erro|ERRÔR
+deletrear|soletrar|DELETREÁR
+repetir|repetir|REPETÍR
+explicar|explicar|EKSPLIKÁR
+universidad|faculdade|UNIBERSIDÁD`,
+'Trabalho e dinheiro':`trabajo|trabalho / emprego|TRABÁRRO
+curro|trabalho (gíria)|KÚRRO
+empresa|empresa|EMPRÊSA
+reunión|reunião|REUNIÔN
+correo|e-mail|KORRÊO
+llamada|ligação|IAMÁDA
+equipo|equipe|EKÍPO
+proyecto|projeto|PROIÉKTO
+problema|problema|PROBLÊMA
+plazo|prazo|PLÁTHO
+horario|horário|ORÁRIO
+descanso|intervalo|DESKÁNSO
+dinero|dinheiro|DINÊRO
+efectivo|dinheiro vivo|EFEKTÍBO
+tarjeta|cartão|TARRÊTA
+precio|preço|PRÊTHIO
+caro|caro|KÁRO
+gratis|grátis|GRÁTIS
+rebajas|liquidação|REBÁRRAS
+cambio|troco|KÁMBIO
+recibo|recibo|RETHÍBO
+factura|nota fiscal / fatura|FAKTÚRA
+sueldo|salário|SUÊLDO
+alquiler|aluguel|ALKILÊR
+euro|euro|ÊURO
+céntimo|centavo|THÊNTIMO`,
+'Escritório e tecnologia':`jefe|chefe|RRÊFE
+gerente|gerente|RRERÊNTE
+empleado|funcionário|EMPLEÁDO
+proveedor|fornecedor|PROBEEDÔR
+contrato|contrato|KONTRÁTO
+presupuesto|orçamento|PRESUPUÊSTO
+objetivo|meta|OBRRETÍBO
+tarea|tarefa|TARÊA
+informe|relatório|INFÔRME
+presentación|apresentação|PRESENTATHIÔN
+hoja de cálculo|planilha|ÔRRA DE KÁLKULO
+archivo|arquivo|ARTCHÍBO
+carpeta|pasta|KARPÊTA
+impresora|impressora|IMPRESÔRA
+pantalla|tela|PANTÁIA
+teclado|teclado|TEKLÁDO
+contraseña|senha|KONTRASÊNHA
+enlace|link|ENLÁTHE
+adjunto|anexo|ADRRÚNTO
+descargar|baixar|DESKARGÁR
+turno|turno|TÚRNO
+horas extra|hora extra|ÔRAS ÉKSTRA
+día libre|folga|DÍA LÍBRE
+seguridad|segurança|SEGURIDÁD
+formación|treinamento|FORMATHIÔN
+entrevista|entrevista|ENTREBÍSTA
+contratar|contratar|KONTRATÁR
+jubilarse|aposentar-se|RRUBILÁRSE`,
+'Corpo e saúde':`cuerpo|corpo|KUÊRPO
+cabeza|cabeça|KABÊTHA
+cara|rosto|KÁRA
+ojo|olho|ÔRRO
+oreja|orelha|ORÊRRA
+nariz|nariz|NARÍTH
+boca|boca|BÔKA
+diente|dente|DIÊNTE
+pelo|cabelo|PÊLO
+cuello|pescoço|KUÊIO
+brazo|braço|BRÁTHO
+mano|mão|MÁNO
+dedo|dedo|DÊDO
+espalda|costas|ESPÁLDA
+estómago|estômago|ESTÔMAGO
+pierna|perna|PIÊRNA
+rodilla|joelho|RODÍIA
+pie|pé|PIÊ
+corazón|coração|KORATHÔN
+dolor|dor|DOLÔR
+me duele|está doendo|ME DUÊLE
+enfermo|doente|ENFÊRMO
+fiebre|febre|FIÊBRE
+resfriado|resfriado|RESFRIÁDO
+tos|tosse|TÔS
+medicina|remédio|MEDITHÍNA
+pastilla|comprimido|PASTÍIA
+receta|receita|RETHÊTA
+urgencias|pronto-socorro|URRÊNTHIAS
+ayuda|ajuda / socorro|AIÚDA`
+};
+const LEVELS=[['Nível 1 · Primeiras palavras',['Básicas','Números','Pessoas e família','Comida e bebida','Cores e roupas']],['Nível 2 · Dia a dia',['Tempo e calendário','Casa','Cidade e lugares','Clima e natureza','Sentimentos']],['Nível 3 · Se virando sozinho',['Ações','Descrever','Perguntas e ligações','Transporte e viagem','Escola e estudo']],['Nível 4 · Mais avançado',['Trabalho e dinheiro','Escritório e tecnologia','Corpo e saúde']]];
+const CATLV={};LEVELS.forEach(([n,cs],i)=>cs.forEach(c=>CATLV[c]=i+1));
+const ORDERED={};LEVELS.forEach(([n,cs])=>cs.forEach(c=>ORDERED[c]=RAW[c]));
+const W=Object.fromEntries(Object.entries(ORDERED).map(([k,v])=>[k,v.trim().split('\n').map(l=>l.split('|').map(x=>x.trim()))]));
+let wcat=store.get('wcat','Todas'),wi=0,flipped=false,known=store.get('known',[]);
+const wt=document.getElementById('wtools');
+let wmode=store.get('wmode','list');
+const ALLC='Todas';
+if(!W[wcat]&&wcat!==ALLC)wcat=ALLC;
+wt.innerHTML=[ALLC,...Object.keys(W)].map(k=>`<button data-k="${k}">${k===ALLC?k:CATLV[k]+' · '+k}</button>`).join('');
+wt.querySelectorAll('button').forEach(b=>b.onclick=()=>{wcat=b.dataset.k;store.set('wcat',wcat);wi=0;flipped=false;renderWord();renderList()});
+function catWords(){return wcat===ALLC?Object.values(W).flat():W[wcat]}
+function renderList(){
+  const q=(document.getElementById('wsearch').value||'').trim().toLowerCase();
+  const cats=wcat===ALLC?Object.keys(W):[wcat];let html='',n=0,lastLv='';
+  cats.forEach(c=>{const rows=W[c].filter(w=>!q||w[0].toLowerCase().includes(q)||w[1].toLowerCase().includes(q));if(!rows.length)return;
+    if(cats.length>1){const lv=LEVELS[CATLV[c]-1];if(lastLv!==lv[0]){html+=`<h3 class="lvh">${lv[0]}</h3>`;lastLv=lv[0]}html+=`<div class="wcat">${c} · ${rows.length}</div>`}
+    html+=rows.map(w=>{n++;return `<button class="wrow" data-en="${w[0].replace(/"/g,'&quot;')}" aria-label="Ouvir ${w[0].replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')});
+  const el=document.getElementById('wlist');el.innerHTML=n?html:'<div class="wempty">Nenhuma palavra encontrada.</div>';
+  el.querySelectorAll('.wrow').forEach(r=>r.onclick=()=>{say(r.dataset.en.replace(/\s*\(.*\)/,''));el.querySelectorAll('.on').forEach(x=>x.classList.remove('on'));r.classList.add('on')});
+  const tot=Object.values(W).reduce((a,b)=>a+b.length,0);
+  document.getElementById('wsub').textContent=tot+' palavras mais usadas na Espanha, do nível 1 (primeiras palavras) ao nível 4 (mais avançado).';
+}
+document.getElementById('wsearch').oninput=renderList;
+function setMode(m){wmode=m;store.set('wmode',m);document.getElementById('listView').hidden=m!=='list';document.getElementById('cardView').hidden=m==='list';document.getElementById('mList').setAttribute('aria-pressed',String(m==='list'));document.getElementById('mCards').setAttribute('aria-pressed',String(m!=='list'))}
+document.getElementById('mList').onclick=()=>setMode('list');
+document.getElementById('mCards').onclick=()=>setMode('cards');
+setMode(wmode);
+function deck(){const all=catWords();const unk=all.filter(w=>!known.includes(w[0]));return unk.length?unk:all}
+function renderWord(){
+  wt.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===wcat)));
+  const d=deck();wi=wi%d.length;const w=d[wi];
+  document.getElementById('card').innerHTML=`<div><div class="big">${w[0]}</div>${flipped?`<div class="back"><div class="pt">${w[1]}</div><div class="pr">${w[2]}</div></div>`:'<div class="hint">Toque para ver a tradução</div>'}</div>`;
+  const kc=catWords().filter(x=>known.includes(x[0])).length;
+  document.getElementById('wpos').textContent=(wi+1)+' / '+d.length;
+  document.getElementById('wknown').textContent=kc+' de '+catWords().length+' que você já sabe';
+}
+const card=document.getElementById('card');
+card.onclick=()=>{flipped=!flipped;renderWord();if(flipped)say(deck()[wi][0].replace(/\s*\(.*\)/,''))};
+card.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.onclick()}};
+document.getElementById('wSay').innerHTML=PLAY;
+document.getElementById('wSay').onclick=()=>say(deck()[wi][0]);
+document.getElementById('wAgain').onclick=()=>{wi++;flipped=false;renderWord()};
+document.getElementById('wKnow').onclick=()=>{const w=deck()[wi][0];if(!known.includes(w)){known.push(w);store.set('known',known);touchDay()}flipped=false;renderWord();updateStats()};
+renderWord();renderList();
+
+/* ---------- Nativo ---------- */
+const N=[
+{t:'Nível 1 · Respostas rápidas',d:'O espanhol responde com palavras curtas e prontas. Decore como um bloco só.',r:`Vale.|Tá bom. / Combinado.|BÁLE
+Venga.|Vamos lá. / Tá bom.|BÊNGA
+Claro.|Claro.|KLÁRO
+¡Genial!|Ótimo!|RRENIÁL
+No pasa nada.|Não tem problema.|NO PÁSA NÁDA
+De nada.|De nada.|DE NÁDA
+¡Qué va!|Imagina! / Que nada!|KÊ BÁ
+Por supuesto.|Com certeza.|POR SUPUÊSTO
+Ya.|Entendi. / Pois é.|IÁ
+Vale, vale.|Tá, tá bom.|BÁLE, BÁLE
+¡Qué bien!|Que bom!|KÊ BIÊN
+¿En serio?|Sério?|EN SÊRIO
+¡No me digas!|Não acredito!|NO ME DÍGAS
+Igualmente.|Igualmente.|IGUALMÊNTE
+¡Salud!|Saúde! (brinde ou espirro)|SALÚD`},
+{t:'Nível 2 · Expressões que você vai ouvir sempre',d:'Frases inteiras que aparecem em qualquer conversa na Espanha.',r:`¿Qué tal?|Tudo bem?|KÊ TÁL
+¿Qué pasa?|E aí?|KÊ PÁSA
+Ya voy.|Já vou.|IÁ BÔI
+Un momento.|Um momento.|UN MOMÊNTO
+Espera un momento.|Espera um pouco.|ESPÊRA UN MOMÊNTO
+Cuídate.|Se cuida.|KUÍDATE
+Nos vemos.|A gente se vê.|NOS BÊMOS
+Ya te digo algo.|Depois te aviso.|IÁ TE DÍGO ÁLGO
+Depende.|Depende.|DEPÊNDE
+Ni idea.|Não faço ideia.|NI IDÊA
+Tiene sentido.|Faz sentido.|TIÊNE SENTÍDO
+No te preocupes.|Não se preocupe.|NO TE PREOKÚPES
+¡Cuánto tiempo!|Quanto tempo!|KUÁNTO TIÊMPO
+Sin prisa.|Sem pressa.|SIN PRÍSA
+¿Cómo dices?|Como assim? / O quê?|KÔMO DÍTHES
+¡Qué rollo!|Que chato!|KÊ RÔIO
+Me alegro.|Fico feliz.|ME ALÊGRO
+¡Buen provecho!|Bom apetite!|BUÊN PROBÊTCHO`},
+{t:'Nível 2 · O som da Espanha',d:'Z e C (antes de E e I) soam como TH, com a língua entre os dentes. J soa forte, da garganta. R entre vogais é leve; RR é vibrado.',r:`zapato|sapato|THAPÁTO
+cerveza|cerveja|THERBÊTHA
+gracias|obrigado|GRÁTHIAS
+cine|cinema|THÍNE
+jamón|presunto|RRAMÔN
+gente|pessoas|RRÊNTE
+pero|mas (R leve)|PÊRO
+perro|cachorro (RR vibrado)|PÊRRO
+llave|chave|IÁBE
+niño|criança|NÍNHO
+hola|olá (H mudo)|ÔLA
+vaso|copo (V soa como B)|BÁSO`},
+{t:'Nível 3 · Gírias da Espanha',d:'Informais, muito usadas entre amigos e colegas.',r:`tío / tía|cara / mina (amigo)|TÍO / TÍA
+guay|legal, maneiro|GUÁI
+mola|é legal|MÔLA
+flipar|ficar impressionado|FLIPÁR
+currar|trabalhar|KURRÁR
+el curro|o trabalho|EL KÚRRO
+la pasta|o dinheiro|LA PÁSTA
+majo|gente boa|MÁRRO
+estar hecho polvo|estar morto de cansado|ESTÁR ÊTCHO PÔLBO
+estar de buen rollo|estar de boa|ESTÁR DE BUÊN RÔIO
+¡Qué morro!|Que cara de pau!|KÊ MÔRRO
+ir de cañas|sair para tomar umas cervejas|ÍR DE KÁNHAS
+me da igual|tanto faz|ME DA IGUÁL
+mogollón|um montão|MOGOIÔN
+pillar|pegar / entender|PIIÁR
+¿Me pillas?|Sacou?|ME PÍIAS`},
+{t:'Nível 3 · Palavras para ganhar tempo',d:'O nativo usa muito enquanto pensa. Usar essas palavras deixa você mais natural.',r:`bueno|bom...|BUÊNO
+pues|pois / então|PUÊS
+a ver|vamos ver|A BÊR
+o sea|ou seja|O SÊA
+es que|é que...|ÊS KE
+vamos|quer dizer|BÁMOS
+en plan|tipo, assim|EN PLÁN
+¿sabes?|sabe?|SÁBES
+¿no?|né?|NÔ
+total, que|resumindo|TOTÁL, KE
+la verdad|na verdade|LA BERDÁD
+mira|olha|MÍRA`},
+{t:'Nível 4 · Expressões idiomáticas',d:'O sentido não está nas palavras. Na Espanha, elas aparecem o tempo todo.',r:`estar en las nubes|estar distraído|ESTÁR EN LAS NÚBES
+tomar el pelo|tirar sarro de alguém|TOMÁR EL PÊLO
+ponerse las pilas|se esforçar, se ligar|PONÊRSE LAS PÍLAS
+costar un ojo de la cara|custar os olhos da cara|KOSTÁR UN ÔRRO DE LA KÁRA
+no tener pelos en la lengua|falar o que pensa|NO TENÊR PÊLOS EN LA LÊNGUA
+estar hasta las narices|estar de saco cheio|ESTÁR ÁSTA LAS NARÍTHES
+meter la pata|dar uma mancada|METÊR LA PÁTA
+ser pan comido|ser moleza|SÊR PÁN KOMÍDO
+dar en el clavo|acertar em cheio|DÁR EN EL KLÁBO
+echar una mano|dar uma mão|ETCHÁR UNA MÁNO
+quedarse en blanco|dar um branco|KEDÁRSE EN BLÁNKO
+consultarlo con la almohada|pensar melhor|KONSULTÁRLO KON LA ALMOÁDA`}
+];
+const nl=document.getElementById('nativeList');
+nl.innerHTML=N.map(g=>`<div class="ngroup"><h3>${g.t}</h3><p>${g.d}</p><div class="wl-head"><span>Português</span><span>English</span><span>Pronúncia</span></div>${g.r.trim().split('\n').map(l=>{const w=l.split('|');const sp=w[0].includes('→')?w[0].split('→')[1].trim():w[0];return `<button class="wrow" data-en="${sp.replace(/"/g,'&quot;')}" aria-label="Ouvir ${sp.replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')}</div>`).join('');
+nl.querySelectorAll('.wrow').forEach(r=>r.onclick=()=>{say(r.dataset.en);nl.querySelectorAll('.on').forEach(x=>x.classList.remove('on'));r.classList.add('on')});
+
+/* ---------- Níveis A1 a C2 ---------- */
+const NV=[
+{k:'A1',n:'Base',c:'#2E7D4F',d:'Cumprimentar, se apresentar, pedir e perguntar o básico.',chave:['¡Hola! = Olá!','Frases curtas, uma ideia por vez.'],l:[
+['Primeiro contato',[['¡Hola! Me llamo {N}.','Olá! Eu me chamo {N}.','ÔLA! ME IÁMO {NP}.'],['¿De dónde eres?','De onde você é?','DE DÔNDE ÊRES?'],['Soy de Brasil, soy brasileño.','Sou do Brasil, sou brasileiro.','SÔI DE BRASÍL, SÔI BRASILÊNHO.'],['Encantado.','Prazer.','ENKANTÁDO.'],['¡Hasta luego!','Até mais!','ÁSTA LUÊGO!']]],
+['Números e preços',[['¿Cuánto cuesta esto?','Quanto custa isto?','KUÁNTO KUÊSTA ÊSTO?'],['Son diez euros.','São dez euros.','SON DIÊTH ÊUROS.'],['¿Cuál es tu número de teléfono?','Qual é o seu telefone?','KUÁL ÊS TU NÚMERO DE TELÉFONO?'],['¿Cuántos años tienes?','Quantos anos você tem?','KUÁNTOS ÁNHOS TIÊNES?'],['Tengo cuarenta y siete años.','Tenho quarenta e sete anos.','TÊNGO KUARÊNTA I SIÊTE ÁNHOS.']]],
+['Pedir o que precisa',[['Quería un café, por favor.','Eu queria um café, por favor.','KERÍA UN KAFÊ, POR FAVÔR.'],['¿Me pone un agua?','Me traz uma água?','ME PÔNE UN ÁGUA?'],['¿Dónde están los servicios?','Onde fica o banheiro?','DÔNDE ESTÁN LOS SERBÍTHIOS?'],['¡Muchas gracias!','Muito obrigado!','MÚTCHAS GRÁTHIAS!'],['De nada.','De nada.','DE NÁDA.']]],
+['Meu dia',[['Me levanto a las seis.','Eu me levanto às seis.','ME LEBÁNTO A LAS SÊIS.'],['Trabajo todos los días.','Trabalho todo dia.','TRABÁRRO TÔDOS LOS DÍAS.'],['Me gusta el café.','Gosto de café.','ME GÚSTA EL KAFÊ.'],['No me gusta la lluvia.','Não gosto de chuva.','NO ME GÚSTA LA IÚBIA.'],['Hoy estoy cansado.','Hoje estou cansado.','ÔI ESTÔI KANSÁDO.']]]
+]},
+{k:'A2',n:'Construção',c:'#C9A100',d:'Contar o que aconteceu, fazer planos e se virar em lojas e ruas.',chave:['Ayer fui a casa. = Ontem fui para casa.','Agora você conta o passado e o futuro.'],l:[
+['O que eu fiz',[['Ayer volví a casa pronto.','Ontem voltei cedo para casa.','AIÊR BOLBÍ A KÁSA PRÔNTO.'],['El sábado fui al cine.','No sábado fui ao cinema.','EL SÁBADO FUÍ AL THÍNE.'],['Comimos en un restaurante.','Comemos num restaurante.','KOMÍMOS EN UN RESTAURÁNTE.'],['¿Dormiste bien?','Você dormiu bem?','DORMÍSTE BIÊN?'],['No lo vi.','Eu não vi.','NO LO BÍ.']]],
+['Planos',[['Voy a viajar el mes que viene.','Vou viajar no mês que vem.','BÔI A BIARRÁR EL MÊS KE BIÊNE.'],['¿Qué vas a hacer mañana?','O que você vai fazer amanhã?','KÊ BAS A ATHÊR MANHÁNA?'],['Quedamos a las ocho.','Combinamos às oito.','KEDÁMOS A LAS ÔTCHO.'],['Te llamo luego.','Te ligo depois.','TE IÁMO LUÊGO.'],['Quizás la próxima vez.','Talvez na próxima.','KITHÁS LA PRÓKSIMA BÊTH.']]],
+['Compras',[['¿Lo tiene en una talla más grande?','Tem num tamanho maior?','LO TIÊNE EN UNA TÁIA MÁS GRÁNDE?'],['¿Me lo puedo probar?','Posso provar?','ME LO PUÊDO PROBÁR?'],['Es demasiado caro.','É caro demais.','ÊS DEMASIÁDO KÁRO.'],['Me lo llevo.','Vou levar.','ME LO IÊBO.'],['¿Puedo pagar en efectivo?','Posso pagar em dinheiro?','PUÊDO PAGÁR EN EFEKTÍBO?']]],
+['Na rua',[['¿Cómo llego a la estación?','Como chego na estação?','KÔMO IÊGO A LA ESTATHIÔN?'],['Gire a la izquierda.','Vire à esquerda.','RRÍRE A LA ITHKIÊRDA.'],['Está al lado del banco.','Fica ao lado do banco.','ESTÁ AL LÁDO DEL BÁNKO.'],['¿Está lejos de aquí?','É longe daqui?','ESTÁ LÊRROS DE AKÍ?'],['Está a cinco minutos andando.','Fica a cinco minutos a pé.','ESTÁ A THÍNKO MINÚTOS ANDÁNDO.']]]
+]},
+{k:'B1',n:'Independente',c:'#2C5DA8',d:'Falar de experiências, dar opinião e resolver problemas sozinho.',chave:['He trabajado = Trabalhei / Tenho trabalhado','Você conta o que já viveu e desde quando.'],l:[
+['Experiências',[['He estado en Madrid dos veces.','Já estive em Madri duas vezes.','Ê ESTÁDO EN MADRÍD DÔS BÊTHES.'],['¿Alguna vez has probado el pulpo?','Você já provou polvo alguma vez?','ALGÚNA BÊTH ÁS PROBÁDO EL PÚLPO?'],['Trabajo aquí desde hace diez años.','Trabalho aqui há dez anos.','TRABÁRRO AKÍ DÊSDE ÁTHE DIÊTH ÁNHOS.'],['Nunca he visto la nieve.','Nunca vi neve.','NÚNKA Ê BÍSTO LA NIÊBE.'],['Todavía no he terminado.','Ainda não terminei.','TODABÍA NO Ê TERMINÁDO.']]],
+['Dar opinião',[['En mi opinión, es una buena idea.','Na minha opinião, é uma boa ideia.','EN MI OPINIÔN, ÊS UNA BUÊNA IDÊA.'],['Creo que tienes razón.','Acho que você tem razão.','KRÊO KE TIÊNES RATHÔN.'],['No estoy seguro de eso.','Não tenho certeza disso.','NO ESTÔI SEGÚRO DE ÊSO.'],['Estoy de acuerdo contigo.','Concordo com você.','ESTÔI DE AKUÊRDO KONTÍGO.'],['Te entiendo, pero...','Te entendo, mas...','TE ENTIÊNDO, PÊRO...']]],
+['Resolver problemas',[['Hay un problema con mi habitación.','Tem um problema no meu quarto.','ÁI UN PROBLÊMA KON MI ABITATHIÔN.'],['El aire acondicionado no funciona.','O ar-condicionado não funciona.','EL ÁIRE AKONDITHIONÁDO NO FUNTHIÔNA.'],['¿Podría mandar a alguien, por favor?','Poderia mandar alguém, por favor?','PODRÍA MANDÁR A ÁLGUIEN, POR FAVÔR?'],['Quisiera hablar con el encargado.','Gostaria de falar com o responsável.','KISIÊRA ABLÁR KON EL ENKARGÁDO.'],['Gracias por arreglarlo tan rápido.','Obrigado por consertar tão rápido.','GRÁTHIAS POR AREGLÁRLO TAN RÁPIDO.']]],
+['No telefone',[['Hola, soy {N}.','Oi, aqui é {N}.','ÔLA, SÔI {NP}.'],['¿Puede hablar más despacio?','Pode falar mais devagar?','PUÊDE ABLÁR MÁS DESPÁTHIO?'],['Perdone, no le he entendido.','Desculpe, não entendi.','PERDÔNE, NO LE Ê ENTENDÍDO.'],['¿Puedo dejar un mensaje?','Posso deixar um recado?','PUÊDO DERRÁR UN MENSÁRRE?'],['Le vuelvo a llamar.','Eu volto a ligar.','LE BUÊLBO A IAMÁR.']]]
+]},
+{k:'B2',n:'Natural',c:'#6B3FA0',d:'Expressar desejos, imaginar situações e falar com naturalidade.',chave:['Ojalá = Tomara','Você fala como o espanhol fala de verdade.'],l:[
+['Desejos e pedidos',[['Ojalá haga buen tiempo.','Tomara que faça tempo bom.','ORRALÁ ÁGA BUÊN TIÊMPO.'],['Quiero que vengas.','Quero que você venha.','KIÊRO KE BÊNGAS.'],['Espero que te guste.','Espero que você goste.','ESPÊRO KE TE GÚSTE.'],['Cuando llegues, llámame.','Quando você chegar, me liga.','KUÁNDO IÊGUES, IÁMAME.'],['Es importante que lo sepas.','É importante que você saiba.','ÊS IMPORTÁNTE KE LO SÊPAS.']]],
+['Imaginar',[['Si fuera tú, aceptaría el trabajo.','Se eu fosse você, aceitaria o emprego.','SI FUÊRA TÚ, ATHEPTARÍA EL TRABÁRRO.'],['Si tuviera más tiempo, viajaría más.','Se eu tivesse mais tempo, viajaria mais.','SI TUBIÊRA MÁS TIÊMPO, BIARRARÍA MÁS.'],['¿Qué harías tú?','O que você faria?','KÊ ARÍAS TÚ?'],['Me gustaría hablar mejor español.','Eu gostaria de falar espanhol melhor.','ME GUSTARÍA ABLÁR MERRÔR ESPANHÔL.'],['Sería genial.','Seria ótimo.','SERÍA RRENIÁL.']]],
+['Contar uma história',[['Pues mira, lo que pasó fue esto.','Então, olha, o que aconteceu foi isto.','PUÊS MÍRA, LO KE PASÔ FUÊ ÊSTO.'],['Estaba conduciendo cuando empezó a llover.','Eu estava dirigindo quando começou a chover.','ESTÁBA KONDUTHIÊNDO KUÁNDO EMPETHÔ A IOBÊR.'],['De repente, se fue la luz.','De repente, a luz acabou.','DE REPÊNTE, SE FUÊ LA LÚTH.'],['Al final, no fue nada.','No fim, não foi nada.','AL FINÁL, NO FUÊ NÁDA.'],['En resumen, todo salió bien.','Resumindo, deu tudo certo.','EN RESÚMEN, TÔDO SALIÔ BIÊN.']]],
+['Reclamar com educação',[['Me temo que hay un error.','Receio que há um erro.','ME TÊMO KE ÁI UN ERRÔR.'],['Me han cobrado dos veces.','Me cobraram duas vezes.','ME ÁN KOBRÁDO DÔS BÊTHES.'],['¿Le importaría comprobarlo otra vez?','O senhor se importaria de verificar de novo?','LE IMPORTARÍA KOMPROBÁRLO ÔTRA BÊTH?'],['Quisiera que me devolvieran el dinero.','Gostaria que me devolvessem o dinheiro.','KISIÊRA KE ME DEBOLBIÊRAN EL DINÊRO.'],['Lo entiendo, pero no es justo.','Entendo, mas não é justo.','LO ENTIÊNDO, PÊRO NO ÊS RRÚSTO.']]]
+]},
+{k:'C1',n:'Avançado',c:'#C2352B',d:'Ligar ideias com fluidez, suavizar o que diz e defender um ponto de vista.',chave:['O sea = ou seja','Você soa fluente, com nuance e jogo de cintura.'],l:[
+['Ligar as ideias',[['O sea, que no vienes.','Ou seja, você não vem.','O SÊA, KE NO BIÊNES.'],['La verdad es que no me convence.','A verdade é que não me convence.','LA BERDÁD ÊS KE NO ME KONBÊNTHE.'],['Dicho esto, vale la pena intentarlo.','Dito isso, vale a pena tentar.','DÍTCHO ÊSTO, BÁLE LA PÊNA INTENTÁRLO.'],['Por otro lado, es caro.','Por outro lado, é caro.','POR ÔTRO LÁDO, ÊS KÁRO.'],['Que yo sepa, está cerrado.','Que eu saiba, está fechado.','KE IÔ SÊPA, ESTÁ THERRÁDO.']]],
+['Suavizar o que diz',[['Quería preguntarte si podrías ayudarme.','Eu queria te perguntar se você poderia me ajudar.','KERÍA PREGUNTÁRTE SI PODRÍAS AIUDÁRME.'],['Igual sería mejor esperar.','Talvez fosse melhor esperar.','IGUÁL SERÍA MERRÔR ESPERÁR.'],['No estoy del todo seguro.','Não tenho total certeza.','NO ESTÔI DEL TÔDO SEGÚRO.'],['Con todo respeto, no estoy de acuerdo.','Com todo o respeito, não concordo.','KON TÔDO RESPÊTO, NO ESTÔI DE AKUÊRDO.'],['¿Sería posible cambiar la cita?','Seria possível mudar o horário?','SERÍA POSÍBLE KAMBIÁR LA THÍTA?']]],
+['Reuniões',[['Vamos al grano.','Vamos direto ao assunto.','BÁMOS AL GRÁNO.'],['¿Lo retomamos más tarde?','Retomamos isso mais tarde?','LO RETOMÁMOS MÁS TÁRDE?'],['Para que estemos todos en la misma línea...','Para que estejamos todos alinhados...','PARA KE ESTÊMOS TÔDOS EN LA MÍSMA LÍNEA...'],['En resumidas cuentas, necesitamos más tiempo.','Resumindo, precisamos de mais tempo.','EN RESUMÍDAS KUÊNTAS, NETHESITÁMOS MÁS TIÊMPO.'],['Lo hablamos la semana que viene.','Conversamos sobre isso semana que vem.','LO ABLÁMOS LA SEMÁNA KE BIÊNE.']]],
+['Expressões da Espanha',[['Es pan comido.','É moleza.','ÊS PAN KOMÍDO.'],['Estoy entre la espada y la pared.','Estou entre a cruz e a espada.','ESTÔI ÊNTRE LA ESPÁDA I LA PARÊD.'],['Ponte las pilas.','Se liga, se esforça.','PÔNTE LAS PÍLAS.'],['Estás en las nubes.','Você está distraído.','ESTÁS EN LAS NÚBES.'],['No es mi rollo.','Não é a minha praia.','NO ÊS MI RÔIO.']]]
+]},
+{k:'C2',n:'Domínio',c:'#16305C',d:'Falar com precisão, elegância e humor, como um nativo culto.',chave:['De haberlo sabido... = Se eu soubesse...','Você escolhe a palavra exata para cada situação.'],l:[
+['Formas elegantes',[['De haberlo sabido, habría venido antes.','Se eu soubesse, teria vindo antes.','DE ABÊRLO SABÍDO, ABRÍA BENÍDO ÁNTES.'],['Jamás había visto semejante desorden.','Nunca tinha visto tamanha bagunça.','RRAMÁS ABÍA BÍSTO SEMERRÁNTE DESÔRDEN.'],['Si necesitara algo, no dude en avisarme.','Se precisar de algo, não hesite em me avisar.','SI NETHESITÁRA ÁLGO, NO DÚDE EN ABISÁRME.'],['No solo es barato, sino también bueno.','Não só é barato, como também é bom.','NO SÔLO ÊS BARÁTO, SÍNO TAMBIÊN BUÊNO.'],['Poco me imaginaba lo que venía.','Mal sabia eu o que vinha pela frente.','PÔKO ME IMARRINÁBA LO KE BENÍA.']]],
+['Precisão',[['No es tanto el precio como la calidad.','Não é tanto o preço, é a qualidade.','NO ÊS TÁNTO EL PRÊTHIO KÔMO LA KALIDÁD.'],['Eso no viene al caso.','Isso não vem ao caso.','ÊSO NO BIÊNE AL KÁSO.'],['A grandes rasgos, salió bien.','De modo geral, deu certo.','A GRÁNDES RÁSGOS, SALIÔ BIÊN.'],['Ni que decir tiene.','Nem precisa dizer.','NI KE DETHÍR TIÊNE.'],['Por si sirve de algo, lo hiciste genial.','Se serve de algo, você foi ótimo.','POR SI SÍRBE DE ÁLGO, LO ITHÍSTE RRENIÁL.']]],
+['Debater com classe',[['Entiendo tu postura, pero discrepo.','Entendo sua posição, mas discordo.','ENTIÊNDO TU POSTÚRA, PÊRO DISKRÊPO.'],['Déjame hacer de abogado del diablo.','Deixa eu fazer o advogado do diabo.','DÊRRAME ATHÊR DE ABOGÁDO DEL DIÁBLO.'],['Es un buen argumento, te lo concedo.','É um bom argumento, isso eu admito.','ÊS UN BUÊN ARGUMÊNTO, TE LO KONTHÊDO.'],['Tendremos que estar de acuerdo en no estar de acuerdo.','Vamos ter que concordar em discordar.','TENDRÊMOS KE ESTÁR DE AKUÊRDO EN NO ESTÁR DE AKUÊRDO.'],['Tomo nota.','Anotado.','TÔMO NÔTA.']]],
+['Humor e ironia',[['Pues qué bien, ¿no?','Que ótimo, não? (irônico)','PUÊS KÊ BIÊN, NÔ?'],['¡A mí me lo vas a contar!','Nem me fale!','A MÍ ME LO BAS A KONTÁR!'],['Y que lo digas.','Pode crer.','I KE LO DÍGAS.'],['Hasta que no lo vea, no me lo creo.','Só acredito vendo.','ÁSTA KE NO LO BÊA, NO ME LO KRÊO.'],['¡Más vale tarde que nunca!','Antes tarde do que nunca!','MÁS BÁLE TÁRDE KE NÚNKA!']]]
+]}
+];
+let nvDone=store.get('nvDone',{}),nvSel=store.get('nvSel',0);
+function renderNiveis(){
+  const st=document.getElementById('stairs');
+  st.innerHTML=NV.map((v,i)=>{const tot=v.l.length,dn=v.l.filter((_,j)=>nvDone[v.k+j]).length;return `<button class="step${i===nvSel?' on':''}" data-i="${i}" style="--sc:${v.c};margin-left:${i*7}%;width:calc(100% - ${i*7}%)"><span class="sn">${i+1}</span><span class="st"><b>${v.k} · ${v.n}</b><small>${v.chave[0]}</small></span><span class="sp">${dn}/${tot}</span></button>`}).reverse().join('');
+  st.querySelectorAll('.step').forEach(b=>b.onclick=()=>{nvSel=+b.dataset.i;store.set('nvSel',nvSel);renderNiveis()});
+  const v=NV[nvSel];
+  document.getElementById('nvHead').innerHTML=`<div class="eyebrow" style="color:${v.c}">Nível ${nvSel+1} de 6 · ${v.k}</div><h2>${v.n}</h2><p class="sub">${v.d} ${v.chave[1]}</p>`;
+  document.getElementById('nvLessons').innerHTML=v.l.map((ls,j)=>`<details class="unit${nvDone[v.k+j]?' ok':''}" ${j===0?'open':''}><summary><span class="num" style="background:${v.c}">${v.k}</span><span class="ut"><b>${ls[0]}</b><span>${ls[1].length} frases</span></span><span class="chev">›</span></summary><div class="ubody">${ls[1].map((p,pi)=>`<div class="phrase"><div class="en">${nm(p[0])}</div><button class="play" data-j="${j}" data-p="${pi}" aria-label="Ouvir">${PLAY}</button><div class="pt">${nm(p[1])}</div><div class="pr">${nm(p[2])}</div></div>`).join('')}<div class="uchecks"><label><input type="checkbox" id="nv${v.k}${j}" data-j="${j}" ${nvDone[v.k+j]?'checked':''}>Já sei falar estas frases</label></div><button class="btn ghost" data-all="${j}">Ouvir todas, com pausa</button></div></details>`).join('');
+  const box=document.getElementById('nvLessons');
+  box.querySelectorAll('.play').forEach(b=>b.onclick=()=>say(nm(v.l[+b.dataset.j][1][+b.dataset.p][0])));
+  box.querySelectorAll('[data-all]').forEach(b=>b.onclick=()=>sayQueue(v.l[+b.dataset.all][1].map(p=>nm(p[0]))));
+  box.querySelectorAll('input[type=checkbox]').forEach(c=>c.onchange=()=>{nvDone[v.k+c.dataset.j]=c.checked;store.set('nvDone',nvDone);if(c.checked)touchDay();renderNiveis()});
+}
+renderNiveis();
+
+/* ---------- Minhas aulas com a professora ---------- */
+const AULAS=[];
+function renderAulas(){
+  const box=document.getElementById('aulasProf');
+  if(!AULAS.length){box.innerHTML='<p class="tip">Nenhuma aula de espanhol incluída ainda. Mande a gravação da aula aqui no Claude e ela aparece neste lugar, com as frases e o áudio.</p>';return}
+  box.innerHTML=AULAS.map((a,ai)=>`<details class="unit" ${ai===AULAS.length-1?'open':''}><summary><span class="num">A${a.n}</span><span class="ut"><b>Aula ${a.n} · ${a.d}</b><span>${a.u}, ${a.pg}</span></span><span class="chev">›</span></summary><div class="ubody"><p class="sub" style="margin:0">${a.r}</p>${a.g.map((g,gi)=>`<h4 class="ag">${g[0]}</h4>${g[1].map((p,pi)=>`<div class="phrase"><div class="en">${p[0]}</div><button class="play" data-a="${ai}" data-g="${gi}" data-p="${pi}" aria-label="Ouvir">${PLAY}</button><div class="pt">${p[1]}</div><div class="pr">${p[2]}</div></div>`).join('')}`).join('')}<button class="btn ghost" data-all="${ai}">Ouvir a aula toda, com pausas</button></div></details>`).join('')+'<p class="tip">As aulas novas entram aqui, em ordem, sempre que a gravação for enviada.</p>';
+  box.querySelectorAll('.play').forEach(b=>b.onclick=()=>{const t=AULAS[+b.dataset.a].g[+b.dataset.g][1][+b.dataset.p][0];say(t.replace(/ · /g,'. ').replace(/\s*\/\s*/g,'. '))});
+  box.querySelectorAll('[data-all]').forEach(b=>b.onclick=()=>sayQueue(AULAS[+b.dataset.all].g.flatMap(g=>g[1].map(p=>p[0].replace(/ · /g,'. ').replace(/\s*\/\s*/g,'. ')))));
+}
+renderAulas();
+{const last=AULAS[AULAS.length-1];document.getElementById('ver').textContent=last?('Versão '+last.n+' · até a aula '+last.n+' ('+last.d.slice(0,5)+')'):'Versão 0 · aguardando a 1ª aula';}
+
+/* ---------- Livro (Español en Marcha A1) ---------- */
+const U=[
+[0,'Apresentação','Apresentar-se na aula, alfabeto, soletrar e frases da sala de aula · págs. 7 a 11',[['¡Hola! Me llamo {N}.','Olá! Eu me chamo {N}.','ÔLA! ME IÁMO {NP}.'],['¿Cómo se escribe?','Como se escreve?','KÔMO SE ESKRÍBE?'],['¿Cómo se pronuncia?','Como se pronuncia?','KÔMO SE PRONÚNTHIA?'],['¿Qué significa?','O que significa?','KÊ SIGNIFÍKA?']],'Escola e estudo'],
+[1,'Saudações','Apresentar e cumprimentar, nacionalidades, profissões, ser e tener, números 0 a 20, tú e usted · págs. 12 a 19',[['¡Encantado!','Muito prazer!','ENKANTÁDO!'],['¿A qué te dedicas?','Você trabalha com o quê?','A KÊ TE DEDÍKAS?'],['Soy ingeniero.','Sou engenheiro.','SÔI INRRENIÊRO.'],['¿Cuál es tu número de teléfono?','Qual é o seu telefone?','KUÁL ÊS TU NÚMERO DE TELÉFONO?']],'Básicas'],
+[2,'Famílias','Família, onde estão as coisas, possessivos, dizer as horas · págs. 20 a 27',[['¿Estás casado?','Você é casado?','ESTÁS KASÁDO?'],['Tengo dos hijos.','Tenho dois filhos.','TÊNGO DÔS ÍRROS.'],['¿Dónde están mis gafas?','Onde estão meus óculos?','DÔNDE ESTÁN MIS GÁFAS?'],['¿Qué hora es? Son las tres.','Que horas são? São três horas.','KÊ ÔRA ÊS? SON LAS TRÊS.']],'Pessoas e família'],
+[3,'O trabalho','Hábitos, verbos com "me", dias da semana, horários e café da manhã · págs. 28 a 35',[['Me levanto a las siete.','Eu me levanto às sete.','ME LEBÁNTO A LAS SIÊTE.'],['¿Estudias o trabajas?','Você estuda ou trabalha?','ESTÚDIAS O TRABÁRRAS?'],['Trabajo de lunes a viernes.','Trabalho de segunda a sexta.','TRABÁRRO DE LÚNES A BIÊRNES.'],['¿Qué desayunas?','O que você toma no café da manhã?','KÊ DESAIÚNAS?']],'Ações'],
+[4,'A casa','Onde você mora, cômodos, móveis, hay e está, check-in no hotel · págs. 36 a 43',[['¿Dónde vives?','Onde você mora?','DÔNDE BÍBES?'],['Vivo en un piso en el centro.','Moro num apartamento no centro.','BÍBO EN UN PÍSO EN EL THÊNTRO.'],['Hay un sofá en el salón.','Tem um sofá na sala.','ÁI UN SOFÁ EN EL SALÔN.'],['Tengo una reserva a nombre de {N}.','Tenho uma reserva no nome de {N}.','TÊNGO UNA RESÊRBA A NÔMBRE DE {NP}.']],'Casa'],
+[5,'Comer','Pedir no restaurante, gustar, tempo livre, receitas · págs. 44 a 51',[['De primero, sopa. De segundo, pescado.','De entrada, sopa. De prato principal, peixe.','DE PRIMÊRO, SÔPA. DE SEGÚNDO, PESKÁDO.'],['¿Te gusta el cine?','Você gosta de cinema?','TE GÚSTA EL THÍNE?'],['Me gustan mucho las películas.','Gosto muito de filmes.','ME GÚSTAN MÚTCHO LAS PELÍKULAS.'],['Corta la cebolla y añade el aceite.','Corte a cebola e acrescente o azeite.','KÔRTA LA THEBÔIA I ANHÁDE EL ATHÊITE.']],'Comida e bebida'],
+[6,'O bairro','Metrô, pedir favores, ser e estar · págs. 52 a 59',[['¿Cómo se va a la Plaza de España?','Como se vai à Praça da Espanha?','KÔMO SE BA A LA PLÁTHA DE ESPÁNHA?'],['Un billete de metro, por favor.','Um bilhete de metrô, por favor.','UN BIIÊTE DE MÊTRO, POR FAVÔR.'],['Cierra la ventana, por favor.','Feche a janela, por favor.','THIÊRRA LA BENTÁNA, POR FAVÔR.'],['Mi barrio es tranquilo.','Meu bairro é tranquilo.','MI BÁRRIO ÊS TRANKÍLO.']],'Cidade e lugares'],
+[7,'Sair com os amigos','Combinar encontros, o que está fazendo agora, descrever pessoas · págs. 60 a 67',[['¿Dónde quedamos?','Onde nos encontramos?','DÔNDE KEDÁMOS?'],['¿Qué estás haciendo?','O que você está fazendo?','KÊ ESTÁS ATHIÊNDO?'],['Estoy cocinando.','Estou cozinhando.','ESTÔI KOTHINÁNDO.'],['Es alto y muy simpático.','Ele é alto e muito simpático.','ÊS ÁLTO I MÚI SIMPÁTIKO.']],'Descrever'],
+[8,'De férias','Como chegar a um lugar, o que aconteceu ontem, o tempo, meses · págs. 68 a 75',[['¿Qué hizo Rosa ayer?','O que a Rosa fez ontem?','KÊ ÍTHO RÔSA AIÊR?'],['Fui a la playa con mi familia.','Fui à praia com minha família.','FUÍ A LA PLÁIA KON MI FAMÍLIA.'],['¿Qué tiempo hace hoy?','Como está o tempo hoje?','KÊ TIÊMPO ÁTHE ÔI?'],['En verano hace mucho calor.','No verão faz muito calor.','EN BERÁNO ÁTHE MÚTCHO KALÔR.']],'Clima e natureza'],
+[9,'Compras','Comprar, cores, roupas, comparar cidades · págs. 76 a 83',[['¿Cuánto cuestan estos zapatos?','Quanto custam estes sapatos?','KUÁNTO KUÊSTAN ÊSTOS THAPÁTOS?'],['Mi novio lleva corbata.','Meu namorado está de gravata.','MI NÔBIO IÊBA KORBÁTA.'],['¿Me lo puedo probar?','Posso provar?','ME LO PUÊDO PROBÁR?'],['Madrid es más grande que Toledo.','Madri é maior que Toledo.','MADRÍD ÊS MÁS GRÁNDE KE TOLÊDO.']],'Cores e roupas'],
+[10,'Saúde e doença','Corpo, doenças e remédios, hábitos do passado, planos com "voy a" · págs. 84 a 92',[['Me duele la cabeza.','Estou com dor de cabeça.','ME DUÊLE LA KABÊTHA.'],['¿Por qué no vas al médico?','Por que você não vai ao médico?','POR KÊ NO BAS AL MÉDIKO?'],['Antes salíamos mucho con los amigos.','Antes saíamos muito com os amigos.','ÁNTES SALÍAMOS MÚTCHO KON LOS AMÍGOS.'],['Voy a trabajar en un hotel.','Vou trabalhar num hotel.','BÔI A TRABARRÁR EN UN OTÊL.']],'Corpo e saúde']
+];
+let ud=store.get('units',{});
+function renderUnits(){
+  const box=document.getElementById('units');
+  box.innerHTML=U.map(([n,t,f,ph,cat],ui)=>{const st=ud[n]||{};const ok=st.sb&&st.wb;return `<details class="unit${ok?' ok':''}" data-n="${n}"><summary><span class="num">${n}</span><span class="ut"><b>Unidade ${n} · ${t}</b><span>${f}</span></span><span class="chev">›</span></summary><div class="ubody">${ph.map((p,i)=>`<div class="phrase"><div class="en">${nm(p[0])}</div><button class="play" data-u="${ui}" data-i="${i}" aria-label="Ouvir">${PLAY}</button><div class="pt">${nm(p[1])}</div><div class="pr">${nm(p[2])}</div></div>`).join('')}<div class="uchecks"><label><input type="checkbox" id="u${n}sb" data-k="sb" ${st.sb?'checked':''}>Fiz no Libro</label><label><input type="checkbox" id="u${n}wb" data-k="wb" ${st.wb?'checked':''}>Fiz no Cuaderno</label><label><input type="checkbox" id="u${n}ap" data-k="ap" ${st.ap?'checked':''}>Treinei as frases aqui</label></div><button class="ulink" data-cat="${cat}">Ver palavras de ${cat} →</button></div></details>`}).join('');
+  box.querySelectorAll('.play').forEach(b=>b.onclick=()=>say(nm(U[+b.dataset.u][3][+b.dataset.i][0])));
+  box.querySelectorAll('.uchecks input').forEach(c=>c.onchange=()=>{const n=+c.closest('.unit').dataset.n;ud[n]=ud[n]||{};ud[n][c.dataset.k]=c.checked;store.set('units',ud);if(c.checked)touchDay();const st=ud[n];c.closest('.unit').classList.toggle('ok',!!(st.sb&&st.wb));uProg()});
+  box.querySelectorAll('.ulink').forEach(b=>b.onclick=()=>{wcat=b.dataset.cat;store.set('wcat',wcat);setMode('list');renderWord();renderList();show('palavras')});
+  uProg();
+}
+function uProg(){const d=U.filter(u=>(ud[u[0]]||{}).sb&&(ud[u[0]]||{}).wb).length;document.getElementById('uProg').textContent=d+' de 11 unidades concluídas no Libro e no Cuaderno'}
+renderUnits();
+
+/* ---------- Rotina da professora ---------- */
+const singerIn=document.getElementById('singer');singerIn.value=store.get('singer','');singerIn.oninput=()=>store.set('singer',singerIn.value);
+let songs=store.get('songs',Array.from({length:8},()=>({n:'',d:false})));
+function renderSongs(){document.getElementById('songs').innerHTML=songs.map((sg,i)=>`<div class="song"><input type="checkbox" id="sd${i}" data-i="${i}" ${sg.d?'checked':''} aria-label="Música ${i+1} feita"><input type="text" id="sn${i}" data-i="${i}" value="${(sg.n||'').replace(/"/g,'&quot;')}" placeholder="Música ${i+1}"><span class="w">semana ${Math.floor(i/2)+1}</span></div>`).join('');
+  document.querySelectorAll('#songs input[type=checkbox]').forEach(c=>c.onchange=()=>{songs[+c.dataset.i].d=c.checked;store.set('songs',songs);if(c.checked)touchDay()});
+  document.querySelectorAll('#songs input[type=text]').forEach(t=>t.oninput=()=>{songs[+t.dataset.i].n=t.value;store.set('songs',songs)});}
+renderSongs();
+const ST=[['Espanhol com legenda em português','Entenda o que está acontecendo.'],['Espanhol com legenda em espanhol','Ligue o som às palavras escritas.'],['Espanhol sem legenda','Teste se você entende só ouvindo.']];
+let clip=store.get('clip',{t:'',s:[false,false,false]});
+const clipIn=document.getElementById('clip');clipIn.value=clip.t;clipIn.oninput=()=>{clip.t=clipIn.value;store.set('clip',clip)};
+function renderSteps(){document.getElementById('steps3').innerHTML=ST.map((x,i)=>`<label><input type="checkbox" id="st${i}" data-i="${i}" ${clip.s[i]?'checked':''}><span><b>Passo ${i+1}: ${x[0]}</b><span>${x[1]}</span></span></label>`).join('');
+  document.querySelectorAll('#steps3 input').forEach(c=>c.onchange=()=>{clip.s[+c.dataset.i]=c.checked;store.set('clip',clip);if(c.checked)touchDay()});}
+renderSteps();
+document.getElementById('resetClip').onclick=()=>{clip={t:'',s:[false,false,false]};clipIn.value='';store.set('clip',clip);renderSteps()};
+let ph=store.get('phone',{c:false,w:false});
+document.getElementById('phoneChecks').innerHTML=[['c','Celular em espanhol'],['w','Waze em espanhol']].map(([k,t])=>`<label><input type="checkbox" id="ph${k}" data-k="${k}" ${ph[k]?'checked':''}>${t}</label>`).join('');
+document.querySelectorAll('#phoneChecks input').forEach(c=>c.onchange=()=>{ph[c.dataset.k]=c.checked;store.set('phone',ph)});
+
+/* ---------- Histórias ---------- */
+const S=[
+{t:'Un café en Madrid',m:'Com as frases das aulas 1 e 2',l:[
+['{N} entra en una cafetería pequeña.','{N} entra numa cafeteria pequena.'],
+['"¡Hola! ¿Qué te pongo?", dice el camarero.','"Oi! O que vai ser?", diz o garçom.'],
+['"Un café con leche, por favor."','"Um café com leite, por favor."'],
+['"¿Para tomar aquí o para llevar?"','"Para tomar aqui ou para viagem?"'],
+['"Para llevar. ¿Cuánto es?"','"Para viagem. Quanto é?"'],
+['"Un euro con cincuenta." {N} paga con tarjeta.','"Um euro e cinquenta." {N} paga no cartão.'],
+['"¡Gracias, hasta luego!"','"Obrigado, até logo!"']]},
+{t:'El nuevo vecino',m:'Com as frases das aulas 3 e 4',l:[
+['Es sábado por la mañana y hace sol.','É sábado de manhã e está fazendo sol.'],
+['{N} ve a un hombre al lado del ascensor.','{N} vê um homem ao lado do elevador.'],
+['"¡Buenos días! Soy {N}, vivo en el tercero."','"Bom dia! Sou {N}, moro no terceiro andar."'],
+['"¡Hola, {N}! Yo soy Javier. Encantado."','"Oi, {N}! Eu sou o Javier. Prazer."'],
+['"¡Qué día tan bonito!"','"Que dia lindo!"'],
+['"Sí, pero hoy hace mucho calor."','"Sim, mas hoje está muito calor."'],
+['"¡Hasta luego, Javier!"','"Até mais, Javier!"']]},
+{t:'Cena en Sevilla',m:'Com as frases das aulas 6 e 9',l:[
+['{N} y un amigo van a un bar de tapas.','{N} e um amigo vão a um bar de petiscos.'],
+['"Una mesa para dos, por favor."','"Uma mesa para dois, por favor."'],
+['El camarero es muy majo.','O garçom é muito gente boa.'],
+['"¿De dónde sois?", pregunta.','"De onde vocês são?", ele pergunta.'],
+['"Somos de Brasil."','"Somos do Brasil."'],
+['"Para mí, una tortilla y una caña."','"Para mim, uma tortilha e um chope."'],
+['Después de cenar: "La cuenta, por favor."','Depois do jantar: "A conta, por favor."']]}
+];
+function renderStories(){document.getElementById('stories').innerHTML=S.map((s,si)=>`<article class="story"><h3>${s.t}</h3><div class="meta">${s.m}</div>${s.l.map((l,li)=>`<div class="line"><button class="play sm" data-s="${si}" data-l="${li}" aria-label="Ouvir frase">${PLAY}</button><div class="txt"><div class="en">${nm(l[0])}</div><div class="pt">${nm(l[1])}</div></div></div>`).join('')}<div class="cta"><button class="btn ghost" data-all="${si}">Ouvir a história toda</button></div></article>`).join('');
+document.querySelectorAll('#stories .play').forEach(b=>b.onclick=()=>say(nm(S[+b.dataset.s].l[+b.dataset.l][0])));
+document.querySelectorAll('#stories [data-all]').forEach(b=>b.onclick=()=>sayQueue(S[+b.dataset.all].l.map(x=>nm(x[0]))));}
+renderStories();
+const sw=document.getElementById('stories');
+document.getElementById('togglePt').onclick=e=>{sw.classList.toggle('hidept');e.target.textContent=sw.classList.contains('hidept')?'Mostrar português':'Esconder português'};
+
+/* ---------- Plano ---------- */
+const P=[
+{t:'Sobreviver no dia a dia',d:'Pedir, pagar, cumprimentar. Frases curtas que você usa no primeiro dia na Espanha.',w:[['Cafeteria e padaria','pedir, pagar, para levar'],['Vizinhos e clima','buenos días, encantado, calor, frío'],['Mercado e loja','dónde está, cuánto cuesta, bolsa'],['Restaurante','mesa, menú del día, la cuenta']]},
+{t:'Viajar e se virar',d:'Hotel, aeroporto, direções e transporte.',w:[['Hotel','reserva, desayuno, wifi'],['Aeroporto','billete, puerta, equipaje'],['Direções e metrô','izquierda, derecha, recto, cerca'],['Táxi e carro','dirección, gasolinera, aparcamiento']]},
+{t:'Conversar de verdade',d:'Falar de você, da família, do trabalho e do fim de semana.',w:[['Sobre mim','edad, ciudad, trabajo'],['Família','hijos, mujer, padres'],['Fim de semana','lo que hice, lo que voy a hacer'],['Gostos','me gusta, comida, música, fútbol']]},
+{t:'Resolver problemas',d:'Saúde, dinheiro, telefone e reclamações educadas.',w:[['Farmácia e médico','dolor, receta, pastilla'],['Banco e pagamentos','tarjeta, efectivo, cambio'],['Telefone','llamar, repetir, deletrear'],['Reclamar com educação','error, cobrar, devolver']]},
+{t:'No trabalho',d:'Do primeiro dia na empresa até entrevista de emprego.',w:[['Apresentar-se e pedir ajuda','nuevo aquí, pregunta, gracias'],['Reuniões, e-mail e telefone','perdón, pantalla, correo'],['Prazos e opiniões','plazo, de acuerdo, creo que'],['Entrevista e problemas','experiencia, sistema, aviso']]},
+{t:'Na escola',d:'Para quem estuda na Espanha ou tem filhos na escola de lá.',w:[['Primeiro dia e sala de aula','aula, repetir, deletrear'],['Lição e colegas','deberes, biblioteca, examen'],['Professor e reunião de pais','ayuda, entregar, refuerzo']]},
+{t:'Fluência no ouvido',d:'Entender o espanhol falado rápido, gírias e conversas longas.',w:[['Gírias da Espanha','vale, tío, guay, mola'],['Conversa no trabalho','reunión, plazo, café con compañeros'],['Séries sem legenda','trechos de 5 a 10 minutos'],['Conversa livre','15 minutos só em espanhol'],['Revisão final','todas as situações do curso']]}
+];
+const TG=[
+[['a',0],['a',1]],[['a',2],['a',3]],[['a',4],['n','A2',2]],[['a',5]],
+[['a',6],['n','B1',2]],[['p','Transporte e viagem']],[['a',7],['n','A2',3]],[['p','Transporte e viagem'],['n','A2',3]],
+[['a',8],['n','A1',0]],[['p','Pessoas e família'],['t','livro']],[['a',11],['n','A2',0]],[['a',10],['n','A1',3]],
+[['a',9],['p','Corpo e saúde']],[['p','Trabalho e dinheiro'],['a',1]],[['a',15],['n','B1',3]],[['n','B2',3]],
+[['a',12],['a',13]],[['a',14],['a',15]],[['a',16],['a',17]],[['a',18],['a',19]],
+[['a',20],['a',21]],[['a',22],['a',23]],[['a',24],['a',25]],
+[['t','nativo']],[['n','C1',2],['a',14]],[['t','rotina']],[['n','B1',1],['n','C1',0]],[['t','niveis']]
+];
+const TABN={livro:'Aulas da professora',nativo:'Fale como nativo',rotina:'Rotina: série e música',niveis:'Todos os níveis'};
+function tgLabel(x){if(x[0]==='a')return 'Aula: '+L[x[1]].t;if(x[0]==='n'){const v=NV.find(v=>v.k===x[1]);return v.k+': '+v.l[x[2]][0]}if(x[0]==='p')return 'Palavras: '+x[1];return TABN[x[1]]}
+function openTg(x){
+  if(x[0]==='a'){cur=x[1];store.set('cur',cur);renderLesson();show('aula');}
+  else if(x[0]==='n'){nvSel=NV.findIndex(v=>v.k===x[1]);store.set('nvSel',nvSel);renderNiveis();show('niveis');const ds=document.querySelectorAll('#nvLessons details');ds.forEach((d,k)=>d.open=k===x[2]);ds[x[2]]&&ds[x[2]].scrollIntoView({block:'start'});}
+  else if(x[0]==='p'){wcat=x[1];store.set('wcat',wcat);setMode('list');renderWord();renderList();show('palavras');}
+  else show(x[1]);
+}
+let wd=store.get('weeks',[]);let wn=0;
+document.getElementById('plan').innerHTML=P.map(m=>`<div class="month"><h3>${m.t}</h3><p>${m.d}</p><div class="weeks">${m.w.map(w=>{wn++;const t=TG[wn-1]||[];return `<div class="week"><span class="n">Tema ${wn}</span><span class="t"><b>${w[0]}</b><span>${w[1]}</span><span class="tgo">${t.map((x,k)=>`<button class="tgb" data-w="${wn-1}" data-k="${k}">${tgLabel(x)} →</button>`).join('')}</span></span><label class="wkc"><input type="checkbox" id="wk${wn}" data-w="${wn}" ${wd.includes(wn)?'checked':''} aria-label="Marcar tema ${wn} como feito"></label></div>`}).join('')}</div></div>`).join('');
+document.querySelectorAll('#plan .tgb').forEach(b=>b.onclick=()=>openTg(TG[+b.dataset.w][+b.dataset.k]));
+document.querySelectorAll('#plan input').forEach(c=>c.onchange=()=>{const n=+c.dataset.w;wd=c.checked?[...wd,n]:wd.filter(x=>x!==n);store.set('weeks',wd);if(c.checked)touchDay();updateStats()});
+
+updateStats();
+show(store.get('tab','aula'));
+</script>
+
+<script>
+if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+let deferredInstall=null;const ib=document.getElementById('installBtn');
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;ib.hidden=false});
+ib.onclick=async()=>{if(!deferredInstall)return;deferredInstall.prompt();await deferredInstall.userChoice;deferredInstall=null;ib.hidden=true};
+addEventListener('appinstalled',()=>{ib.hidden=true});
+</script>
+</body>
+</html>
