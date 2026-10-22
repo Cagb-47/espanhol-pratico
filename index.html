@@ -276,7 +276,7 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
     <p class="sub">Escolha onde vai usar: vida pessoal, trabalho ou escola. Cada aula mostra o nível, do 1 (mais simples) ao 4. Ouça, repita três vezes e avance quando quiser.</p>
     <details class="pguide"><summary>Como ler a pronúncia</summary>
       <ul>
-        <li><b>TH</b>: língua entre os dentes, como no inglês "think". É o Z e o C antes de E e I: <i>gracias</i> = GRÁTHIAS.</li>
+        <li><b>TH</b>: ponta da língua entre os dentes, soltando o ar, como quem fala com a "língua presa". É o Z e o C antes de E e I: <i>gracias</i> = GRÁTHIAS.</li>
         <li><b>RR</b>: som forte da garganta, como o R de "rato". É o J e o G antes de E e I: <i>trabajo</i> = TRABÁRRO.</li>
         <li><b>R</b>: sempre vibrado na ponta da língua, nunca da garganta. No começo da palavra e no RR escrito, vibre mais: <i>perro</i> = PÊRRO.</li>
         <li><b>B</b>: o V também soa como B: <i>vale</i> = BÁLE. O <b>H</b> não tem som: <i>hola</i> = ÔLA.</li>
@@ -378,7 +378,7 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
     <div class="wtools" id="wtools"></div>
     <div id="listView">
       <input id="wsearch" type="search" placeholder="Buscar em português ou espanhol" aria-label="Buscar palavra">
-      <div class="wl-head"><span>Português</span><span>English</span><span>Pronúncia</span></div>
+      <div class="wl-head"><span>Português</span><span>Español</span><span>Pronúncia</span></div>
       <div class="wl" id="wlist"></div>
       <p class="tip">Toque em qualquer linha para ouvir. A pronúncia escrita é aproximada; o áudio é a referência.</p>
     </div>
@@ -1505,7 +1505,7 @@ Seguimos en contacto.|Vamos manter contato.|SEGUÍMOS EN KONTÁKTO
 ];
 N.push(...FRG);
 const nl=document.getElementById('nativeList');
-nl.innerHTML=N.map(g=>`<div class="ngroup"><h3>${g.t}</h3><p>${g.d}</p><div class="wl-head"><span>Português</span><span>English</span><span>Pronúncia</span></div>${g.r.trim().split('\n').map(l=>{const w=l.split('|');const sp=w[0].includes('→')?w[0].split('→')[1].trim():w[0];return `<button class="wrow" data-en="${sp.replace(/"/g,'&quot;')}" aria-label="Ouvir ${sp.replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')}</div>`).join('');
+nl.innerHTML=N.map(g=>`<div class="ngroup"><h3>${g.t}</h3><p>${g.d}</p><div class="wl-head"><span>Português</span><span>Español</span><span>Pronúncia</span></div>${g.r.trim().split('\n').map(l=>{const w=l.split('|');const sp=w[0].includes('→')?w[0].split('→')[1].trim():w[0];return `<button class="wrow" data-en="${sp.replace(/"/g,'&quot;')}" aria-label="Ouvir ${sp.replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')}</div>`).join('');
 nl.querySelectorAll('.wrow').forEach(r=>r.onclick=()=>{say(r.dataset.en);nl.querySelectorAll('.on').forEach(x=>x.classList.remove('on'));r.classList.add('on')});
 
 /* ---------- Níveis A1 a C2 ---------- */
@@ -2620,7 +2620,7 @@ D: Vista o colete refletivo antes de sair do carro na estrada: é obrigatório n
 N: Apresentar-se
 
 @A1|O som de Z e C|Gracias soa "GRÁTHIAS"|gram
-C: Na Espanha, o Z e o C antes de E e I têm um som que não existe em português: a língua fica entre os dentes, como no "th" do inglês.
+C: Na Espanha, o Z e o C antes de E e I têm um som que não existe em português: a ponta da língua fica entre os dentes e o ar sai por cima dela, como quem fala com a "língua presa".
 P: Língua entre os dentes, soltando ar.
 R: Z|zapato, cerveza, azul
 R: CE e CI|cena, cine, gracias
@@ -3389,7 +3389,7 @@ renderPV();
 
 /* ---------- SOS ---------- */
 {const sl=document.getElementById('sosList');
-sl.innerHTML=SOS.map(g=>`<div class="ngroup"><h3>${g.t}</h3><p>${g.d}</p><div class="wl-head"><span>Português</span><span>English</span><span>Pronúncia</span></div>${g.r.trim().split('\n').map(l=>{const w=l.split('|');return `<button class="wrow" data-en="${w[0].replace(/"/g,'&quot;')}" aria-label="Ouvir ${w[0].replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')}</div>`).join('');
+sl.innerHTML=SOS.map(g=>`<div class="ngroup"><h3>${g.t}</h3><p>${g.d}</p><div class="wl-head"><span>Português</span><span>Español</span><span>Pronúncia</span></div>${g.r.trim().split('\n').map(l=>{const w=l.split('|');return `<button class="wrow" data-en="${w[0].replace(/"/g,'&quot;')}" aria-label="Ouvir ${w[0].replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')}</div>`).join('');
 sl.querySelectorAll('.wrow').forEach(r=>r.onclick=()=>{say(r.dataset.en.replace(' / ',', '));sl.querySelectorAll('.on').forEach(x=>x.classList.remove('on'));r.classList.add('on')});}
 
 /* ---------- Plano ---------- */
