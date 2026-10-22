@@ -10,7 +10,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Espanhol Prático">
 <meta name="description" content="Espanhol da Espanha para vida pessoal, trabalho e escola, do A1 ao C2, com áudio.">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}.pguide{background:var(--soft);border-radius:12px;padding:10px 14px;margin:0 0 14px}.pguide summary{font-weight:700;cursor:pointer}.pguide ul{margin:8px 0 0;padding-left:1.1em}.pguide li+li{margin-top:6px}
+</style>
 <title>Espanhol Prático</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,7 +174,36 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
 .step .sp{font:700 .8rem var(--f-mono);background:rgba(255,255,255,.2);padding:2px 8px;border-radius:999px}
 .step.on{outline:3px solid var(--mustard);outline-offset:2px}
 .step[style*="#C9A100"] .sn{color:#5a4700}
-.pguide{background:var(--soft);border-radius:12px;padding:10px 14px;margin:0 0 14px}.pguide summary{font-weight:700;cursor:pointer}.pguide ul{margin:8px 0 0;padding-left:1.1em}.pguide li+li{margin-top:6px}
+.mm{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.mm>summary{list-style:none;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:12px 14px;cursor:pointer}
+.mm>summary::-webkit-details-marker{display:none}
+.mm .mlvb{font:800 .8rem var(--f-mono);color:#fff;padding:4px 8px;border-radius:8px}
+.mm .mt{min-width:0}.mm .mt b{display:block;font:800 1.1rem var(--f-display)}.mm .mt span{color:var(--muted);font-size:.9rem}
+.mm[open] .chev{transform:rotate(90deg)}
+.mmb{padding:0 12px 14px;display:grid;gap:10px}
+.blk{border:2px solid var(--bc);border-radius:12px;padding:10px 12px;background:color-mix(in srgb,var(--bc) 6%,var(--paper))}
+.blk h4{display:flex;align-items:center;gap:8px;margin:0 0 6px;font:800 .98rem var(--f-display);color:var(--bc)}
+.blk h4 i{font-style:normal;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--bc);color:#fff;font-size:.85rem}
+.blk ul{margin:0;padding-left:1.1em}.blk li+li{margin-top:4px}
+.pense{margin-top:8px;border:1.5px dashed var(--bc);border-radius:10px;padding:6px 10px;font-size:.95rem}
+.rrw{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:8px;padding:6px 0;border-top:1px dashed var(--line);font-size:.95rem}
+.rrw b{min-width:0}.rrw span{min-width:0;font-family:var(--f-mono);font-size:.88rem;font-weight:600}
+.exr{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;padding:6px 0;border-top:1px dashed var(--line)}
+.exr .t{min-width:0}.exr .t b{display:block}.exr .t span{color:var(--muted);font-size:.92rem}
+.err{display:grid;gap:4px;padding:6px 0;border-top:1px dashed var(--line);font-size:.95rem}
+.err .no{color:var(--red);font-weight:700}.err .ok{color:var(--m1);font-weight:700}
+.nxt{margin-top:8px;border:0;border-radius:999px;background:var(--navy);color:#fff;font:700 .85rem var(--f-body);padding:7px 12px;cursor:pointer}
+.mus{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;display:grid;gap:6px}
+.mus .mh{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.mus .mh b{font:800 1.08rem var(--f-display)}.mus .mh span{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:5px 10px;font:600 .88rem var(--f-body);cursor:pointer}
+.yt{color:var(--navy);font-weight:700}
+.pvr{display:grid;grid-template-columns:1fr;gap:2px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px}
+.pvr button{border:0;background:none;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit}
+.pvr .v{font:800 1.08rem var(--f-display)}.pvr .m{color:var(--muted);font-size:.95rem}.pvr .pr{font:600 .85rem var(--f-mono);color:var(--m2)}
+.pvr .e{margin-top:4px;font-size:.95rem}.pvr .e span{display:block;color:var(--muted);font-size:.9rem}
+.sosbar{background:var(--red);color:#fff;border-radius:12px;padding:12px 14px;font:700 1.05rem var(--f-body);margin-bottom:14px;text-align:center}
+.sosbar b{font-size:1.4rem}
 /* Histórias */
 .story{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
 .story+.story{margin-top:16px}
@@ -221,8 +251,11 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
       <button role="tab" data-tab="rotina" aria-selected="false">Rotina</button>
       <button role="tab" data-tab="mapas" aria-selected="false">Mapas</button>
       <button role="tab" data-tab="palavras" aria-selected="false">Palavras</button>
-      <button role="tab" data-tab="nativo" aria-selected="false">Nativo</button>
-      <button role="tab" data-tab="historias" aria-selected="false">Histórias</button>
+      <button role="tab" data-tab="phrasal" aria-selected="false">Expressões com verbos</button>
+      <button role="tab" data-tab="nativo" aria-selected="false">Frases</button>
+      <button role="tab" data-tab="musicas" aria-selected="false">Músicas</button>
+      <button role="tab" data-tab="historias" aria-selected="false">Leitura</button>
+      <button role="tab" data-tab="sos" aria-selected="false">SOS</button>
       <button role="tab" data-tab="plano" aria-selected="false">Trilha</button>
     </nav>
   </div>
@@ -299,6 +332,7 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
 
     <div class="rbox">
       <h3>1. Música: um cantor por mês</h3>
+      <div class="cta" style="margin:0 0 12px"><button class="btn ghost" id="goMus">Ver as 33 músicas por nível →</button></div>
       <p>Escolha um cantor que canta em espanhol. Duas músicas por semana, de manhã e à tarde, somando 8 músicas no mês. Ouça com a letra aberta no Spotify ou no YouTube.</p>
       <div class="rrow"><label for="singer">Cantor do mês</label><input id="singer" type="text" placeholder="Ex.: o cantor que você escolheu"></div>
       <div class="songs" id="songs"></div>
@@ -322,10 +356,16 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
   </section>
 
   <section id="mapas" data-panel hidden>
-    <h2>Mapas visuais</h2>
-    <p class="sub">Do iniciante (A1) ao avançado (C2), na mesma escada da aba Níveis. Filtre pelo seu nível, siga a numeração e toque no alto-falante para ouvir.</p>
+    <h2>Mapas mentais</h2>
+    <p class="sub">Do iniciante (A1) ao avançado (C2), com situações do dia a dia e gramática. Os mapas completos têm 5 partes: conceito, regra, exemplos com tradução, erro comum de brasileiros e dica visual. Os mapas rápidos são para revisar em um minuto.</p>
+    <div class="wmode" role="group" aria-label="Tipo de mapa">
+      <button id="mmFull" aria-pressed="true">Mapas completos</button>
+      <button id="mmQuick" aria-pressed="false">Mapas rápidos</button>
+    </div>
     <div class="wtools" id="mapFilter"></div>
-    <div class="maps" id="maps"></div>
+    <div class="wtools" id="mmType"></div>
+    <div id="mmaps"></div>
+    <div class="maps" id="maps" hidden></div>
   </section>
 
   <section id="palavras" data-panel hidden>
@@ -354,16 +394,38 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
   </section>
 
   <section id="nativo" data-panel hidden>
-    <h2>Fale como nativo</h2>
+    <h2>Frases e fala nativa</h2>
     <p class="sub">Do nível 1 ao 4. Mais palavras não deixam você com cara de nativo. O que faz isso é ter respostas prontas, as gírias e o som da Espanha. Toque numa linha para ouvir.</p>
     <div id="nativeList"></div>
   </section>
 
   <section id="historias" data-panel hidden>
-    <h2>Histórias lado a lado</h2>
-    <p class="sub">Histórias curtas com as frases das aulas. Leia o espanhol em voz alta, depois esconda o português e teste se entende.</p>
+    <h2>Leitura bilíngue</h2>
+    <p class="sub">Histórias das aulas, conversas em situações reais e clássicos da literatura adaptados para o nível básico, sempre com o espanhol e o português lado a lado. Toque no alto-falante para ouvir cada frase.</p>
     <div class="cta" style="margin:0 0 14px"><button class="btn ghost" id="togglePt">Esconder português</button></div>
     <div id="stories"></div>
+  </section>
+
+  <section id="musicas" data-panel hidden>
+    <h2>Espanhol com músicas</h2>
+    <p class="sub">33 músicas separadas por nível. Antes de ouvir, leia o tema e treine as palavras. Depois, ouça com a letra aberta no YouTube ou no Spotify e marque quando terminar.</p>
+    <p class="note" style="margin-top:0">As letras não estão no app porque têm direitos autorais. O botão abre a música no YouTube.</p>
+    <div class="wtools" id="musFilter"></div>
+    <div id="musList"></div>
+  </section>
+
+  <section id="phrasal" data-panel hidden>
+    <h2>Expressões com verbos</h2>
+    <p class="sub" id="pvSub">As expressões com verbo que o espanhol usa o tempo todo. Toque na expressão ou no exemplo para ouvir.</p>
+    <input id="pvSearch" type="search" placeholder="Buscar: echar, tener, sentir falta..." aria-label="Buscar expressão" style="width:100%;box-sizing:border-box;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:11px 12px;font:600 1rem var(--f-body);margin-bottom:12px">
+    <div id="pvList"></div>
+  </section>
+
+  <section id="sos" data-panel hidden>
+    <h2>SOS Espanhol</h2>
+    <p class="sub">Seu guia de emergências. Toque numa linha para ouvir a frase.</p>
+    <div class="sosbar">Emergência na Espanha e na Europa: ligue <b>112</b></div>
+    <div id="sosList"></div>
   </section>
 
   <section id="plano" data-panel hidden>
@@ -1381,6 +1443,67 @@ echar una mano|dar uma mão|ETCHÁR UNA MÁNO
 quedarse en blanco|dar um branco|KEDÁRSE EN BLÁNKO
 consultarlo con la almohada|pensar melhor|KONSULTÁRLO KON LA ALMOÁDA`}
 ];
+const FRG=[
+{t:'Frases essenciais · Concordar e discordar',d:'Para participar de qualquer conversa ou reunião.',r:`Estoy totalmente de acuerdo.|Concordo totalmente.|ESTÔI TOTALMÊNTE DE AKUÊRDO
+Es verdad.|É verdade.|ÊS BERDÁD
+¡Exacto!|Exatamente!|EKSÁKTO
+Tienes razón.|Você tem razão.|TIÊNES RATHÔN
+No estoy tan seguro.|Não tenho tanta certeza.|NO ESTÔI TAN SEGÚRO
+Entiendo lo que dices, pero...|Entendo o que você diz, mas...|ENTIÊNDO LO KE DÍTHES, PÊRO
+Creo que no.|Acho que não.|KRÊO KE NÔ
+No estoy de acuerdo.|Não concordo.|NO ESTÔI DE AKUÊRDO
+Me parece bien.|Me parece bom.|ME PARÊTHE BIÊN
+¡Suena genial!|Parece ótimo!|SUÊNA RRENIÁL`},
+{t:'Frases essenciais · Pedir e oferecer',d:'Pedidos educados e ofertas do dia a dia.',r:`¿Me puedes ayudar?|Você pode me ajudar?|ME PUÊDES AIUDÁR
+¿Me haces un favor?|Me faz um favor?|ME ÁTHES UN FABÔR
+¿Te importa esperar?|Se importa de esperar?|TE IMPÔRTA ESPERÁR
+¿Necesitas ayuda?|Precisa de ajuda?|NETHESÍTAS AIÚDA
+Déjame ayudarte.|Deixa eu te ajudar.|DÊRRAME AIUDÁRTE
+¿Quieres un café?|Quer um café?|KIÊRES UN KAFÊ
+¿Te traigo algo?|Te trago algo?|TE TRÁIGO ÁLGO
+Sírvete.|Sirva-se.|SÍRBETE
+Aquí tienes.|Aqui está.|AKÍ TIÊNES
+Pasa tú primero.|Pode passar primeiro.|PÁSA TÚ PRIMÊRO`},
+{t:'Frases essenciais · Agradecer e desculpar',d:'A educação abre portas em qualquer país.',r:`Muchas gracias.|Muito obrigado.|MÚTCHAS GRÁTHIAS
+Te lo agradezco mucho.|Agradeço muito.|TE LO AGRADÊTHKO MÚTCHO
+Eres muy amable.|Você é muito gentil.|ÊRES MÚI AMÁBLE
+No hay de qué.|Não há de quê.|NO ÁI DE KÊ
+De nada.|De nada.|DE NÁDA
+Lo siento mucho.|Sinto muito.|LO SIÊNTO MÚTCHO
+Perdona, ha sido culpa mía.|Desculpa, foi culpa minha.|PERDÔNA, Á SÍDO KÚLPA MÍA
+No volverá a pasar.|Não vai acontecer de novo.|NO BOLBERÁ A PASÁR
+No pasa nada.|Não tem problema.|NO PÁSA NÁDA
+Perdone.|Com licença.|PERDÔNE`},
+{t:'Frases essenciais · Quando não entende',d:'As frases mais úteis para quem está aprendendo.',r:`Perdona, no te he entendido.|Desculpa, não te entendi.|PERDÔNA, NO TE Ê ENTENDÍDO
+¿Puedes repetirlo?|Pode repetir?|PUÊDES REPETÍRLO
+¿Puedes hablar más despacio?|Pode falar mais devagar?|PUÊDES ABLÁR MÁS DESPÁTHIO
+¿Qué significa eso?|O que isso significa?|KÊ SIGNIFÍKA ÊSO
+¿Cómo se dice esto en español?|Como se diz isto em espanhol?|KÔMO SE DÍTHE ÊSTO EN ESPANHÔL
+¿Cómo se escribe?|Como se escreve?|KÔMO SE ESKRÍBE
+¿Quieres decir...?|Você quer dizer...?|KIÊRES DETHÍR
+Todavía estoy aprendiendo español.|Ainda estou aprendendo espanhol.|TODABÍA ESTÔI APRENDIÊNDO ESPANHÔL`},
+{t:'Frases essenciais · Sentimentos e reações',d:'Para reagir de forma natural.',r:`¡Qué pasada!|Que incrível!|KÊ PASÁDA
+Me alegro mucho por ti.|Fico muito feliz por você.|ME ALÊGRO MÚTCHO POR TÍ
+¡Qué pena!|Que pena!|KÊ PÊNA
+Lo siento mucho.|Sinto muito.|LO SIÊNTO MÚTCHO
+¡Qué bien!|Que bom!|KÊ BIÊN
+¡No me lo puedo creer!|Não acredito!|NO ME LO PUÊDO KREÊR
+¡Qué gracioso!|Que engraçado!|KÊ GRATHIÔSO
+Estoy preocupado.|Estou preocupado.|ESTÔI PREOKUPÁDO
+¡Qué alivio!|Que alívio!|KÊ ALÍBIO
+¡Enhorabuena!|Parabéns!|ENORABUÊNA`},
+{t:'Frases essenciais · Começar e terminar conversas',d:'Abrir e fechar a conversa com naturalidade.',r:`¿Qué tal te va?|Como vai você?|KÊ TÁL TE BÁ
+¿Qué es de tu vida?|O que você tem feito?|KÊ ÊS DE TU BÍDA
+¡Cuánto tiempo!|Quanto tempo!|KUÁNTO TIÊMPO
+Por cierto...|A propósito...|POR THIÊRTO
+En fin...|Enfim...|EN FÍN
+Me tengo que ir.|Tenho que ir.|ME TÊNGO KE ÍR
+Me ha encantado hablar contigo.|Adorei conversar com você.|ME Á ENKANTÁDO ABLÁR KONTÍGO
+Seguimos en contacto.|Vamos manter contato.|SEGUÍMOS EN KONTÁKTO
+¡Cuídate!|Se cuida!|KUÍDATE
+¡Que tengas un buen día!|Tenha um bom dia!|KE TÊNGAS UN BUÊN DÍA`}
+];
+N.push(...FRG);
 const nl=document.getElementById('nativeList');
 nl.innerHTML=N.map(g=>`<div class="ngroup"><h3>${g.t}</h3><p>${g.d}</p><div class="wl-head"><span>Português</span><span>English</span><span>Pronúncia</span></div>${g.r.trim().split('\n').map(l=>{const w=l.split('|');const sp=w[0].includes('→')?w[0].split('→')[1].trim():w[0];return `<button class="wrow" data-en="${sp.replace(/"/g,'&quot;')}" aria-label="Ouvir ${sp.replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')}</div>`).join('');
 nl.querySelectorAll('.wrow').forEach(r=>r.onclick=()=>{say(r.dataset.en);nl.querySelectorAll('.on').forEach(x=>x.classList.remove('on'));r.classList.add('on')});
@@ -1468,7 +1591,7 @@ const U=[
 let ud=store.get('units',{});
 function renderUnits(){
   const box=document.getElementById('units');
-  box.innerHTML=U.map(([n,t,f,ph,cat],ui)=>{const st=ud[n]||{};const ok=st.sb&&st.wb;return `<details class="unit${ok?' ok':''}" data-n="${n}"><summary><span class="num">${n}</span><span class="ut"><b>Unidade ${n} · ${t}</b><span>${f}</span></span><span class="chev">›</span></summary><div class="ubody">${ph.map((p,i)=>`<div class="phrase"><div class="en">${nm(p[0])}</div><button class="play" data-u="${ui}" data-i="${i}" aria-label="Ouvir">${PLAY}</button><div class="pt">${nm(p[1])}</div><div class="pr">${nm(p[2])}</div></div>`).join('')}<div class="uchecks"><label><input type="checkbox" id="u${n}sb" data-k="sb" ${st.sb?'checked':''}>Fiz no Libro</label><label><input type="checkbox" id="u${n}wb" data-k="wb" ${st.wb?'checked':''}>Fiz no Cuaderno</label><label><input type="checkbox" id="u${n}ap" data-k="ap" ${st.ap?'checked':''}>Treinei as frases aqui</label></div><button class="ulink" data-cat="${cat}">Ver palavras de ${cat} →</button></div></details>`}).join('');
+  box.innerHTML=U.map(([n,t,f,ph,cat],ui)=>{const st=ud[n]||{};const ok=st.sb&&st.wb;return `<details class="unit${ok?' ok':''}" data-n="${n}"><summary><span class="num">${n}</span><span class="ut"><b>Unidade ${n} · ${t}</b><span>${f}</span></span><span class="chev">›</span></summary><div class="ubody">${ph.map((p,i)=>`<div class="phrase"><div class="en">${nm(p[0])}</div><button class="play" data-u="${n}" data-i="${i}" aria-label="Ouvir">${PLAY}</button><div class="pt">${nm(p[1])}</div><div class="pr">${nm(p[2])}</div></div>`).join('')}<div class="uchecks"><label><input type="checkbox" id="u${n}sb" data-k="sb" ${st.sb?'checked':''}>Fiz no Libro</label><label><input type="checkbox" id="u${n}wb" data-k="wb" ${st.wb?'checked':''}>Fiz no Cuaderno</label><label><input type="checkbox" id="u${n}ap" data-k="ap" ${st.ap?'checked':''}>Treinei as frases aqui</label></div><button class="ulink" data-cat="${cat}">Ver palavras de ${cat} →</button></div></details>`}).join('');
   box.querySelectorAll('.play').forEach(b=>b.onclick=()=>say(nm(U[+b.dataset.u][3][+b.dataset.i][0])));
   box.querySelectorAll('.uchecks input').forEach(c=>c.onchange=()=>{const n=+c.closest('.unit').dataset.n;ud[n]=ud[n]||{};ud[n][c.dataset.k]=c.checked;store.set('units',ud);if(c.checked)touchDay();const st=ud[n];c.closest('.unit').classList.toggle('ok',!!(st.sb&&st.wb));uProg()});
   box.querySelectorAll('.ulink').forEach(b=>b.onclick=()=>{wcat=b.dataset.cat;store.set('wcat',wcat);setMode('list');renderWord();renderList();show('palavras')});
@@ -1522,12 +1645,1752 @@ const S=[
 ['"Para mí, una tortilla y una caña."','"Para mim, uma tortilha e um chope."'],
 ['Después de cenar: "La cuenta, por favor."','Depois do jantar: "A conta, por favor."']]}
 ];
+const LEIT=[
+{t:'Controle de passaportes',m:'Conversa · aeroporto de Madri',l:[
+['Agente: Buenas tardes. Pasaporte, por favor.','Agente: Boa tarde. Passaporte, por favor.'],
+['{N}: Aquí tiene.','{N}: Aqui está.'],
+['Agente: ¿Cuál es el motivo de su viaje?','Agente: Qual é o motivo da sua viagem?'],
+['{N}: Turismo. Estoy de vacaciones.','{N}: Turismo. Estou de férias.'],
+['Agente: ¿Cuánto tiempo se va a quedar?','Agente: Quanto tempo vai ficar?'],
+['{N}: Dos semanas.','{N}: Duas semanas.'],
+['Agente: ¿Dónde se aloja?','Agente: Onde vai ficar hospedado?'],
+['{N}: En un hotel en el centro de Madrid.','{N}: Num hotel no centro de Madri.'],
+['Agente: Muy bien. ¡Que disfrute de su estancia!','Agente: Muito bem. Aproveite a estadia!']]},
+{t:'En el centro de salud',m:'Conversa · consulta médica na Espanha',l:[
+['Médica: Buenos días. ¿Qué le pasa?','Médica: Bom dia. O que o senhor tem?'],
+['{N}: Me duele mucho la cabeza y tengo fiebre.','{N}: Estou com muita dor de cabeça e febre.'],
+['Médica: ¿Desde cuándo?','Médica: Desde quando?'],
+['{N}: Desde ayer por la mañana.','{N}: Desde ontem de manhã.'],
+['Médica: ¿Es alérgico a algún medicamento?','Médica: É alérgico a algum remédio?'],
+['{N}: No, a ninguno.','{N}: Não, a nenhum.'],
+['Médica: Tome esto cada ocho horas y descanse.','Médica: Tome isto de oito em oito horas e descanse.']]},
+{t:'Don Quijote de la Mancha',m:'Clássico adaptado · Miguel de Cervantes, 1605 (domínio público)',l:[
+['En un pueblo de la Mancha vive un señor mayor.','Num povoado da Mancha vive um senhor de idade.'],
+['Lee tantos libros de caballeros que pierde el juicio.','Lê tantos livros de cavalaria que perde o juízo.'],
+['Decide ser caballero y se llama Don Quijote.','Decide ser cavaleiro e se chama Dom Quixote.'],
+['Su amigo Sancho Panza va con él.','Seu amigo Sancho Pança vai com ele.'],
+['Un día ve unos molinos de viento.','Um dia, ele vê uns moinhos de vento.'],
+['"¡Son gigantes!", grita Don Quijote.','"São gigantes!", grita Dom Quixote.'],
+['"No son gigantes, son molinos", dice Sancho.','"Não são gigantes, são moinhos", diz Sancho.']]},
+{t:'Lazarillo de Tormes',m:'Clássico adaptado · autor anônimo, 1554 (domínio público)',l:[
+['Lázaro es un niño pobre de Salamanca.','Lázaro é um menino pobre de Salamanca.'],
+['Su madre lo deja con un ciego.','Sua mãe o deixa com um cego.'],
+['El ciego es listo, pero muy tacaño.','O cego é esperto, mas muito pão-duro.'],
+['Lázaro tiene hambre todos los días.','Lázaro passa fome todos os dias.'],
+['Un día, comen uvas juntos.','Um dia, eles comem uvas juntos.'],
+['Lázaro come de tres en tres, y el ciego no dice nada.','Lázaro come de três em três, e o cego não diz nada.'],
+['"¿Sabes por qué callo? Porque tú comes de tres en tres", dice el ciego.','"Sabe por que eu me calo? Porque você come de três em três", diz o cego.']]},
+{t:'El rayo de luna',m:'Lenda adaptada · Gustavo Adolfo Bécquer, 1862 (domínio público)',l:[
+['Manrique es un joven noble y solitario.','Manrique é um jovem nobre e solitário.'],
+['Le gusta pasear de noche junto al río.','Ele gosta de passear à noite perto do rio.'],
+['Una noche, ve una luz blanca entre los árboles.','Uma noite, ele vê uma luz branca entre as árvores.'],
+['Cree que es una mujer bellísima.','Ele acha que é uma mulher belíssima.'],
+['La busca durante meses por toda la ciudad.','Ele a procura durante meses pela cidade toda.'],
+['Al final, descubre que era solo un rayo de luna.','No fim, descobre que era só um raio de lua.']]},
+{t:'Marianela',m:'Clássico adaptado · Benito Pérez Galdós, 1878 (domínio público)',l:[
+['Marianela es una chica pobre y muy buena.','Marianela é uma moça pobre e muito boa.'],
+['Es la guía de Pablo, un joven ciego.','Ela é a guia de Pablo, um jovem cego.'],
+['Pablo la quiere porque conoce su corazón.','Pablo a ama porque conhece o coração dela.'],
+['Un médico le devuelve la vista a Pablo.','Um médico devolve a visão a Pablo.'],
+['Marianela tiene miedo de que él no la quiera.','Marianela tem medo de que ele não a ame.'],
+['La historia habla de la belleza que no se ve.','A história fala da beleza que não se vê.']]},
+{t:'La lechera',m:'Fábula adaptada · Félix María Samaniego, 1781 (domínio público)',l:[
+['Una chica lleva un cántaro de leche al mercado.','Uma moça leva um jarro de leite ao mercado.'],
+['Por el camino, sueña con lo que va a comprar.','No caminho, ela sonha com o que vai comprar.'],
+['"Con el dinero compraré huevos y gallinas."','"Com o dinheiro vou comprar ovos e galinhas."'],
+['"Después compraré un cerdo y una vaca."','"Depois vou comprar um porco e uma vaca."'],
+['Está tan contenta que salta de alegría.','Ela está tão contente que pula de alegria.'],
+['El cántaro cae y se rompe. Adiós, leche.','O jarro cai e quebra. Adeus, leite.'],
+['Moraleja: no cuentes con algo que todavía no tienes.','Moral: não conte com algo que você ainda não tem.']]},
+{t:'Pepita Jiménez',m:'Clássico adaptado · Juan Valera, 1874 (domínio público)',l:[
+['Luis es un joven que quiere ser sacerdote.','Luis é um jovem que quer ser padre.'],
+['Pasa el verano en el pueblo de su padre, en Andalucía.','Passa o verão no povoado do pai, na Andaluzia.'],
+['Allí conoce a Pepita, una viuda joven e inteligente.','Lá conhece Pepita, uma viúva jovem e inteligente.'],
+['Su padre quiere casarse con ella.','O pai dele quer se casar com ela.'],
+['Pero Luis y Pepita se enamoran.','Mas Luis e Pepita se apaixonam.'],
+['Al final, Luis elige el amor.','No fim, Luis escolhe o amor.']]},
+{t:'El Cantar de mio Cid',m:'Poema épico adaptado · autor anônimo, séc. XII (domínio público)',l:[
+['Rodrigo Díaz es un caballero valiente de Castilla.','Rodrigo Díaz é um cavaleiro valente de Castela.'],
+['La gente lo llama "el Cid".','O povo o chama de "o Cid".'],
+['El rey lo expulsa de su tierra injustamente.','O rei o expulsa da sua terra injustamente.'],
+['El Cid deja a su mujer y a sus hijas con tristeza.','O Cid deixa a esposa e as filhas com tristeza.'],
+['Gana muchas batallas y conquista Valencia.','Vence muitas batalhas e conquista Valência.'],
+['Al final, el rey lo perdona y su honor vuelve.','No fim, o rei o perdoa e sua honra volta.']]}
+];
+S.push(...LEIT);
 function renderStories(){document.getElementById('stories').innerHTML=S.map((s,si)=>`<article class="story"><h3>${s.t}</h3><div class="meta">${s.m}</div>${s.l.map((l,li)=>`<div class="line"><button class="play sm" data-s="${si}" data-l="${li}" aria-label="Ouvir frase">${PLAY}</button><div class="txt"><div class="en">${nm(l[0])}</div><div class="pt">${nm(l[1])}</div></div></div>`).join('')}<div class="cta"><button class="btn ghost" data-all="${si}">Ouvir a história toda</button></div></article>`).join('');
 document.querySelectorAll('#stories .play').forEach(b=>b.onclick=()=>say(nm(S[+b.dataset.s].l[+b.dataset.l][0])));
 document.querySelectorAll('#stories [data-all]').forEach(b=>b.onclick=()=>sayQueue(S[+b.dataset.all].l.map(x=>nm(x[0]))));}
 renderStories();
 const sw=document.getElementById('stories');
 document.getElementById('togglePt').onclick=e=>{sw.classList.toggle('hidept');e.target.textContent=sw.classList.contains('hidept')?'Mostrar português':'Esconder português'};
+
+const MUS=`A1|Bonito|Jarabe de Palo|Espanha|alegria com as coisas simples|bonito, todo, día, vida
+A1|Me gustas tú|Manu Chao|Espanha / França|coisas de que se gosta|gustar, avión, mañana, tú
+A1|Bailando|Enrique Iglesias|Espanha|dança e paixão|bailar, cuerpo, corazón, noche
+A1|Color esperanza|Diego Torres|Argentina|esperança e mudança|saber, cambiar, color, mundo
+A1|Vivir mi vida|Marc Anthony|EUA (salsa)|viver o presente|vivir, reír, bailar, vida
+A1|La Bamba|tradicional mexicana|México|festa e dança|bailar, gracia, arriba, capitán
+A1|Corazón partío|Alejandro Sanz|Espanha|amor que dói|corazón, partir, dolor, querer
+A1|Puedes contar conmigo|La Oreja de Van Gogh|Espanha|amizade e apoio|contar, conmigo, siempre, amigo
+A1|La flaca|Jarabe de Palo|Espanha|amor e saudade|flaca, cuerpo, piel, besar
+A1|Rosas|La Oreja de Van Gogh|Espanha|lembranças de um amor|rosas, recordar, aire, ciudad
+A1|Solamente tú|Pablo Alborán|Espanha|declaração de amor|tú, mirar, día, sentir
+A2|Saturno|Pablo Alborán|Espanha|amor e distância|universo, cielo, girar, quedarse
+A2|Malamente|Rosalía|Espanha|intuição e mau presságio|mal, sentir, cuidado, calle
+A2|Princesas|Pereza|Espanha|noites em Madri|princesas, noche, Madrid, salir
+A2|Ella|Bebe|Espanha|recomeço e autoestima|ella, hoy, miedo, espejo
+A2|Malo|Bebe|Espanha|violência doméstica|malo, voz, miedo, puerta
+A2|Escapar|Enrique Iglesias|Espanha|fugir com quem ama|escapar, olvidar, juntos, lugar
+A2|Vivir así es morir de amor|Camilo Sesto|Espanha|amor intenso|vivir, morir, amor, siempre
+A2|Me quedo contigo|Los Chunguitos|Espanha|escolher a pessoa amada|quedarse, contigo, preferir, mundo
+A2|Hoy|Gloria Estefan|Cuba / EUA|recomeçar e seguir em frente|hoy, mañana, sentir, mirar
+A2|Lucha de gigantes|Nacha Pop / Antonio Vega|Espanha|conflitos internos|lucha, gigantes, sentir, dentro
+A2|Despacito|Luis Fonsi|Porto Rico|paquera e dança|despacio, respirar, cuello, oído
+B1|Mediterráneo|Joan Manuel Serrat|Espanha|amor pelo mar e pela terra natal|mar, nacer, morir, orilla
+B1|Entre dos tierras|Héroes del Silencio|Espanha|relação desgastada|tierras, dejar, caer, entre
+B1|Insurrección|El Último de la Fila|Espanha|rebeldia e despedida|insurrección, cielo, viento, sangre
+B1|La chica de ayer|Nacha Pop|Espanha|amor de uma noite|chica, ayer, mañana, fiesta
+B1|Cadillac solitario|Loquillo|Espanha|nostalgia e solidão|solitario, noche, mar, faro
+B1|Como camarón|Estopa|Espanha|amor e humor|como, cantar, querer, voz
+B2|Hijo de la Luna|Mecano|Espanha|lenda cigana|luna, hijo, gitana, noche
+B2|Mujer contra mujer|Mecano|Espanha|amor e preconceito|mujer, amor, juzgar, verdad
+B2|Cruz de navajas|Mecano|Espanha|história trágica em Madri|navajas, calle, noticia, mañana
+B2|19 días y 500 noches|Joaquín Sabina|Espanha|fim de um amor|días, noches, olvidar, perder
+B2|Pongamos que hablo de Madrid|Joaquín Sabina|Espanha|retrato de Madri|Madrid, cielo, bajar, morir`;
+const SOS=[
+{t:'Emergência médica',d:'Para urgências, ambulância e farmácia. Na Espanha e em toda a Europa, o número de emergência é 112.',r:`¡Llame al 112!|Ligue para o 112!|IÁME AL THIÊNTO DÔTHE
+Necesito un médico.|Preciso de um médico.|NETHESÍTO UN MÉDIKO
+Necesito una ambulancia.|Preciso de uma ambulância.|NETHESÍTO UNA AMBULÁNTHIA
+¿Dónde está el hospital más cercano?|Onde fica o hospital mais próximo?|DÔNDE ESTÁ EL OSPITÁL MÁS THERKÁNO
+No me encuentro bien.|Não estou me sentindo bem.|NO ME ENKUÊNTRO BIÊN
+Me duele el pecho.|Estou com dor no peito.|ME DUÊLE EL PÊTCHO
+No puedo respirar.|Não consigo respirar.|NO PUÊDO RESPIRÁR
+Soy alérgico a la penicilina.|Sou alérgico a penicilina.|SÔI ALÉRRIKO A LA PENITHILÍNA
+Soy diabético.|Sou diabético.|SÔI DIABÉTIKO
+Tomo esta medicina.|Tomo este remédio.|TÔMO ÊSTA MEDITHÍNA
+Se ha desmayado.|Ele desmaiou.|SE Á DESMAIÁDO
+Está sangrando.|Está sangrando.|ESTÁ SANGRÁNDO
+Me duele aquí.|Dói aqui.|ME DUÊLE AKÍ
+Tengo seguro médico.|Tenho seguro de saúde.|TÊNGO SEGÚRO MÉDIKO`},
+{t:'Pedir ajuda',d:'Frases curtas para chamar atenção e pedir socorro.',r:`¡Socorro!|Socorro!|SOKÔRRO
+¡Ayuda, por favor!|Ajuda, por favor!|AIÚDA, POR FAVÔR
+Es una emergencia.|É uma emergência.|ÊS UNA EMERRÊNTHIA
+¡Llame a la policía!|Chame a polícia!|IÁME A LA POLITHÍA
+¡Fuego!|Fogo!|FUÊGO
+¡Cuidado!|Cuidado!|KUIDÁDO
+¡Pare!|Pare!|PÁRE
+¿Hay algún herido?|Tem algum ferido?|ÁI ALGÚN ERÍDO
+Tranquilo, calma.|Fique tranquilo, calma.|TRANKÍLO, KÁLMA
+¿Habla portugués?|Você fala português?|ÁBLA PORTUGUÊS
+No hablo bien español.|Não falo bem espanhol.|NO ÁBLO BIÊN ESPANHÔL`},
+{t:'Roubo e perdas',d:'Para falar com a polícia, o hotel ou o consulado.',r:`Me han robado la cartera.|Roubaram minha carteira.|ME ÁN ROBÁDO LA KARTÊRA
+He perdido el pasaporte.|Perdi o passaporte.|Ê PERDÍDO EL PASAPÔRTE
+He perdido el móvil.|Perdi o celular.|Ê PERDÍDO EL MÔBIL
+Alguien se ha llevado mi bolso.|Alguém levou minha bolsa.|ÁLGUIEN SE Á IEBÁDO MI BÔLSO
+Quiero poner una denuncia.|Quero registrar uma ocorrência.|KIÊRO PONÊR UNA DENÚNTHIA
+¿Dónde está el consulado de Brasil?|Onde fica o consulado do Brasil?|DÔNDE ESTÁ EL KONSULÁDO DE BRASÍL
+Tengo que bloquear la tarjeta.|Preciso bloquear o cartão.|TÊNGO KE BLOKEÁR LA TARRÊTA`},
+{t:'Perdido ou sem rumo',d:'Para se achar na rua, no aeroporto ou no transporte.',r:`Me he perdido.|Estou perdido.|ME Ê PERDÍDO
+¿Me lo puede enseñar en el mapa?|Pode me mostrar no mapa?|ME LO PUÊDE ENSENHÁR EN EL MÁPA
+He perdido el vuelo.|Perdi o voo.|Ê PERDÍDO EL BUÊLO
+Mi maleta no ha llegado.|Minha mala não chegou.|MI MALÊTA NO Á IEGÁDO
+¿Dónde puedo cargar el móvil?|Onde posso carregar o celular?|DÔNDE PUÊDO KARGÁR EL MÔBIL
+¿Cómo llego a esta dirección?|Como chego neste endereço?|KÔMO IÊGO A ÊSTA DIREKTHIÔN`},
+{t:'Vocabulário urgente',d:'Palavras para reconhecer em placas e avisos.',r:`salida de emergencia|saída de emergência|SALÍDA DE EMERRÊNTHIA
+primeros auxilios|primeiros socorros|PRIMÊROS AUKSÍLIOS
+farmacia de guardia|farmácia de plantão|FARMÁTHIA DE GUÁRDIA
+peligro|perigo|PELÍGRO
+atención|atenção|ATENTHIÔN
+suelo mojado|piso molhado|SUÊLO MORRÁDO
+prohibido el paso|entrada proibida|PROIBÍDO EL PÁSO
+fuera de servicio|fora de serviço|FUÊRA DE SERBÍTHIO
+herida|ferida|ERÍDA
+accidente|acidente|AKTHIDÊNTE`}
+];
+const PV=`echar de menos|sentir falta de|ETCHÁR DE MÊNOS|Te echo de menos.|Sinto sua falta.
+echar una mano|dar uma mão, ajudar|ETCHÁR UNA MÁNO|¿Me echas una mano?|Me dá uma mão?
+echar la culpa|pôr a culpa|ETCHÁR LA KÚLPA|No me eches la culpa.|Não ponha a culpa em mim.
+darse cuenta|perceber|DÁRSE KUÊNTA|Me di cuenta del error.|Percebi o erro.
+dar un paseo|dar uma volta|DÁR UN PASÊO|Vamos a dar un paseo.|Vamos dar uma volta.
+dar las gracias|agradecer|DÁR LAS GRÁTHIAS|Quiero darte las gracias.|Quero te agradecer.
+dar igual|tanto faz|DÁR IGUÁL|Me da igual.|Tanto faz para mim.
+dar pena|dar dó|DÁR PÊNA|Me da pena.|Me dá dó.
+dar miedo|dar medo|DÁR MIÊDO|Me da miedo.|Me dá medo.
+hacer falta|precisar, fazer falta|ATHÊR FÁLTA|No hace falta.|Não precisa.
+hacer caso|dar atenção, obedecer|ATHÊR KÁSO|No me haces caso.|Você não me dá atenção.
+hacer cola|fazer fila|ATHÊR KÔLA|Hay que hacer cola.|É preciso fazer fila.
+hacer la compra|fazer as compras|ATHÊR LA KÔMPRA|Hoy hago la compra.|Hoje faço as compras.
+hacer ilusión|deixar animado|ATHÊR ILUSIÔN|Me hace mucha ilusión.|Estou muito animado com isso.
+tener ganas de|ter vontade de|TENÊR GÁNAS DE|Tengo ganas de verte.|Tenho vontade de te ver.
+tener que|ter que|TENÊR KE|Tengo que irme.|Tenho que ir.
+tener prisa|estar com pressa|TENÊR PRÍSA|Tengo prisa.|Estou com pressa.
+tener razón|ter razão|TENÊR RATHÔN|Tienes razón.|Você tem razão.
+tener cuidado|tomar cuidado|TENÊR KUIDÁDO|Ten cuidado.|Tome cuidado.
+tener en cuenta|levar em conta|TENÊR EN KUÊNTA|Tenlo en cuenta.|Leve isso em conta.
+tomar algo|beber alguma coisa|TOMÁR ÁLGO|¿Tomamos algo?|Vamos beber alguma coisa?
+tomar una decisión|tomar uma decisão|TOMÁR UNA DETHISIÔN|Hay que tomar una decisión.|É preciso tomar uma decisão.
+tomar el pelo|tirar sarro|TOMÁR EL PÊLO|Me estás tomando el pelo.|Você está tirando sarro de mim.
+llevar + tempo|estar há (tempo)|IEBÁR|Llevo un año aquí.|Estou aqui há um ano.
+llevarse bien|se dar bem|IEBÁRSE BIÊN|Nos llevamos muy bien.|A gente se dá muito bem.
+quedar|marcar encontro|KEDÁR|¿Quedamos a las ocho?|Nos encontramos às oito?
+quedarse|ficar|KEDÁRSE|Me quedo en casa.|Fico em casa.
+quedar bien|cair bem (roupa)|KEDÁR BIÊN|Te queda bien.|Fica bem em você.
+acabar de|acabar de|AKABÁR DE|Acabo de llegar.|Acabei de chegar.
+volver a|fazer de novo|BOLBÊR A|Vuelve a intentarlo.|Tente de novo.
+dejar de|parar de|DERRÁR DE|Dejé de fumar.|Parei de fumar.
+empezar a|começar a|EMPETHÁR A|Empezó a llover.|Começou a chover.
+ponerse a|começar a (de repente)|PONÊRSE A|Se puso a llorar.|Começou a chorar.
+ponerse nervioso|ficar nervoso|PONÊRSE NERBIÔSO|Me pongo nervioso.|Fico nervoso.
+ponerse las pilas|se esforçar|PONÊRSE LAS PÍLAS|Ponte las pilas.|Se esforça.
+seguir + -ando|continuar|SEGUÍR|Sigo trabajando.|Continuo trabalhando.
+estar a punto de|estar quase|ESTÁR A PÚNTO DE|Estoy a punto de salir.|Estou quase saindo.
+estar harto|estar de saco cheio|ESTÁR ÁRTO|Estoy harto.|Estou de saco cheio.
+estar de acuerdo|concordar|ESTÁR DE AKUÊRDO|Estoy de acuerdo.|Concordo.
+estar de vacaciones|estar de férias|ESTÁR DE BAKATHIÔNES|Estoy de vacaciones.|Estou de férias.
+ir de compras|ir às compras|ÍR DE KÔMPRAS|Vamos de compras.|Vamos às compras.
+ir de tapas|sair para petiscar|ÍR DE TÁPAS|¿Vamos de tapas?|Vamos petiscar?
+irse|ir embora|ÍRSE|Me voy.|Vou embora.
+pasarlo bien|se divertir|PASÁRLO BIÊN|Lo pasamos genial.|Nos divertimos muito.
+pasar de|não ligar para|PASÁR DE|Paso de eso.|Não ligo para isso.
+meter la pata|dar um fora|METÊR LA PÁTA|He metido la pata.|Dei um fora.
+caer bien|simpatizar|KAÊR BIÊN|Me cae bien.|Gosto dele.
+caer mal|não simpatizar|KAÊR MÁL|Me cae mal.|Não vou com a cara dele.
+hacerse|tornar-se|ATHÊRSE|Se hizo médico.|Ele se tornou médico.
+volverse|ficar (mudança)|BOLBÊRSE|Se volvió loco.|Ficou louco.
+acordarse de|lembrar de|AKORDÁRSE DE|¿Te acuerdas de mí?|Você lembra de mim?
+olvidarse de|esquecer de|OLBIDÁRSE DE|Me olvidé de llamar.|Esqueci de ligar.
+preocuparse por|se preocupar com|PREOKUPÁRSE POR|No te preocupes.|Não se preocupe.
+fijarse en|reparar em|FIRRÁRSE EN|Fíjate en esto.|Repara nisso.
+contar con|contar com|KONTÁR KON|Cuenta conmigo.|Conte comigo.
+pensar en|pensar em|PENSÁR EN|Pienso en ti.|Penso em você.
+soñar con|sonhar com|SONHÁR KON|Sueño con viajar.|Sonho em viajar.
+casarse con|casar com|KASÁRSE KON|Se casó con Ana.|Casou com a Ana.
+enamorarse de|apaixonar-se por|ENAMORÁRSE DE|Me enamoré de ella.|Me apaixonei por ela.
+depender de|depender de|DEPENDÊR DE|Depende de ti.|Depende de você.
+tratar de|tentar|TRATÁR DE|Trata de llegar pronto.|Tente chegar cedo.
+servir para|servir para|SERBÍR PÁRA|¿Para qué sirve?|Para que serve?
+sacar fotos|tirar fotos|SAKÁR FÔTOS|¿Nos sacas una foto?|Tira uma foto nossa?
+sacar dinero|sacar dinheiro|SAKÁR DINÊRO|Voy a sacar dinero.|Vou sacar dinheiro.
+coger el autobús|pegar o ônibus|KORRÊR EL AUTOBÚS|Cojo el autobús.|Pego o ônibus.
+pedir perdón|pedir desculpas|PEDÍR PERDÔN|Te pido perdón.|Te peço desculpas.
+pedir cita|marcar horário|PEDÍR THÍTA|Quiero pedir cita.|Quero marcar horário.
+poner una lavadora|lavar roupa|PONÊR UNA LABADÔRA|Pongo una lavadora.|Vou lavar roupa.
+poner la mesa|pôr a mesa|PONÊR LA MÊSA|¿Pones la mesa?|Põe a mesa?
+recoger|buscar alguém / arrumar|REKORRÊR|Te recojo a las ocho.|Te busco às oito.
+apuntarse|se inscrever / topar|APUNTÁRSE|¡Me apunto!|Tô dentro!
+echar un vistazo|dar uma olhada|ETCHÁR UN BISTÁTHO|Echa un vistazo.|Dá uma olhada.
+llevar a cabo|realizar|IEBÁR A KÁBO|Llevamos a cabo el proyecto.|Realizamos o projeto.
+salir bien|dar certo|SALÍR BIÊN|Todo salió bien.|Deu tudo certo.
+salir mal|dar errado|SALÍR MÁL|Salió mal.|Deu errado.
+valer la pena|valer a pena|BALÊR LA PÊNA|Vale la pena.|Vale a pena.
+tener en mente|ter em mente|TENÊR EN MÊNTE|Lo tengo en mente.|Tenho isso em mente.
+quitar|tirar|KITÁR|Quítate los zapatos.|Tire os sapatos.
+ponerse (ropa)|vestir|PONÊRSE|Ponte el abrigo.|Vista o casaco.
+probarse|provar (roupa)|PROBÁRSE|¿Me lo puedo probar?|Posso provar?
+encargarse de|cuidar de, ficar responsável|ENKARGÁRSE DE|Yo me encargo.|Eu cuido disso.
+hacerse cargo|assumir|ATHÊRSE KÁRGO|Me hago cargo.|Eu assumo.
+cambiar de opinión|mudar de ideia|KAMBIÁR DE OPINIÔN|He cambiado de opinión.|Mudei de ideia.
+estar en las nubes|estar distraído|ESTÁR EN LAS NÚBES|Estás en las nubes.|Você está distraído.
+no tener ni idea|não fazer ideia|NO TENÊR NI IDÊA|No tengo ni idea.|Não faço ideia.
+costar un ojo de la cara|custar os olhos da cara|KOSTÁR UN ÔRRO DE LA KÁRA|Cuesta un ojo de la cara.|Custa os olhos da cara.
+ir al grano|ir direto ao ponto|ÍR AL GRÁNO|Vamos al grano.|Vamos direto ao ponto.
+ser pan comido|ser moleza|SÊR PÁN KOMÍDO|Es pan comido.|É moleza.
+quedarse en blanco|dar um branco|KEDÁRSE EN BLÁNKO|Me quedé en blanco.|Me deu um branco.`;
+/* ---------- Mapas completos ---------- */
+const MMT=`@A1|Apresentar-se|¡Hola! Me llamo Carlos|sit
+C: Apresentar-se é a primeira conversa em qualquer lugar: no trabalho, na aula ou com o vizinho.
+C: Na Espanha, a apresentação vem com dois beijos no rosto entre homem e mulher, ou entre mulheres.
+P: Olá + me chamo + prazer.
+R: Dizer o nome|Me llamo + nome. / Soy + nome.
+R: Perguntar o nome|¿Cómo te llamas?
+R: De onde é|Soy de + país.
+R: Fechar|Encantado / Encantada.
+E: ¡Hola! Me llamo Carlos.|Olá! Eu me chamo Carlos.
+E: ¿Cómo te llamas?|Como você se chama?
+E: Soy de Brasil.|Sou do Brasil.
+E: Encantado.|Muito prazer.
+X: Me llamo es Carlos.|Me llamo Carlos.|Com "me llamo", não use "es".
+D: Homem diz "encantado"; mulher diz "encantada".
+N: Cumprimentar no dia a dia
+
+@A1|Cumprimentar no dia a dia|Buenos días, ¿qué tal?|sit
+C: Na Espanha, cumprimenta-se o vizinho, o garçom e o caixa. O "¿Qué tal?" é um oi rápido.
+P: Bom dia + tudo bem + e você.
+R: Manhã|Buenos días.
+R: Tarde e noite|Buenas tardes. / Buenas noches.
+R: Informal|¡Hola! ¿Qué tal?
+R: Resposta|Bien, gracias. ¿Y tú?
+E: ¡Buenos días!|Bom dia!
+E: ¿Qué tal?|Tudo bem?
+E: Muy bien, gracias. ¿Y tú?|Muito bem, obrigado. E você?
+E: ¡Hasta luego!|Até logo!
+X: Buenas tardes às 13h|Buenos días até a hora do almoço|Na Espanha, o "buenas tardes" começa depois do almoço, por volta das 14h ou 15h.
+D: "Hasta luego" serve como tchau para qualquer hora, mesmo sem previsão de se ver de novo.
+N: Pedir um café
+
+@A1|Pedir um café|Un café con leche, por favor|sit
+C: Na cafeteria espanhola, o pedido é direto e rápido, quase sempre no balcão.
+P: Me pone + o que quer + por favor.
+R: Pedir|¿Me pone un café?
+R: Tipos|café solo, cortado, café con leche
+R: Para levar|Para llevar.
+R: Comer algo|Y una tostada, por favor.
+E: ¿Me pone un café con leche, por favor?|Me vê um café com leite, por favor?
+E: Un cortado, por favor.|Um café pingado, por favor.
+E: Para llevar.|Para viagem.
+E: Y una tostada con tomate.|E uma torrada com tomate.
+X: Quiero un café.|¿Me pone un café?|"Quiero" é aceito, mas "¿Me pone...?" soa mais natural no balcão.
+D: Café solo é o expresso. Cortado é com um pouco de leite.
+N: Pagar no caixa
+
+@A1|Pagar no caixa|¿Cuánto es?|sit
+C: Na hora de pagar, as perguntas se repetem: quanto é, cartão ou dinheiro.
+P: Quanto é? Cartão ou dinheiro?
+R: Preço|¿Cuánto es?
+R: Cartão|¿Puedo pagar con tarjeta?
+R: Dinheiro|En efectivo.
+R: Pedir a conta|¿Me cobra, por favor?
+E: ¿Cuánto es?|Quanto é?
+E: ¿Puedo pagar con tarjeta?|Posso pagar com cartão?
+E: Aquí tiene.|Aqui está.
+E: Quédese con el cambio.|Pode ficar com o troco.
+X: ¿Cuánto cuesta? (no fim da refeição)|¿Me cobra? / La cuenta, por favor.|Para fechar a conta, peça "la cuenta" ou "¿me cobra?".
+D: Na Espanha, a gorjeta não é obrigatória. Deixar o troco já basta.
+N: No supermercado
+
+@A1|No supermercado|¿Dónde está la leche?|sit
+C: No supermercado, você procura produtos, pergunta e passa no caixa.
+P: Onde está + produto?
+R: Procurar|¿Dónde está + produto?
+R: Corredor|Está en el pasillo tres.
+R: Sacola|¿Quiere bolsa?
+R: Recusar|No, gracias.
+E: Perdone, ¿dónde está la leche?|Com licença, onde fica o leite?
+E: Está en el pasillo tres.|Fica no corredor três.
+E: ¿Tienen pan integral?|Vocês têm pão integral?
+E: No necesito bolsa.|Não preciso de sacola.
+X: ¿Dónde queda la leche? (no Brasil)|¿Dónde está la leche?|Na Espanha, o mais comum é "¿dónde está?".
+D: Na Espanha, a sacola é paga. Leve a sua.
+N: No restaurante
+
+@A1|No restaurante|Una mesa para dos|sit
+C: Muitos restaurantes têm o "menú del día": entrada, prato principal, sobremesa e bebida por um preço fixo.
+P: Mesa, menu do dia, pedido, conta.
+R: Chegar|Una mesa para dos, por favor.
+R: Menu|¿Qué lleva el menú del día?
+R: Pedir|De primero... De segundo...
+R: Conta|La cuenta, por favor.
+E: Una mesa para dos, por favor.|Uma mesa para dois, por favor.
+E: ¿Qué lleva el menú del día?|O que vem no menu do dia?
+E: De primero, ensalada; de segundo, pescado.|De entrada, salada; de prato principal, peixe.
+E: La cuenta, por favor.|A conta, por favor.
+X: El menú, por favor (querendo o cardápio)|La carta, por favor.|O cardápio é "la carta". "Menú" é o prato do dia.
+D: O almoço espanhol é tarde, entre 14h e 16h.
+N: No bar de tapas
+
+@A1|No bar de tapas|Una caña y una tapa|sit
+C: Ir de tapas é parte da cultura espanhola: pequenas porções com uma bebida, de bar em bar.
+P: Uma bebida + uma tapa + a conta.
+R: Cerveja|una caña (chope pequeno)
+R: Tapa|una tapa de tortilla
+R: Porção maior|una ración de calamares
+R: Mais uma|Otra, por favor.
+E: Una caña, por favor.|Um chope, por favor.
+E: ¿Qué tapas tienen?|Que petiscos vocês têm?
+E: Una ración de patatas bravas.|Uma porção de batatas bravas.
+E: Otra ronda, por favor.|Mais uma rodada, por favor.
+X: Una cerveza grande (esperando chope)|Una caña|No bar, "caña" é o chope pequeno e é o pedido mais comum.
+D: Em algumas cidades, como Granada, a tapa vem de graça com a bebida.
+N: Pedir informação na rua
+
+@A1|Pedir informação na rua|Perdone, ¿dónde está...?|sit
+C: Para pedir direção, comece com "Perdone" ou "Perdona" e use frases curtas.
+P: Com licença + onde está + lugar?
+R: Começar|Perdone... (formal) / Perdona... (informal)
+R: Perguntar|¿Dónde está + lugar?
+R: Distância|¿Está lejos?
+R: Mapa|¿Me lo puede enseñar en el mapa?
+E: Perdone, ¿dónde está el metro?|Com licença, onde fica o metrô?
+E: ¿Está lejos de aquí?|É longe daqui?
+E: ¿Hay una farmacia cerca?|Tem uma farmácia perto?
+E: Muchas gracias.|Muito obrigado.
+X: ¿Dónde es el metro?|¿Dónde está el metro?|Para localização, use "estar".
+D: Tenha o endereço escrito no celular para mostrar.
+N: Esquerda, direita, reto
+
+@A1|Esquerda, direita, reto|Gire a la izquierda|sit
+C: Entender a resposta é tão importante quanto perguntar. São poucas palavras que se repetem.
+P: Izquierda, derecha, todo recto, esquina.
+R: Virar|Gire a la izquierda / a la derecha
+R: Seguir|Siga todo recto.
+R: Lugares|en la esquina, al lado de, enfrente de
+R: Distância|a dos calles
+E: Siga todo recto.|Siga reto.
+E: Gire a la derecha.|Vire à direita.
+E: Está en la esquina.|Fica na esquina.
+E: Está enfrente del banco.|Fica em frente ao banco.
+X: Gire a la izquerda.|Gire a la izquierda.|Atenção à escrita e ao som: "itkiêrda".
+D: Na Espanha, a distância é dada em ruas: "a dos calles".
+N: Pegar um táxi ou metrô
+
+@A1|Pegar um táxi ou metrô|Lléveme a esta dirección|sit
+C: No táxi, você diz o destino. No metrô, compra o bilhete e confere a linha.
+P: Destino, linha, bilhete.
+R: Táxi|¿Me lleva a + lugar?
+R: Parar|Pare aquí, por favor.
+R: Metrô|Un billete, por favor.
+R: Linha|¿Qué línea va a + lugar?
+E: ¿Me lleva al aeropuerto?|Pode me levar ao aeroporto?
+E: Pare aquí, por favor.|Pare aqui, por favor.
+E: Un billete de metro, por favor.|Um bilhete de metrô, por favor.
+E: ¿Qué línea va a Sol?|Qual linha vai para Sol?
+X: Coger el metro (na América Latina)|Coger el metro (na Espanha)|Na Espanha, "coger" é pegar, normal. Na América Latina, evite.
+D: Em Madri e Barcelona, o bilhete de 10 viagens sai mais barato.
+N: No hotel
+
+@A1|No hotel|Tengo una reserva|sit
+C: No check-in, você diz que tem reserva, mostra o documento e pergunta o que precisa.
+P: Reserva, nome, documento, horários.
+R: Chegar|Tengo una reserva.
+R: Nome|A nombre de + nome.
+R: Café da manhã|¿A qué hora es el desayuno?
+R: Saída|¿A qué hora hay que dejar la habitación?
+E: Hola, tengo una reserva.|Oi, tenho uma reserva.
+E: A nombre de Carlos Silva.|No nome de Carlos Silva.
+E: ¿Cuál es la contraseña del wifi?|Qual é a senha do Wi-Fi?
+E: ¿Me puede dar otra toalla?|Pode me dar outra toalha?
+X: Tengo una reservación.|Tengo una reserva.|Na Espanha, se diz "reserva".
+D: Na Espanha, o Wi-Fi se pronuncia "uífi".
+N: Falar do tempo
+
+@A1|Falar do tempo|Hace calor|sit
+C: O tempo é o assunto mais comum para puxar conversa. Em espanhol, quase sempre se usa o verbo "hacer".
+P: Hace + calor, frío, sol, viento.
+R: Calor|Hace calor.
+R: Frio|Hace frío.
+R: Chuva|Está lloviendo.
+R: Pergunta|¿Qué tiempo hace?
+E: Hoy hace mucho calor.|Hoje está muito calor.
+E: Hace un frío horrible.|Está um frio horrível.
+E: Está lloviendo.|Está chovendo.
+E: ¡Qué buen día!|Que dia bom!
+X: Está calor.|Hace calor.|Calor e frio usam "hacer".
+D: Na Espanha, o verão é muito quente e o inverno do interior é frio.
+N: Dizer as horas
+
+@A1|Dizer as horas|¿Qué hora es?|sit
+C: Para combinar horários, você precisa entender e dizer as horas.
+P: Es la una. Son las + hora.
+R: Uma hora|Es la una.
+R: Outras|Son las tres.
+R: Meia e quarto|y media, y cuarto, menos cuarto
+R: Combinar|a las + hora
+E: ¿Qué hora es?|Que horas são?
+E: Son las diez y media.|São dez e meia.
+E: Es la una menos cuarto.|É quinze para a uma.
+E: Quedamos a las ocho.|Combinamos às oito.
+X: Son la una.|Es la una.|A uma hora é singular: "es la una".
+D: Os espanhóis jantam tarde, entre 21h e 22h.
+N: Telefone e e-mail
+
+@A1|Telefone e e-mail|¿Cuál es tu número?|sit
+C: Para trocar contato, os números são ditos em grupos e o e-mail tem palavras próprias.
+P: Arroba, punto, guion.
+R: Telefone|¿Cuál es tu número de teléfono?
+R: Arroba|arroba
+R: Ponto|punto
+R: Hífen e traço baixo|guion / guion bajo
+E: ¿Cuál es tu número de teléfono?|Qual é o seu telefone?
+E: Es el seis, uno, dos...|É seis, um, dois...
+E: ¿Cuál es tu correo?|Qual é o seu e-mail?
+E: carlos arroba gmail punto com|carlos arroba gmail ponto com
+X: ¿Cuál es tu celular?|¿Cuál es tu móvil?|Na Espanha, celular é "móvil".
+D: Treine soletrar seu nome com o alfabeto em espanhol (unidade 0 do livro).
+N: Falar da família
+
+@A1|Falar da família|Tengo dos hijos|sit
+C: Família é assunto comum para criar intimidade nas conversas (unidade 2 do livro).
+P: Tengo + quantos + quem.
+R: Ter|Tengo una hija.
+R: Estado civil|Estoy casado. / Soy soltero.
+R: Nomes|Se llama...
+R: Idade|Tiene diez años.
+E: Estoy casado.|Sou casado.
+E: Tengo una hija.|Tenho uma filha.
+E: Mi mujer se llama Ana.|Minha esposa se chama Ana.
+E: ¿Tienes hijos?|Você tem filhos?
+X: Mi hija es diez años.|Mi hija tiene diez años.|Idade usa "tener".
+D: "Padres" significa pai e mãe juntos. "Parientes" são os outros familiares.
+N: Minha rotina
+
+@A1|Minha rotina|Me levanto a las seis|sit
+C: Para contar a rotina, muitos verbos levam "me": me levanto, me ducho, me acuesto (unidade 3 do livro).
+P: Me + verbo + hora.
+R: Acordar|Me levanto a las...
+R: Trabalhar|Empiezo a trabajar a las...
+R: Almoçar|Como a las dos.
+R: Dormir|Me acuesto a las...
+E: Me levanto a las seis.|Eu me levanto às seis.
+E: Me ducho y desayuno.|Tomo banho e tomo café.
+E: Como a las dos.|Almoço às duas.
+E: Me acuesto a las once.|Vou dormir às onze.
+X: Levanto a las seis.|Me levanto a las seis.|Levantar-se precisa do "me".
+D: Narre sua rotina em espanhol enquanto faz as coisas.
+N: Na farmácia
+
+@A1|Na farmácia|Necesito algo para el dolor de cabeza|sit
+C: Na Espanha, a farmácia tem uma cruz verde. O farmacêutico orienta sobre remédios simples.
+P: Necesito algo para + problema.
+R: Pedir|Necesito algo para + problema.
+R: Problemas|el dolor de cabeza, el resfriado, la fiebre
+R: Receita|¿Necesito receta?
+R: Dose|¿Cada cuánto lo tomo?
+E: Necesito algo para el dolor de cabeza.|Preciso de algo para dor de cabeça.
+E: Tengo un resfriado.|Estou resfriado.
+E: ¿Necesito receta?|Preciso de receita?
+E: ¿Cada cuánto lo tomo?|De quanto em quanto tempo eu tomo?
+X: Estoy con dolor.|Me duele + parte / Tengo dolor de...|Dor usa "doler" ou "tener".
+D: À noite, procure a "farmacia de guardia", a farmácia de plantão.
+N: Comprar roupas
+
+@A1|Comprar roupas|¿Me lo puedo probar?|sit
+C: Na loja de roupas, você pergunta o tamanho, prova e decide (unidade 9 do livro).
+P: Talla, probador, precio, me lo llevo.
+R: Tamanho|¿Lo tiene en la talla M?
+R: Provar|¿Me lo puedo probar?
+R: Provador|¿Dónde están los probadores?
+R: Decidir|Me lo llevo.
+E: ¿Lo tiene en una talla más grande?|Tem num tamanho maior?
+E: ¿Me lo puedo probar?|Posso provar?
+E: Me queda pequeño.|Ficou pequeno em mim.
+E: Me lo llevo.|Vou levar.
+X: Me queda chico.|Me queda pequeño.|Na Espanha, "chico" é menino.
+D: Atenção às rebajas (liquidações) de janeiro e julho.
+N: Agradecer e se desculpar
+
+@A1|Agradecer e se desculpar|Gracias, perdón, perdone|sit
+C: Educação abre portas. "Gracias", "perdón" e "por favor" resolvem quase tudo.
+P: Gracias, de nada, perdón, perdone.
+R: Agradecer|Gracias. / Muchas gracias.
+R: Responder|De nada. / No hay de qué.
+R: Desculpar|Perdón. / Lo siento.
+R: Passar|Perdone, ¿puedo pasar?
+E: ¡Muchas gracias!|Muito obrigado!
+E: De nada.|De nada.
+E: Lo siento mucho.|Sinto muito.
+E: Perdone, ¿puedo pasar?|Com licença, posso passar?
+X: Desculpa (em português)|Perdón / Perdona|"Disculpa" também existe, mas "perdón" é o mais rápido.
+D: "Lo siento" é para algo mais sério. Esbarrou em alguém? "¡Perdón!".
+N: Pedir para repetir
+
+@A1|Pedir para repetir|¿Puede repetir, por favor?|sit
+C: Não entender é normal. Saber pedir para repetir mantém a conversa viva.
+P: Desculpe + repetir + devagar.
+R: Repetir|¿Puede repetir?
+R: Devagar|¿Puede hablar más despacio?
+R: Escrever|¿Me lo puede escribir?
+R: Confirmar|¿Quiere decir...?
+E: Perdone, no le he entendido.|Desculpe, não entendi.
+E: ¿Puede repetir, por favor?|Pode repetir, por favor?
+E: ¿Puede hablar más despacio?|Pode falar mais devagar?
+E: ¿Cómo se escribe?|Como se escreve?
+X: ¿Qué? (seco)|¿Perdón? / ¿Cómo?|"¿Cómo?" é a forma educada de pedir para repetir.
+D: Avise logo: "Estoy aprendiendo español". As pessoas falam mais devagar.
+N: Cumprimentar o vizinho
+
+@A1|Cumprimentar o vizinho|Soy el nuevo vecino|sit
+C: Na Espanha, a vida é em prédios ("pisos"). É comum cruzar com os vizinhos no elevador e na escada.
+P: Oi + sou o vizinho + de qual andar.
+R: Apresentar|Soy el nuevo vecino.
+R: Andar|Vivo en el tercero.
+R: Elevador|¿A qué piso va?
+R: Despedir|¡Hasta luego!
+E: Hola, soy Carlos, el nuevo vecino.|Oi, sou o Carlos, o novo vizinho.
+E: Vivo en el tercero B.|Moro no terceiro B.
+E: ¿A qué piso va?|Para qual andar você vai?
+E: ¡Que tenga un buen día!|Tenha um bom dia!
+X: Vivo en el tercer andar.|Vivo en el tercero.|O espanhol costuma dizer só o número do andar.
+D: No elevador, um "buenos días" e um "hasta luego" já criam boa relação.
+N: Convidar alguém
+
+@A1|Convidar alguém|¿Tomamos un café?|sit
+C: Para convidar, o espanhol usa a forma "nós": ¿tomamos...?, ¿quedamos...?
+P: ¿Tomamos / Quedamos + atividade?
+R: Convidar|¿Tomamos un café?
+R: Combinar|¿Quedamos el sábado?
+R: Aceitar|¡Vale! / ¡Me encantaría!
+R: Recusar|Lo siento, no puedo.
+E: ¿Tomamos un café?|Vamos tomar um café?
+E: ¿Quedamos mañana?|Vamos nos encontrar amanhã?
+E: ¡Vale, perfecto!|Combinado, perfeito!
+E: Lo siento, hoy no puedo.|Desculpa, hoje não posso.
+X: ¿Combinamos? (no sentido de encontro)|¿Quedamos?|"Combinar" em espanhol é misturar coisas.
+D: "Quedar" é o verbo-chave para marcar encontros na Espanha (unidade 7 do livro).
+N: Dias e datas
+
+@A1|Dias e datas|Mi cumpleaños es en mayo|sit
+C: Para marcar compromissos, você precisa dos meses e dos dias. Em espanhol, eles são escritos com letra minúscula.
+P: El + número + de + mês.
+R: Mês|en mayo
+R: Dia|el diez de mayo
+R: Dia da semana|el lunes
+R: Pergunta|¿Qué día es hoy?
+E: Mi cumpleaños es en mayo.|Meu aniversário é em maio.
+E: La reunión es el lunes.|A reunião é na segunda.
+E: Hoy es veintidós de octubre.|Hoje é vinte e dois de outubro.
+E: Nos vemos la semana que viene.|Nos vemos semana que vem.
+X: en el lunes|el lunes|Com dias da semana, use só "el".
+D: A data na Espanha é escrita como no Brasil: dia, mês e ano.
+N: Primeiro dia no trabalho
+
+@A1|Primeiro dia no trabalho|Soy nuevo aquí|sit
+C: No primeiro dia, você se apresenta, pergunta onde ficam as coisas e conhece a equipe.
+P: Sou novo + o que faço + onde fica?
+R: Apresentar|Hola, soy Carlos. Soy nuevo.
+R: Função|Soy el nuevo ingeniero de seguridad.
+R: Perguntar|¿Dónde está la sala de descanso?
+R: Ajuda|¿Con quién hablo para...?
+E: Hola, soy Carlos. Soy nuevo aquí.|Oi, sou o Carlos. Sou novo aqui.
+E: Soy el nuevo ingeniero de seguridad.|Sou o novo engenheiro de segurança.
+E: ¿Dónde están los servicios?|Onde fica o banheiro?
+E: Encantado de trabajar con vosotros.|Prazer em trabalhar com vocês.
+X: Estoy nuevo.|Soy nuevo.|"Novo no trabalho" usa "ser".
+D: Na Espanha, os colegas se tratam por "tú" desde o primeiro dia.
+N: Combinar um horário
+
+@A2|Combinar um horário|¿Te viene bien el lunes?|sit
+C: Para marcar reunião ou encontro, o espanhol pergunta se o horário "vem bem" para a pessoa.
+P: ¿Te viene bien? = Fica bom para você?
+R: Sugerir|¿Qué tal el lunes a las diez?
+R: Perguntar|¿Te viene bien?
+R: Aceitar|Me viene perfecto.
+R: Remarcar|¿Podemos cambiarlo?
+E: ¿Estás libre el viernes?|Você está livre na sexta?
+E: ¿Te viene bien a las tres?|Às três fica bom para você?
+E: Me viene perfecto.|Para mim está perfeito.
+E: ¿Podemos dejarlo para la semana que viene?|Podemos deixar para a semana que vem?
+X: ¿Está bien para ti? (soa traduzido)|¿Te viene bien?|"Venir bien" é a forma natural.
+D: Na Espanha, reuniões de trabalho raramente acontecem entre 14h e 16h, horário de almoço.
+N: Marcar consulta médica
+
+@A2|Marcar consulta médica|Quería pedir cita|sit
+C: Na Espanha, marca-se consulta no "centro de salud" ou na clínica, pedindo "cita".
+P: Cita = consulta ou horário marcado.
+R: Marcar|Quería pedir cita.
+R: Médico|con el médico de cabecera
+R: Seguro|¿Aceptan mi seguro?
+R: Urgente|Es urgente.
+E: Quería pedir cita con el médico.|Queria marcar uma consulta com o médico.
+E: ¿Tiene algo para mañana?|Tem algum horário para amanhã?
+E: ¿Aceptan este seguro?|Vocês aceitam este seguro?
+E: Tengo que anular la cita.|Tenho que cancelar a consulta.
+X: Quiero marcar una consulta.|Quería pedir cita.|O natural na Espanha é "pedir cita".
+D: Médico de cabecera é o clínico geral.
+N: No consultório
+
+@A2|No consultório|¿Qué le pasa?|sit
+C: No médico, você explica o que sente, desde quando e se toma algum remédio (unidade 10 do livro).
+P: O que dói + desde quando + alergias.
+R: Dor|Me duele la espalda.
+R: Tempo|Desde hace tres días.
+R: Alergia|Soy alérgico a...
+R: Remédio|Tomo esta medicina.
+E: No me encuentro bien.|Não estou me sentindo bem.
+E: Me duele la cabeza.|Estou com dor de cabeça.
+E: Empezó ayer.|Começou ontem.
+E: Soy alérgico a la penicilina.|Sou alérgico a penicilina.
+X: Me duelen la cabeza.|Me duele la cabeza.|Uma parte do corpo: "duele". Várias: "duelen".
+D: Aponte onde dói: "Me duele aquí".
+N: No banco
+
+@A2|No banco|Quería abrir una cuenta|sit
+C: No banco, você abre conta, saca dinheiro ou resolve problemas com o cartão.
+P: Cuenta, sacar, ingresar, tarjeta.
+R: Conta|Quería abrir una cuenta.
+R: Sacar|sacar dinero
+R: Depositar|ingresar dinero
+R: Cartão|Mi tarjeta no funciona.
+E: Quería abrir una cuenta.|Queria abrir uma conta.
+E: ¿Dónde hay un cajero?|Onde tem um caixa eletrônico?
+E: Mi tarjeta está bloqueada.|Meu cartão está bloqueado.
+E: Quiero ingresar este dinero.|Quero depositar este dinheiro.
+X: depositar dinero|ingresar dinero|Na Espanha, depositar é "ingresar".
+D: O caixa eletrônico é "cajero automático".
+N: No aeroporto
+
+@A2|No aeroporto|¿Ventanilla o pasillo?|sit
+C: No aeroporto, você faz check-in, despacha a mala, passa pela segurança e procura a porta de embarque.
+P: Facturar, puerta, embarque.
+R: Check-in|Quería facturar.
+R: Mala|Tengo una maleta para facturar.
+R: Assento|¿Ventanilla o pasillo?
+R: Portão|¿Cuál es la puerta de embarque?
+E: Quería facturar esta maleta.|Queria despachar esta mala.
+E: Prefiero ventanilla.|Prefiro janela.
+E: ¿A qué hora es el embarque?|A que horas é o embarque?
+E: He perdido mi vuelo.|Perdi meu voo.
+X: despachar la maleta|facturar la maleta|Na Espanha, despachar a mala é "facturar".
+D: Puerta = portão. Pasillo = corredor.
+N: Controle de passaportes
+
+@A2|Controle de passaportes|¿Motivo de su viaje?|sit
+C: No controle de passaportes, as perguntas são curtas. Responda de forma simples e direta.
+P: Responda só o que foi perguntado.
+R: Motivo|Turismo. / Trabajo.
+R: Tempo|Dos semanas.
+R: Hospedagem|En un hotel en Madrid.
+R: Volta|Tengo el billete de vuelta.
+E: Vengo de vacaciones.|Venho de férias.
+E: Me quedo dos semanas.|Fico duas semanas.
+E: Me alojo en un hotel en el centro.|Fico hospedado num hotel no centro.
+E: Aquí tiene el billete de vuelta.|Aqui está a passagem de volta.
+X: Contar a viagem toda|Respostas curtas|O agente quer respostas curtas e claras.
+D: Deixe a reserva do hotel e a passagem de volta abertas no celular.
+N: Alugar um carro
+
+@A2|Alugar um carro|Tengo una reserva de coche|sit
+C: Para alugar carro, você mostra a reserva, a carteira e decide sobre o seguro.
+P: Reserva, carné, seguro, depósito.
+R: Retirar|Tengo una reserva.
+R: Seguro|¿El seguro está incluido?
+R: Tanque|¿Lo devuelvo con el depósito lleno?
+R: Problema|El coche tiene un arañazo.
+E: Vengo a recoger un coche.|Venho retirar um carro.
+E: ¿El seguro está incluido?|O seguro está incluso?
+E: ¿Lo devuelvo con el depósito lleno?|Devolvo com o tanque cheio?
+E: Tiene un arañazo en la puerta.|Tem um arranhão na porta.
+X: el carro|el coche|Na Espanha, carro é "coche".
+D: Carteira de motorista é "carné de conducir".
+N: No posto de gasolina
+
+@A2|No posto de gasolina|Lleno, por favor|sit
+C: Na Espanha, em muitos postos você mesmo abastece e paga no caixa.
+P: Bomba + valor + pagar.
+R: Bomba|el surtidor número cuatro
+R: Valor|Cuarenta euros en el cuatro.
+R: Encher|Lleno, por favor.
+R: Combustível|gasolina / diésel
+E: Cuarenta euros en el surtidor cuatro.|Quarenta euros na bomba quatro.
+E: Lleno, por favor.|Enche o tanque, por favor.
+E: ¿Dónde están los servicios?|Onde fica o banheiro?
+E: ¿Me da el tique?|Pode me dar o recibo?
+X: Etanol no carro alugado|gasolina sin plomo 95|Na Espanha, o comum é gasolina 95 ou diesel.
+D: Posto é "gasolinera". Confira sempre o tipo de combustível na tampa do tanque.
+N: Pedir comida em casa
+
+@A2|Pedir comida em casa|Falta algo en mi pedido|sit
+C: Por aplicativo ou telefone, você pede, confirma o endereço e reclama se faltar algo.
+P: Pedido, dirección, tiempo, problema.
+R: Pedir|Quería pedir...
+R: Endereço|La dirección es...
+R: Tempo|¿Cuánto tarda?
+R: Problema|Falta algo en mi pedido.
+E: Quería pedir una pizza grande.|Queria pedir uma pizza grande.
+E: ¿Cuánto tarda?|Quanto tempo demora?
+E: Falta una bebida en mi pedido.|Está faltando uma bebida no meu pedido.
+E: Déjelo en la puerta, por favor.|Deixe na porta, por favor.
+X: ¿Cuánto demora? (aceito, mas menos comum)|¿Cuánto tarda?|Na Espanha, "tardar" é o verbo mais usado.
+D: Pedido é "pedido". Entregador é "repartidor".
+N: Devolver ou trocar algo
+
+@A2|Devolver ou trocar algo|Quería devolver esto|sit
+C: Para devolver ou trocar, tenha o tíquete e respeite o prazo da loja.
+P: Devolver, cambiar, reembolso.
+R: Devolver|Quería devolver esto.
+R: Trocar|¿Lo puedo cambiar?
+R: Motivo|No me queda bien. / Está roto.
+R: Dinheiro|¿Me devuelven el dinero?
+E: Quería devolver esto.|Queria devolver isto.
+E: No me queda bien.|Não ficou bem em mim.
+E: ¿Lo puedo cambiar por otra talla?|Posso trocar por outro tamanho?
+E: Aquí tiene el tique.|Aqui está o tíquete.
+X: Quiero trocar esto.|Quiero cambiar esto.|Trocar é "cambiar".
+D: Guarde o tíquete da compra: sem ele, a troca fica difícil.
+N: Reclamar com educação
+
+@A2|Reclamar com educação|Hay un problema con...|sit
+C: Reclame com calma e firmeza. Começar com "Perdone" ajuda muito.
+P: Explique o problema e peça a solução.
+R: Começar|Perdone, hay un problema.
+R: Explicar|La comida está fría.
+R: Pedir|¿Lo podría solucionar?
+R: Responsável|¿Puedo hablar con el encargado?
+E: Perdone, hay un problema con la habitación.|Desculpe, tem um problema com o quarto.
+E: El aire acondicionado no funciona.|O ar-condicionado não funciona.
+E: Me han cobrado dos veces.|Me cobraram duas vezes.
+E: ¿Lo podría solucionar, por favor?|Poderia resolver, por favor?
+X: Quiero hablar con el gerente. (num restaurante)|¿Puedo hablar con el encargado?|O responsável pelo local é "el encargado".
+D: Pedir o "libro de reclamaciones" é um direito na Espanha.
+N: Pedir ajuda no trabalho
+
+@A2|Pedir ajuda no trabalho|¿Tienes un momento?|sit
+C: No trabalho, peça ajuda de forma educada e mostre que respeita o tempo do colega.
+P: Tem um momento + pedido + obrigado.
+R: Abrir|¿Tienes un momento?
+R: Pedir|¿Me echas una mano con esto?
+R: Explicar|No sé muy bien cómo...
+R: Agradecer|Gracias, te lo agradezco.
+E: ¿Tienes un momento?|Você tem um momento?
+E: ¿Me echas una mano con este informe?|Me dá uma mão com este relatório?
+E: No sé muy bien cómo hacerlo.|Não sei bem como fazer.
+E: Muchas gracias, te lo agradezco.|Muito obrigado, agradeço.
+X: Ayúdame aquí. (seco)|¿Me echas una mano?|"Echar una mano" é ajudar, e soa amigável.
+D: Mostre o que já tentou antes de pedir ajuda.
+N: Reunião rápida
+
+@A2|Reunião rápida|Empezamos|sit
+C: Nas reuniões, você precisa começar, opinar, perguntar e fechar com os próximos passos.
+P: Começar, opinar, resumir.
+R: Começar|Bueno, empezamos.
+R: Opinar|Creo que deberíamos...
+R: Perguntar|¿Alguna pregunta?
+R: Fechar|Pues lo dejamos aquí.
+E: Bueno, empezamos.|Bom, vamos começar.
+E: Estoy de acuerdo.|Concordo.
+E: ¿Puedes compartir la pantalla?|Pode compartilhar a tela?
+E: Lo dejamos aquí por hoy.|Paramos por aqui hoje.
+X: Estoy de acordo.|Estoy de acuerdo.|Atenção ao "ue": acuerdo.
+D: Anote "los próximos pasos" no fim de cada reunião.
+N: Falar ao telefone
+
+@A2|Falar ao telefone|¿Diga? / ¿Sí?|sit
+C: Na Espanha, atende-se o telefone com "¿Diga?", "¿Dígame?" ou "¿Sí?".
+P: Quem é, com quem quer falar, recado.
+R: Atender|¿Diga? / ¿Sí?
+R: Pedir alguém|¿Está Ana?
+R: Recado|¿Puedo dejar un mensaje?
+R: Retornar|Te llamo luego.
+E: ¿Diga?|Alô?
+E: Hola, soy Carlos, de Toro.|Oi, aqui é o Carlos, da Toro.
+E: ¿Está el señor García?|O senhor García está?
+E: Le vuelvo a llamar más tarde.|Volto a ligar mais tarde.
+X: ¿Aló? (na Espanha)|¿Diga? / ¿Sí?|"Aló" é comum na América Latina, não na Espanha.
+D: Fale devagar e repita os números para confirmar.
+N: Conversa do fim de semana
+
+@A2|Conversa do fim de semana|¿Qué tal el finde?|sit
+C: Na segunda, todos perguntam do fim de semana. Os espanhóis chamam de "finde".
+P: Como foi + o que fez + e você?
+R: Perguntar|¿Qué tal el finde?
+R: Bom|¡Genial!
+R: Contar|Fui a la playa.
+R: Devolver|¿Y tú qué hiciste?
+E: ¿Qué tal el fin de semana?|Como foi o fim de semana?
+E: Muy bien, gracias.|Muito bom, obrigado.
+E: Me quedé en casa descansando.|Fiquei em casa descansando.
+E: ¿Y tú qué hiciste?|E você, o que fez?
+X: Yo fue a la playa.|Yo fui a la playa.|Eu = fui. Ele = fue.
+D: Prepare três frases sobre o seu fim de semana no domingo à noite.
+N: Na academia
+
+@A2|Na academia|¿Te queda mucho?|sit
+C: No gimnasio, você pergunta se o aparelho está livre e pede ajuda.
+P: Está usando? Falta muito?
+R: Livre|¿Está libre?
+R: Falta|¿Te queda mucho?
+R: Ajuda|¿Cómo funciona esta máquina?
+R: Liberar|Todo tuyo.
+E: ¿Está libre esta máquina?|Esta máquina está livre?
+E: ¿Te quedan muchas series?|Faltam muitas séries?
+E: ¿Me ayudas con esto?|Me ajuda com isto?
+E: Todo tuyo.|É todo seu.
+X: ¿Tú estás usando?|¿La estás usando?|Diga o que está sendo usado: "la máquina" vira "la".
+D: Academia na Espanha é "gimnasio" ou "gym".
+N: Na barbearia ou cabeleireiro
+
+@A2|Na barbearia ou cabeleireiro|Solo las puntas|sit
+C: Para cortar o cabelo, explique o tamanho e o estilo com palavras simples.
+P: Corto, puntas, lados, arriba.
+R: Aparar|Solo las puntas.
+R: Lados|Corto por los lados.
+R: Em cima|Largo por arriba.
+R: Máquina|Con el número dos.
+E: Solo cortar las puntas, por favor.|Só aparar as pontas, por favor.
+E: Corto por los lados, por favor.|Curto nas laterais, por favor.
+E: No muy corto.|Não muito curto.
+E: ¡Ha quedado genial, gracias!|Ficou ótimo, obrigado!
+X: Quiero cortar el cabello un poquito.|Solo las puntas, por favor.|Mais claro e natural.
+D: Leve uma foto do corte no celular.
+N: Escola dos filhos
+
+@A2|Escola dos filhos|¿Qué tal va mi hija?|sit
+C: Na escola, os pais conversam com o tutor sobre notas, comportamento e deveres.
+P: Como vai + o que melhorar + como ajudar.
+R: Perguntar|¿Qué tal va mi hija?
+R: Notas|¿Qué tal sus notas?
+R: Ajudar|¿Cómo puedo ayudarla en casa?
+R: Faltar|Mañana no irá al colegio.
+E: ¿Qué tal va mi hija en clase?|Como minha filha está indo na aula?
+E: ¿Hace los deberes?|Ela faz a lição de casa?
+E: ¿Cómo puedo ayudarla en casa?|Como posso ajudá-la em casa?
+E: Hoy está enferma.|Hoje ela está doente.
+X: la escuela de mi hija (aceito)|el colegio de mi hija|Na Espanha, escola é mais "colegio".
+D: O professor responsável pela turma é o "tutor".
+N: Fazer amizade
+
+@A2|Fazer amizade|A ver si quedamos un día|sit
+C: Para transformar um conhecido em amigo, o espanhol sugere marcar algo e troca contato.
+P: A ver si quedamos + me passa o número.
+R: Sugerir|A ver si quedamos un día.
+R: Contato|¿Me das tu número?
+R: Redes|¿Tienes Instagram?
+R: Confirmar|Avísame cuando puedas.
+E: A ver si quedamos un día.|Vamos ver se marcamos algo um dia.
+E: ¿Me das tu número?|Me passa seu número?
+E: Avísame cuando puedas.|Me avisa quando puder.
+E: ¡Lo he pasado genial!|Foi muito legal!
+X: Combinamos de salir.|Quedamos para salir.|Use "quedar".
+D: Depois do encontro, mande: "¡Qué bien lo pasamos!".
+N: Se despedir e manter contato
+
+@A2|Se despedir e manter contato|Seguimos en contacto|sit
+C: Na despedida, os espanhóis são calorosos: dois beijos, abraços e promessas de manter contato.
+P: Foi bom + vamos manter contato + se cuida.
+R: Agradecer|Me ha encantado verte.
+R: Contato|Seguimos en contacto.
+R: Desejar|¡Cuídate!
+R: Viagem|¡Buen viaje!
+E: Me ha encantado verte.|Adorei te ver.
+E: Seguimos en contacto.|Vamos manter contato.
+E: ¡Cuídate mucho!|Se cuida!
+E: ¡Buen viaje!|Boa viagem!
+X: ¡Buena viaje!|¡Buen viaje!|"Viaje" é masculino em espanhol.
+D: "Un beso" no fim de mensagens é comum entre amigos.
+N: Alugar um apartamento
+
+@A2|Alugar um apartamento|¿Sigue disponible el piso?|sit
+C: Para alugar um "piso", pergunte se está livre, o valor, os gastos e marque visita (unidade 4 do livro).
+P: Disponible, alquiler, gastos, visita.
+R: Disponível|¿Sigue disponible?
+R: Valor|¿Cuánto es el alquiler?
+R: Contas|¿Los gastos están incluidos?
+R: Visitar|¿Puedo verlo esta semana?
+E: ¿Sigue disponible el piso?|O apartamento ainda está disponível?
+E: ¿Cuánto es el alquiler?|Quanto é o aluguel?
+E: ¿Los gastos están incluidos?|As contas estão incluídas?
+E: ¿Puedo ir a verlo?|Posso ir ver?
+X: el apartamento (menos comum)|el piso|Na Espanha, apartamento é "piso".
+D: "Fianza" é o depósito de garantia, normalmente de um ou dois meses.
+N: Enviar um pacote
+
+@A2|Enviar um pacote|Quería enviar esto a Brasil|sit
+C: Nos Correos, você diz o destino, escolhe a velocidade e declara o conteúdo.
+P: Destino, rapidez, conteúdo, preço.
+R: Enviar|Quería enviar esto a Brasil.
+R: Tempo|¿Cuánto tarda en llegar?
+R: Barato|¿Cuál es la opción más barata?
+R: Rastreio|¿Se puede hacer seguimiento?
+E: Quería enviar este paquete a Brasil.|Queria enviar este pacote para o Brasil.
+E: ¿Cuánto tarda en llegar?|Quanto tempo demora para chegar?
+E: ¿Cuál es la opción más barata?|Qual é a opção mais barata?
+E: ¿Se puede hacer seguimiento?|Dá para rastrear?
+X: Enviar en Brasil|Enviar a Brasil|Destino usa "a": enviar a Brasil.
+D: Na Espanha, o correio se chama "Correos", sempre no plural.
+N: No cinema
+
+@A2|No cinema|Dos entradas para la sesión de las siete|sit
+C: No cinema, você escolhe o filme, a sessão, os lugares e a pipoca (unidade 5 do livro).
+P: Película, sesión, entradas, butacas.
+R: Ingressos|Dos entradas para...
+R: Sessão|la sesión de las siete
+R: Legenda|¿Es en versión original?
+R: Pipoca|Unas palomitas grandes.
+E: Dos entradas para la sesión de las siete.|Dois ingressos para a sessão das sete.
+E: ¿Es en versión original?|É na versão original (legendado)?
+E: ¿Podemos sentarnos juntos?|Podemos sentar juntos?
+E: Unas palomitas grandes, por favor.|Uma pipoca grande, por favor.
+X: Dos tickets|Dos entradas|Ingresso é "entrada".
+D: Na Espanha, os filmes são dublados. Procure "VOSE" para assistir legendado.
+N: Carro quebrado
+
+@A2|Carro quebrado|Se me ha averiado el coche|sit
+C: Se o carro quebrar, você precisa chamar ajuda, explicar o problema e entender o mecânico.
+P: Averiado, pinchazo, batería, grúa.
+R: Avisar|Se me ha averiado el coche.
+R: Pneu|He pinchado una rueda.
+R: Bateria|No arranca, es la batería.
+R: Guincho|Necesito una grúa.
+E: Se me ha averiado el coche en la autopista.|Meu carro quebrou na rodovia.
+E: He pinchado una rueda.|Furei um pneu.
+E: El coche no arranca.|O carro não liga.
+E: ¿Cuánto costará arreglarlo?|Quanto vai custar para consertar?
+X: Mi coche se quebró.|Se me ha averiado el coche.|Carro quebrado é "averiado".
+D: Vista o colete refletivo antes de sair do carro na estrada: é obrigatório na Espanha.
+N: Apresentar-se
+
+@A1|O som de Z e C|Gracias soa "GRÁTHIAS"|gram
+C: Na Espanha, o Z e o C antes de E e I têm um som que não existe em português: a língua fica entre os dentes, como no "th" do inglês.
+P: Língua entre os dentes, soltando ar.
+R: Z|zapato, cerveza, azul
+R: CE e CI|cena, cine, gracias
+R: CA, CO, CU|soam como K: casa, cosa, cuna
+E: gracias|obrigado
+E: cerveza|cerveja
+E: cinco|cinco
+E: zapato|sapato
+X: grássias (com S)|gráthias|Na Espanha, o som é TH. O S só é usado na América Latina e nas Canárias.
+D: Ponha o dedo na frente da boca: a língua deve encostar nele ao falar "cinco".
+N: O som de J e G
+
+@A1|O som de J e G|Jamón soa "RRAMÔN"|gram
+C: O J, e o G antes de E e I, têm um som forte que vem da garganta, parecido com o R de "rato".
+P: Som da garganta, como quem pigarreia de leve.
+R: J|jamón, ojo, trabajo
+R: GE e GI|gente, Gibraltar
+R: GA, GO, GU|som de G: gato, gol
+R: GUE e GUI|o U não soa: guerra, guitarra
+E: jamón|presunto
+E: gente|pessoas
+E: trabajo|trabalho
+E: guitarra|violão
+X: jamón com J de "janela"|RRAMÔN|O J espanhol nunca soa como o J português.
+D: Treine "ojo" (olho) e "hijo" (filho) até sair da garganta.
+N: R e RR
+
+@A1|R e RR|Pero e perro são palavras diferentes|gram
+C: O R entre vogais é leve, como em "caro". O RR, e o R no começo da palavra, é vibrado na ponta da língua.
+P: R leve = toque rápido. RR = vibração.
+R: R leve|pero, caro, para
+R: RR vibrado|perro, carro, tierra
+R: R inicial vibrado|rojo, Roma, río
+E: pero|mas
+E: perro|cachorro
+E: carro|carroça (na Espanha, carro é "coche")
+E: rojo|vermelho
+X: rojo com R de garganta|R vibrado na ponta da língua|O R espanhol nunca é da garganta.
+D: Faça um "trrrr" de motor com a ponta da língua. Esse é o RR.
+N: H, LL, Ñ e V
+
+@A1|H, LL, Ñ e V|As letras com sons diferentes|gram
+C: Algumas letras do espanhol enganam o brasileiro: o H é mudo, o LL soa como I, o Ñ é como NH e o V soa como B.
+P: H mudo, LL = I, Ñ = NH, V = B.
+R: H mudo|hola, hablar, hotel
+R: LL|llamar, calle, pollo
+R: Ñ|España, mañana, niño
+R: V = B|vino, vale, vaso
+E: hola|olá
+E: me llamo|me chamo
+E: mañana|amanhã
+E: vale|tá bom
+X: lhamar (LL como LH)|iamár|Na Espanha, o LL soa como I.
+D: Lembre: "vino" e "bino" soam igual.
+N: Ser e estar
+
+@A1|Ser e estar|Soy brasileño, estoy cansado|gram
+C: Como no português, "ser" é o que a coisa é, e "estar" é como ou onde ela está. Mas há diferenças importantes.
+P: Ser = identidade. Estar = estado e lugar.
+R: ser|nacionalidade, profissão, características
+R: estar|como se sente, onde está
+R: Lugar|El banco está en la esquina.
+R: Casado|Estoy casado (estado civil usa estar)
+E: Soy ingeniero.|Sou engenheiro.
+E: Estoy cansado.|Estou cansado.
+E: ¿Dónde está el hotel?|Onde fica o hotel?
+E: Estoy casado.|Sou casado.
+X: Soy casado.|Estoy casado.|Na Espanha, estado civil costuma usar "estar".
+D: Unidade 6 do livro: "Mi barrio es tranquilo / Hoy está tranquilo".
+N: Tú, usted e vosotros
+
+@A1|Tú, usted e vosotros|Formal, informal e plural|gram
+C: O espanhol tem "tú" (informal), "usted" (formal) e, na Espanha, "vosotros" para "vocês" informal.
+P: Amigo = tú. Senhor = usted. Grupo de amigos = vosotros.
+R: tú|¿Cómo estás?
+R: usted|¿Cómo está?
+R: vosotros|¿Cómo estáis?
+R: ustedes|¿Cómo están? (formal)
+E: ¿Cómo estás?|Como você está?
+E: ¿Cómo está usted?|Como o senhor está?
+E: ¿Qué queréis tomar?|O que vocês querem beber?
+E: ¿De dónde sois?|De onde vocês são?
+X: Ustedes (com amigos, na Espanha)|Vosotros|Entre amigos, na Espanha, use "vosotros".
+D: Na Espanha, "tú" é usado muito mais do que no Brasil formal.
+N: Gênero das palavras
+
+@A1|Gênero das palavras|El viaje, la leche|gram
+C: Quase sempre o gênero é igual ao português. Mas algumas palavras mudam e confundem o brasileiro.
+P: Decore as palavras que trocam de gênero.
+R: Masculino em espanhol|el viaje, el puente, el árbol, el color
+R: Feminino em espanhol|la leche, la nariz, la sal, la sangre
+R: Terminadas em -aje|masculinas: el garaje, el mensaje
+E: el viaje|a viagem
+E: la leche|o leite
+E: la nariz|o nariz
+E: el color|a cor
+X: la viaje|el viaje|Palavras em -aje são masculinas.
+D: Escreva essas palavras num cartão com o artigo em vermelho.
+N: Plural
+
+@A1|Plural|Un coche, dos coches|gram
+C: O plural é parecido com o português: S depois de vogal, ES depois de consoante.
+P: Vogal + S. Consoante + ES.
+R: Vogal|casa → casas
+R: Consoante|ciudad → ciudades
+R: Z vira CES|lápiz → lápices, vez → veces
+R: Artigos|el → los, la → las
+E: dos coches|dois carros
+E: tres ciudades|três cidades
+E: muchas veces|muitas vezes
+E: los niños|as crianças
+X: los lápizes|los lápices|O Z vira C no plural.
+D: Unidade 2 do livro: plural dos nomes.
+N: Hay e está
+
+@A1|Hay e está|Para dizer o que tem e onde está|gram
+C: "Hay" diz que algo existe. "Está" diz onde fica uma coisa conhecida (unidade 4 do livro).
+P: Hay = tem / existe. Está = fica.
+R: hay + um/uma|Hay un banco cerca.
+R: hay + plural|Hay tres habitaciones.
+R: está + o/a|El banco está en la esquina.
+R: Pergunta|¿Hay wifi?
+E: Hay una farmacia en la esquina.|Tem uma farmácia na esquina.
+E: ¿Hay wifi aquí?|Tem Wi-Fi aqui?
+E: La farmacia está en la esquina.|A farmácia fica na esquina.
+E: No hay nadie.|Não tem ninguém.
+X: Hay el banco.|Está el banco / Hay un banco.|"Hay" não vem com "el/la".
+D: Coisa desconhecida: hay. Coisa conhecida: está.
+N: Gustar
+
+@A2|Gustar|Me gusta, me gustan|gram
+C: Em espanhol, é a coisa que "agrada" a pessoa. Por isso o verbo concorda com a coisa (unidade 5 do livro).
+P: Me gusta + uma coisa. Me gustan + várias.
+R: Singular|Me gusta el cine.
+R: Plural|Me gustan las películas.
+R: Verbo|Me gusta bailar.
+R: Pessoas|me, te, le, nos, os, les
+E: Me gusta el café.|Gosto de café.
+E: Me gustan los perros.|Gosto de cachorros.
+E: ¿Te gusta bailar?|Você gosta de dançar?
+E: A mí también. / A mí tampoco.|Eu também. / Eu também não.
+X: Yo gusto de café.|Me gusta el café.|Nunca use "yo gusto de".
+D: Pense em "agradar": o café me agrada.
+N: Verbos com me
+
+@A2|Verbos com me|Me levanto, me ducho, me acuesto|gram
+C: Muitos verbos da rotina são reflexivos: a ação volta para a própria pessoa (unidade 3 do livro).
+P: Me, te, se, nos, os, se + verbo.
+R: levantarse|me levanto, te levantas, se levanta
+R: ducharse|me ducho
+R: acostarse|me acuesto
+R: llamarse|me llamo
+E: Me levanto a las siete.|Eu me levanto às sete.
+E: ¿A qué hora te acuestas?|A que horas você vai dormir?
+E: Nos vemos mañana.|A gente se vê amanhã.
+E: Se llama Ana.|Ela se chama Ana.
+X: Levanto temprano.|Me levanto temprano.|Sem o "me", o sentido muda: levantar alguma coisa.
+D: Faça a sua rotina falando em voz alta, sempre com o "me".
+N: Verbos irregulares do presente
+
+@A2|Verbos irregulares do presente|Empezar, volver, ir|gram
+C: Alguns verbos mudam a vogal no meio: E vira IE e O vira UE (unidade 3 do livro).
+P: E → IE, O → UE, menos com nosotros e vosotros.
+R: E → IE|empezar: empiezo, quiero, prefiero
+R: O → UE|volver: vuelvo, puedo, duermo
+R: E → I|pedir: pido, repito
+R: Totalmente irregulares|ir: voy, vas, va / ser: soy, eres, es
+E: Empiezo a trabajar a las ocho.|Começo a trabalhar às oito.
+E: Vuelvo a casa a las seis.|Volto para casa às seis.
+E: No puedo hoy.|Não posso hoje.
+E: Voy al trabajo en metro.|Vou ao trabalho de metrô.
+X: yo podo|yo puedo|O O vira UE: puedo.
+D: Desenhe uma bota: as pessoas "dentro" mudam, nosotros e vosotros ficam fora.
+N: Estar + gerúndio
+
+@A2|Estar + gerúndio|¿Qué estás haciendo?|gram
+C: Para ações acontecendo agora, o espanhol usa estar + gerúndio, igual ao português (unidade 7 do livro).
+P: Estoy + -ando / -iendo.
+R: -ar → -ando|trabajar → trabajando
+R: -er / -ir → -iendo|comer → comiendo
+R: Irregulares|leer → leyendo, dormir → durmiendo
+E: ¿Qué estás haciendo?|O que você está fazendo?
+E: Estoy cocinando.|Estou cozinhando.
+E: Está durmiendo.|Ele está dormindo.
+E: Estamos viendo una película.|Estamos vendo um filme.
+X: Estoy comendo.|Estoy comiendo.|O gerúndio de -er é "-iendo".
+D: Igual ao português, só muda o final: -ando e -iendo.
+N: Ir a + verbo
+
+@A2|Ir a + verbo|Voy a viajar|gram
+C: Para planos, o espanhol usa "ir a" + verbo. Não esqueça o "a" (unidade 10 do livro).
+P: Voy a + verbo.
+R: yo|voy a trabajar
+R: tú|vas a venir
+R: él / ella|va a llover
+R: nosotros|vamos a cenar
+E: Voy a viajar en agosto.|Vou viajar em agosto.
+E: ¿Qué vas a hacer mañana?|O que você vai fazer amanhã?
+E: Va a llover.|Vai chover.
+E: Vamos a cenar fuera.|Vamos jantar fora.
+X: Voy viajar.|Voy a viajar.|O "a" é obrigatório.
+D: Brasileiro esquece o "a" com frequência. Treine: "voy a, vas a, va a".
+N: O passado: fui, comí
+
+@A2|O passado: fui, comí|Pretérito indefinido|gram
+C: Para ações terminadas num momento do passado (ayer, el lunes, en 2020), usa-se o indefinido (unidade 8 do livro).
+P: Ontem, semana passada, em 2020: indefinido.
+R: -ar|trabajé, trabajaste, trabajó
+R: -er / -ir|comí, comiste, comió
+R: Irregulares|fui, tuve, hice, estuve
+R: Marcadores|ayer, anoche, el año pasado
+E: Ayer trabajé mucho.|Ontem trabalhei muito.
+E: El sábado fui al cine.|No sábado fui ao cinema.
+E: ¿Qué hiciste el fin de semana?|O que você fez no fim de semana?
+E: Comimos paella.|Comemos paella.
+X: Yo trabajó.|Yo trabajé.|Atenção ao acento: trabajé (eu), trabajó (ele).
+D: O acento muda a pessoa: hablo (eu falo) e habló (ele falou).
+N: Comparar
+
+@A2|Comparar|Más grande que, tan... como|gram
+C: Para comparar, usa-se más... que, menos... que e tan... como (unidade 9 do livro).
+P: Más que, menos que, tan como.
+R: Superioridade|más grande que
+R: Inferioridade|menos caro que
+R: Igualdade|tan bonito como
+R: Irregulares|mejor, peor, mayor, menor
+E: Madrid es más grande que Toledo.|Madri é maior que Toledo.
+E: Este es menos caro.|Este é menos caro.
+E: Es tan alto como yo.|Ele é tão alto quanto eu.
+E: Es la mejor tortilla de la ciudad.|É a melhor tortilha da cidade.
+X: más mejor|mejor|"Mejor" já é comparativo.
+D: Compare a sua cidade com uma cidade espanhola em três frases.
+N: Muy e mucho
+
+@A2|Muy e mucho|Muy caro, mucho dinero|gram
+C: "Muy" vem antes de adjetivo e advérbio. "Mucho" vem com substantivo e com verbo.
+P: Muy + como é. Mucho + coisa ou ação.
+R: muy + adjetivo|muy bonito, muy caro
+R: mucho + substantivo|mucho dinero, mucha gente
+R: verbo + mucho|Trabajo mucho.
+R: Exceção|mucho mejor, mucho más
+E: Es muy caro.|É muito caro.
+E: Tengo mucho trabajo.|Tenho muito trabalho.
+E: Me gusta mucho.|Gosto muito.
+E: Hay mucha gente.|Tem muita gente.
+X: Es mucho caro.|Es muy caro.|Antes de adjetivo, use "muy".
+D: Muy nunca fica sozinho no fim da frase: "Me gusta mucho", nunca "me gusta muy".
+N: Por e para
+
+@B1|Por e para|Por favor, para ti|gram
+C: Os dois podem virar "para" ou "por" em português. A escolha depende do sentido.
+P: Para = destino e objetivo. Por = causa, meio e lugar por onde se passa.
+R: para|destino, objetivo, prazo
+R: por|causa, preço, meio, "através de"
+R: Fixas|por favor, por la mañana, para siempre
+E: Este regalo es para ti.|Este presente é para você.
+E: Gracias por todo.|Obrigado por tudo.
+E: Paseamos por el parque.|Passeamos pelo parque.
+E: Lo necesito para el lunes.|Preciso disso para segunda.
+X: Gracias para todo.|Gracias por todo.|Agradecimento usa "por".
+D: Para olha para frente (objetivo). Por olha para trás (causa).
+N: Já fiz: he hecho
+
+@B1|Já fiz: he hecho|Pretérito perfecto|gram
+C: Na Espanha, o "he hecho" é usado para o que aconteceu hoje, esta semana ou na vida, sem data fechada.
+P: Hoy, esta semana, alguna vez, nunca: he + particípio.
+R: Formação|he, has, ha, hemos, habéis, han + -ado / -ido
+R: Hoje|Hoy he comido paella.
+R: Experiência|¿Has estado en Sevilla?
+R: Irregulares|hecho, visto, dicho, escrito, vuelto
+E: Hoy he trabajado mucho.|Hoje trabalhei muito.
+E: ¿Has estado alguna vez en Madrid?|Você já esteve em Madri?
+E: Nunca he probado el pulpo.|Nunca provei polvo.
+E: Todavía no he terminado.|Ainda não terminei.
+X: Hoy trabajé mucho. (na Espanha)|Hoy he trabajado mucho.|Na Espanha, "hoy" pede o perfecto.
+D: Unidade 8 do livro e o caderno trazem muitos exercícios disso.
+N: Antes eu fazia: imperfecto
+
+@B1|Antes eu fazia: imperfecto|Antes salíamos mucho|gram
+C: O imperfeito descreve hábitos e situações do passado, como o "fazia" e o "era" do português (unidade 10 do livro).
+P: Antes + costume = imperfeito.
+R: -ar|trabajaba, trabajabas, trabajaba
+R: -er / -ir|comía, comías, comía
+R: Irregulares|era, iba, veía
+R: Marcadores|antes, de niño, siempre
+E: Antes salíamos mucho.|Antes saíamos muito.
+E: De niño vivía en Río.|Quando criança, eu morava no Rio.
+E: Era muy tímido.|Eu era muito tímido.
+E: Siempre íbamos a la playa.|Sempre íamos à praia.
+X: De niño viví en Río (como hábito)|De niño vivía en Río.|Situação que durava no passado usa imperfeito.
+D: Imperfeito pinta o cenário. Indefinido conta o que aconteceu.
+N: Pronomes lo, la, le
+
+@B1|Pronomes lo, la, le|¿El libro? Lo tengo yo|gram
+C: Para não repetir a coisa ou a pessoa, o espanhol usa lo, la, los, las e le (unidade 9 do livro).
+P: Lo / la = a coisa. Le = para a pessoa.
+R: Objeto masculino|lo / los
+R: Objeto feminino|la / las
+R: Para alguém|le / les
+R: Os dois juntos|le + lo = se lo
+E: ¿Los zapatos? Me los llevo.|Os sapatos? Vou levá-los.
+E: La llamo mañana.|Ligo para ela amanhã.
+E: Le doy el libro.|Dou o livro para ele.
+E: Se lo doy.|Dou para ele.
+X: Le lo doy.|Se lo doy.|"Le + lo" vira "se lo".
+D: Em respostas curtas, use o pronome: "¿La cuenta? Ya la tengo."
+N: Dar ordens: imperativo
+
+@B1|Dar ordens: imperativo|Cierra la ventana|gram
+C: O imperativo serve para dar instruções, ordens e conselhos (unidades 5 e 6 do livro).
+P: Tú: forma de "ele" do presente. Usted: troca a vogal.
+R: tú (-ar)|habla, cierra, gira
+R: tú (-er / -ir)|come, abre, escribe
+R: usted|hable, coma, abra
+R: Irregulares|ven, pon, haz, di, sal, ten, ve
+E: Cierra la ventana, por favor.|Feche a janela, por favor.
+E: Gire a la derecha.|Vire à direita.
+E: Ven aquí.|Vem aqui.
+E: Haz los deberes.|Faça a lição de casa.
+X: Vienes aquí. (como ordem)|Ven aquí.|O imperativo de "venir" é "ven".
+D: Receitas e direções na rua usam muito o imperativo.
+N: Expressões com verbo
+
+@B1|Expressões com verbo|Acabar de, volver a, dejar de|gram
+C: São dois verbos juntos que mudam o sentido. O espanhol usa muito no dia a dia.
+P: Verbo + preposição + infinitivo.
+R: acabar de|acabou de fazer
+R: volver a|fazer de novo
+R: dejar de|parar de
+R: llevar + tempo|há quanto tempo
+E: Acabo de llegar.|Acabei de chegar.
+E: Vuelvo a llamarte luego.|Te ligo de novo depois.
+E: He dejado de fumar.|Parei de fumar.
+E: Llevo dos años aquí.|Estou aqui há dois anos.
+X: Paré de fumar (aceito, menos comum)|Dejé de fumar.|O mais natural é "dejar de".
+D: "Llevar + tempo" é muito espanhol: "Llevo una hora esperando".
+N: Conselhos e obrigações
+
+@B1|Conselhos e obrigações|Tienes que, deberías, hay que|gram
+C: Do conselho leve à obrigação forte, o espanhol tem várias formas.
+P: Deberías = conselho. Tienes que = obrigação. Hay que = regra geral.
+R: Conselho|Deberías descansar.
+R: Obrigação|Tienes que ir al médico.
+R: Regra geral|Hay que llevar casco.
+R: Não precisa|No hace falta pagar.
+E: Deberías dormir más.|Você deveria dormir mais.
+E: Tengo que trabajar mañana.|Tenho que trabalhar amanhã.
+E: Hay que llevar casco.|É obrigatório usar capacete.
+E: No hace falta reservar.|Não precisa reservar.
+X: Tengo de trabajar.|Tengo que trabajar.|Obrigação é "tener que".
+D: Na segurança do trabalho: "Hay que usar el EPI" é regra para todos.
+N: Indefinido ou perfecto
+
+@B1|Indefinido ou perfecto|Hoy he comido, ayer comí|gram
+C: Na Espanha, a escolha depende do tempo: período ainda aberto (hoje, esta semana) ou fechado (ontem, ano passado).
+P: Tempo aberto: he comido. Tempo fechado: comí.
+R: Perfecto|hoy, esta mañana, esta semana, este año
+R: Indefinido|ayer, anoche, el lunes, en 2020
+R: Experiência|alguna vez, nunca, ya → perfecto
+E: Esta mañana he desayunado tarde.|Hoje de manhã tomei café tarde.
+E: Ayer desayuné temprano.|Ontem tomei café cedo.
+E: Este año he viajado mucho.|Este ano viajei muito.
+E: El año pasado viajé a Italia.|Ano passado viajei para a Itália.
+X: Ayer he comido paella.|Ayer comí paella.|"Ayer" é tempo fechado: indefinido.
+D: Desenhe duas caixas: "hoje e esta semana" (aberta) e "ontem e antes" (fechada).
+N: Desejos com ojalá
+
+@B2|Desejos com ojalá|Ojalá venga|gram
+C: Depois de "ojalá", "quiero que" e "espero que", o verbo vai para o subjuntivo.
+P: Desejo para outra pessoa = subjuntivo.
+R: Formação -ar|hable, hables, hable
+R: Formação -er / -ir|coma, comas, coma
+R: Irregulares|sea, vaya, tenga, haga, esté
+R: Gatilhos|ojalá, quiero que, espero que
+E: Ojalá haga buen tiempo.|Tomara que faça tempo bom.
+E: Quiero que vengas.|Quero que você venha.
+E: Espero que estés bien.|Espero que você esteja bem.
+E: Ojalá tengas suerte.|Tomara que você tenha sorte.
+X: Espero que estás bien.|Espero que estés bien.|Depois de "espero que", vem o subjuntivo.
+D: "Ojalá" vem do árabe e quer dizer "se Deus quiser".
+N: Quando + subjuntivo
+
+@B2|Quando + subjuntivo|Cuando llegues, llámame|gram
+C: Para falar do futuro depois de "cuando", o espanhol usa o subjuntivo, não o futuro.
+P: Cuando + futuro = cuando + subjuntivo.
+R: Futuro|Cuando llegues, llámame.
+R: Hábito|Cuando llego, me ducho.
+R: Outros gatilhos|en cuanto, hasta que, antes de que
+E: Cuando llegues, avísame.|Quando você chegar, me avisa.
+E: Cuando tenga tiempo, te llamo.|Quando eu tiver tempo, te ligo.
+E: Espera hasta que vuelva.|Espere até que eu volte.
+E: En cuanto lo sepa, te digo.|Assim que eu souber, te digo.
+X: Cuando llegarás, llámame.|Cuando llegues, llámame.|Depois de "cuando", não se usa o futuro.
+D: O português faz parecido: "quando você chegar".
+N: Imaginar com si
+
+@B2|Imaginar com si|Si tuviera tiempo...|gram
+C: Para situações imaginárias, usa-se si + imperfeito do subjuntivo e o condicional.
+P: Si + tuviera, iría.
+R: Real|Si llueve, me quedo en casa.
+R: Imaginário|Si tuviera dinero, viajaría.
+R: Conselho|Si fuera tú, lo haría.
+E: Si fuera tú, aceptaría.|Se eu fosse você, aceitaria.
+E: Si tuviera tiempo, estudiaría más.|Se eu tivesse tempo, estudaria mais.
+E: ¿Qué harías tú?|O que você faria?
+E: Si llueve, nos quedamos.|Se chover, a gente fica.
+X: Si tendría dinero...|Si tuviera dinero...|Depois de "si", não se usa o condicional.
+D: Igual ao português: "se eu tivesse" e "eu faria".
+N: O futuro simples
+
+@B2|O futuro simples|Mañana lloverá|gram
+C: O futuro simples serve para previsões, promessas e suposições. No dia a dia, "ir a" é mais comum.
+P: Infinitivo + é, ás, á, emos, éis, án.
+R: Regulares|hablaré, comeré, viviré
+R: Irregulares|tendré, haré, podré, saldré, diré
+R: Suposição|Serán las diez. (devem ser dez horas)
+E: Mañana lloverá.|Amanhã vai chover.
+E: Te lo diré mañana.|Te digo amanhã.
+E: ¿Dónde estará Ana?|Onde será que a Ana está?
+E: Serán las diez.|Devem ser dez horas.
+X: tenré|tendré|O futuro de "tener" é "tendré".
+D: Use o futuro para supor coisas: "Estará cansado".
+N: O condicional
+
+@B2|O condicional|Me gustaría, podrías|gram
+C: O condicional serve para pedidos educados, desejos e hipóteses.
+P: Infinitivo + ía.
+R: Pedido|¿Podrías ayudarme?
+R: Desejo|Me gustaría viajar.
+R: Conselho|Yo que tú, lo haría.
+R: Irregulares|tendría, haría, podría, diría
+E: Me gustaría un café.|Eu gostaria de um café.
+E: ¿Podrías repetir?|Você poderia repetir?
+E: Yo que tú, iría.|Eu, no seu lugar, iria.
+E: Sería genial.|Seria ótimo.
+X: Me gustaba un café. (pedindo agora)|Me gustaría un café.|Para pedir com educação, use o condicional.
+D: "Yo que tú" é bem espanhol para dar conselho.
+N: Contar o que alguém disse
+
+@B2|Contar o que alguém disse|Me dijo que...|gram
+C: Para repetir o que alguém falou, o verbo costuma recuar um tempo, como em português.
+P: "Estoy cansado" → Dijo que estaba cansado.
+R: Presente → imperfeito|"Estoy bien" → Dijo que estaba bien.
+R: Futuro → condicional|"Vendré" → Dijo que vendría.
+R: Pergunta|Me preguntó si...
+R: Pedido|Me pidió que + subjuntivo
+E: Me dijo que estaba ocupado.|Ele me disse que estava ocupado.
+E: Dijo que vendría.|Disse que viria.
+E: Me preguntó si quería café.|Me perguntou se eu queria café.
+E: Me pidió que esperara.|Me pediu que esperasse.
+X: Me dijo que viene mañana. (passado distante)|Me dijo que vendría.|Recue o tempo do verbo.
+D: Pratique contando a conversa do dia anterior.
+N: Se impessoal e passiva
+
+@B2|Se impessoal e passiva|Se habla español|gram
+C: Quando não importa quem faz, o espanhol usa "se" com o verbo.
+P: Se + verbo = alguém faz, não importa quem.
+R: Impessoal|Se vive bien aquí.
+R: Passiva com "se"|Se venden pisos.
+R: Placas|Se prohíbe fumar.
+R: Passiva com ser|Fue construido en 1990.
+E: Aquí se habla español.|Aqui se fala espanhol.
+E: Se alquila piso.|Aluga-se apartamento.
+E: Se prohíbe fumar.|É proibido fumar.
+E: El informe fue revisado.|O relatório foi revisado.
+X: Se vende pisos.|Se venden pisos.|O verbo concorda com a coisa.
+D: Placas de rua e de obra usam muito o "se".
+N: Arrependimentos
+
+@B2|Arrependimentos|Debería haberlo hecho|gram
+C: Para falar do que teria sido melhor fazer, usa-se o condicional + haber + particípio.
+P: Debería haber = deveria ter.
+R: Arrependimento|Debería haber estudiado.
+R: Crítica|No deberías haberlo dicho.
+R: Poderia|Podría haber sido peor.
+R: Desejo|Ojalá hubiera venido.
+E: Debería haberte llamado.|Eu deveria ter te ligado.
+E: No deberías haberte preocupado.|Você não deveria ter se preocupado.
+E: Podría haber sido peor.|Poderia ter sido pior.
+E: Ojalá lo hubiera sabido.|Quem dera eu tivesse sabido.
+X: Debería estudiado.|Debería haber estudiado.|Precisa do "haber".
+D: Muito usado em conversas sobre decisões: "Tendría que haber ido".
+N: Conectores de contraste
+
+@C1|Conectores de contraste|Aunque, sin embargo, a pesar de|gram
+C: Para mostrar contraste com elegância, cada conector tem a sua posição na frase.
+P: Aunque liga frases. A pesar de vem antes de uma coisa. Sin embargo começa a frase.
+R: aunque|Aunque llovía, salimos.
+R: a pesar de|A pesar del tráfico, llegamos.
+R: sin embargo|Es barato. Sin embargo, es lento.
+R: aun así|Estaba cansado; aun así, fui.
+E: Aunque estaba cansado, terminé.|Embora estivesse cansado, terminei.
+E: A pesar de la lluvia, jugamos.|Apesar da chuva, jogamos.
+E: Es un buen plan. Sin embargo, es caro.|É um bom plano. Porém, é caro.
+E: Aun así, lo intentaré.|Mesmo assim, vou tentar.
+X: A pesar que llueve|A pesar de que llueve|Antes de frase, use "a pesar de que".
+D: "Aunque" + subjuntivo deixa a frase hipotética: "aunque llueva, iré".
+N: Suavizar o que se diz
+
+@C1|Suavizar o que se diz|Quería preguntarte si...|gram
+C: Para não soar direto demais, o falante avançado usa o imperfeito e o condicional.
+P: Quanto mais "para trás" no tempo, mais educado.
+R: Pedido|Quería pedirte un favor.
+R: Opinião|Yo diría que...
+R: Possibilidade|Igual sería mejor...
+R: Discordar|Entiendo, pero...
+E: Quería preguntarte si podrías ayudarme.|Eu queria te perguntar se você poderia me ajudar.
+E: Yo diría que es mejor esperar.|Eu diria que é melhor esperar.
+E: Igual deberíamos hablarlo.|Talvez devêssemos conversar sobre isso.
+E: No estoy del todo convencido.|Não estou totalmente convencido.
+X: Estás equivocado.|No sé si estoy de acuerdo.|Em reuniões, a forma direta pode soar agressiva.
+D: "Igual" no começo da frase quer dizer "talvez" na Espanha.
+N: Dar ênfase
+
+@C1|Dar ênfase|Lo que necesito es...|gram
+C: Para destacar uma parte da frase, o espanhol reorganiza as palavras.
+P: Lo que + verbo + es...
+R: Lo que... es|Lo que necesito es descansar.
+R: Fue... quien|Fue Ana quien llamó.
+R: Es que|Es que no puedo.
+R: Sí que|¡Sí que me gusta!
+E: Lo que necesito es más tiempo.|O que eu preciso é de mais tempo.
+E: Fue mi jefe quien lo decidió.|Foi o meu chefe que decidiu.
+E: Es que estoy cansado.|É que estou cansado.
+E: ¡Sí que lo sabía!|Eu sabia, sim!
+X: Lo que necesito es de tiempo.|Lo que necesito es tiempo.|Sem "de".
+D: "Es que..." é a desculpa mais espanhola que existe. Use para se justificar.
+N: Palavras que andam juntas
+
+@C1|Palavras que andam juntas|Tomar una decisión, echar de menos|gram
+C: Algumas palavras sempre andam com outras. Trocar soa estranho, mesmo com o sentido certo.
+P: Aprenda em pares, não palavra solta.
+R: tomar|tomar una decisión, tomar el sol, tomar algo
+R: echar|echar de menos, echar una mano, echar la culpa
+R: dar|dar un paseo, dar las gracias, darse cuenta
+R: hacer|hacer caso, hacer falta, hacer cola
+E: Tenemos que tomar una decisión.|Temos que tomar uma decisão.
+E: Te echo de menos.|Sinto sua falta.
+E: Me di cuenta del error.|Percebi o erro.
+E: Hay que hacer cola.|É preciso fazer fila.
+X: Siento tu falta.|Te echo de menos.|"Sentir falta" é "echar de menos" na Espanha.
+D: Anote sempre o par completo: "echar de menos", nunca só "echar".
+N: Verbos com preposição fixa
+
+@C1|Verbos com preposição fixa|Pensar en, soñar con|gram
+C: Muitos verbos pedem uma preposição própria, diferente do português.
+P: Decore o verbo junto com a preposição.
+R: pensar en|pensar em
+R: soñar con|sonhar com
+R: casarse con|casar com
+R: depender de|depender de
+R: enamorarse de|apaixonar-se por
+E: Pienso en ti.|Penso em você.
+E: Anoche soñé contigo.|Ontem à noite sonhei com você.
+E: Se casó con Ana.|Ele casou com a Ana.
+E: Me enamoré de Madrid.|Me apaixonei por Madri.
+X: Me enamoré por Madrid.|Me enamoré de Madrid.|Em espanhol, a pessoa se apaixona "de".
+D: Faça uma frase sua com cada par e repita em voz alta.
+N: Expressões idiomáticas
+
+@C1|Expressões idiomáticas|El sentido no está en las palabras|gram
+C: Os modismos não se entendem traduzindo palavra por palavra. Na Espanha, eles aparecem o tempo todo.
+P: Aprenda como um bloco, junto com a situação em que se usa.
+R: Fácil|ser pan comido
+R: Distraído|estar en las nubes
+R: Caro|costar un ojo de la cara
+R: Esforçar-se|ponerse las pilas
+R: Errar|meter la pata
+E: El examen fue pan comido.|A prova foi moleza.
+E: Siempre estás en las nubes.|Você está sempre distraído.
+E: Ese coche cuesta un ojo de la cara.|Esse carro custa os olhos da cara.
+E: He metido la pata.|Dei um fora.
+X: Traduzir ao pé da letra|Entender pela situação|"Meter la pata" é dar um fora, não pôr a pata.
+D: Associe cada expressão a uma imagem engraçada.
+N: Mistura de tempos com si
+
+@C1|Mistura de tempos com si|Si hubiera estudiado, ahora sabría|gram
+C: Às vezes uma decisão do passado muda o presente. O espanhol mistura os tempos na mesma frase.
+P: Si + hubiera + particípio, condicional agora.
+R: Passado → presente|Si hubiera estudiado, ahora hablaría bien.
+R: Passado → passado|Si lo hubiera sabido, habría venido.
+E: Si hubiera aceptado, ahora viviría en Madrid.|Se eu tivesse aceitado, agora moraria em Madri.
+E: Si lo hubiera sabido, te habría ayudado.|Se eu soubesse, teria te ajudado.
+E: Si hubiera dormido más, no estaría cansado.|Se eu tivesse dormido mais, não estaria cansado.
+X: Si habría sabido...|Si hubiera sabido...|Depois de "si", nunca o condicional.
+D: Desenhe uma linha do tempo: a causa fica atrás e o resultado agora.
+N: Formas elegantes
+
+@C2|Formas elegantes|De haberlo sabido...|gram
+C: Em textos e falas cultas, o espanhol troca o "si" por formas mais elegantes.
+P: De + infinitivo composto = se eu tivesse...
+R: De + haber|De haberlo sabido, habría venido.
+R: De + infinitivo|De necesitar ayuda, llámame.
+R: Gerúndio|Pensándolo bien, tienes razón.
+E: De haberlo sabido, te habría avisado.|Se eu soubesse, teria te avisado.
+E: De tener tiempo, iría.|Se eu tivesse tempo, iria.
+E: Pensándolo bien, mejor no.|Pensando bem, melhor não.
+E: En caso de duda, pregunte.|Em caso de dúvida, pergunte.
+X: De haber lo sabido|De haberlo sabido|Os pronomes se juntam ao infinitivo.
+D: Use em e-mails formais: "En caso de necesitar algo, no dude en contactarme".
+N: Nuance de sinônimos
+
+@C2|Nuance de sinônimos|Barato ou económico?|gram
+C: Palavras parecidas passam impressões diferentes. Escolher bem mostra domínio do idioma.
+P: Mesma ideia, emoção diferente.
+R: delgado · flaco|magro · magricela
+R: barato · económico|barato (pode ser ruim) · com preço bom
+R: cabezota · decidido|cabeça-dura · decidido
+R: curioso · cotilla|curioso · fofoqueiro
+E: El hotel es muy económico.|O hotel tem um preço muito bom.
+E: Es muy decidida.|Ela é muito decidida.
+E: ¡No seas cotilla!|Não seja fofoqueiro!
+E: Parece barato.|Parece barato (de má qualidade).
+X: "Tu casa es barata" (elogio)|"Tu casa es económica"|"Barato" pode soar como "de baixa qualidade".
+D: Monte pares de palavras positivas e negativas.
+N: Ironia e humor
+
+@C2|Ironia e humor|Pues qué bien|gram
+C: O espanhol usa muita ironia no dia a dia. O tom de voz carrega o sentido real.
+P: O tom manda mais que as palavras.
+R: Ironia|Pues qué bien.
+R: Concordar forte|¡A mí me lo vas a contar!
+R: Duvidar|Hasta que no lo vea, no me lo creo.
+R: Reclamar|Lo que faltaba.
+E: Pues qué bien, ¿no?|Que ótimo, né? (irônico)
+E: ¡A mí me lo vas a contar!|Nem me fale!
+E: Y que lo digas.|Pode crer.
+E: Lo que faltaba.|Era só o que faltava.
+X: Entender ao pé da letra|Observar o tom e a situação|"Pues qué bien" depois de um problema é ironia.
+D: Assista a comédias espanholas e preste atenção no tom das falas.
+N: Formal e informal
+
+@C2|Formal e informal|Usted o tú, escribir o mandar|gram
+C: O falante fluente escolhe as palavras conforme a situação: chefe, cliente ou amigo.
+P: Formal = usted e palavras completas. Informal = tú e expressões do dia a dia.
+R: Pedir|¿Podría usted...? / ¿Me puedes...?
+R: Enviar|remitir / mandar
+R: Ajudar|asistir / echar una mano
+R: Dinheiro|dinero / pasta
+E: Le agradecería su ayuda.|Eu agradeceria a sua ajuda. (formal)
+E: ¿Me echas una mano?|Me dá uma mão? (informal)
+E: Adjunto le remito el informe.|Segue em anexo o relatório. (formal)
+E: Te lo mando ahora.|Te mando agora. (informal)
+X: "¿Qué pasa, tío?" para um cliente|"Buenos días, señor García"|O registro errado causa má impressão.
+D: E-mail para cliente: usted. Mensagem para colega: tú.
+N: Marcadores do discurso
+
+@C2|Marcadores do discurso|O sea, vamos, total que|gram
+C: São palavras curtas que organizam a conversa e soam muito naturais.
+P: Pequenas palavras, grande fluência.
+R: o sea|ou seja
+R: vamos|quer dizer
+R: total, que|resumindo
+R: por cierto|aliás, a propósito
+R: en fin|enfim
+E: O sea, que no vienes.|Ou seja, você não vem.
+E: Es caro; vamos, carísimo.|É caro; quer dizer, caríssimo.
+E: Total, que llegamos tarde.|Resumindo, chegamos tarde.
+E: Por cierto, ¿qué tal tu madre?|Aliás, como vai sua mãe?
+X: Usar "o sea" em toda frase|Usar com moderação|Exagerar soa infantil.
+D: Escolha um marcador por semana e use em todas as conversas.
+N: A palavra forte e o acento
+
+@C2|A palavra forte e o acento|Esta e está, hablo e habló|gram
+C: Em espanhol, o acento escrito muda o sentido. Errar a sílaba forte confunde quem ouve.
+P: O acento manda: mude a sílaba forte e você muda a palavra.
+R: esta / está|este, esta / ele está
+R: hablo / habló|eu falo / ele falou
+R: el / él|o (artigo) / ele
+R: tu / tú|seu / você
+R: si / sí|se / sim
+E: Esta casa está limpia.|Esta casa está limpa.
+E: Hablo español.|Eu falo espanhol.
+E: Él habló ayer.|Ele falou ontem.
+E: Sí, si quieres.|Sim, se você quiser.
+X: Ella habló (querendo dizer "eu falo")|Hablo|A sílaba forte muda a pessoa e o tempo.
+D: Bata palma na sílaba forte enquanto fala a palavra.
+N: Falsos amigos
+
+@C2|Falsos amigos|Exquisito não é esquisito|gram
+C: Palavras parecidas com o português, mas com outro sentido. Para o brasileiro, são as armadilhas mais perigosas.
+P: Parece, mas não é.
+R: exquisito|delicioso
+R: embarazada|grávida
+R: oficina|escritório
+R: rato|momento
+R: apellido|sobrenome
+R: polvo|pó (polvo é "pulpo")
+E: La comida está exquisita.|A comida está deliciosa.
+E: Mi mujer está embarazada.|Minha esposa está grávida.
+E: Trabajo en una oficina.|Trabalho num escritório.
+E: Espera un rato.|Espera um pouco.
+X: Estoy embarazado (com vergonha)|Tengo vergüenza.|"Embarazada" é grávida. Vergonha é "vergüenza".
+D: Faça uma lista dos falsos amigos e revise toda semana.
+N: Ditados populares
+
+@C2|Ditados populares|Más vale tarde que nunca|gram
+C: Os refranes são ditados que todo espanhol conhece. Usar um no momento certo mostra domínio e cultura.
+P: Ditado certo, na hora certa.
+R: Atraso|Más vale tarde que nunca.
+R: Cedo|A quien madruga, Dios le ayuda.
+R: Paciência|No por mucho madrugar amanece más temprano.
+R: Aparência|El hábito no hace al monje.
+R: Escolher|Más vale pájaro en mano que ciento volando.
+E: Más vale tarde que nunca.|Antes tarde do que nunca.
+E: A quien madruga, Dios le ayuda.|Deus ajuda quem cedo madruga.
+E: El hábito no hace al monje.|O hábito não faz o monge.
+E: Más vale pájaro en mano que ciento volando.|Mais vale um pássaro na mão do que dois voando.
+X: Traduzir o ditado brasileiro palavra por palavra|Usar o refrán espanhol equivalente|Muitos ditados existem nas duas línguas, mas com palavras diferentes.
+D: Compare com os ditados brasileiros: muitos são quase iguais.
+N: Revisão geral
+`;
+const MMC={C:'Conceito central',R:'Estrutura / regra',E:'Exemplos com tradução',X:'Erro comum de brasileiros',D:'Dica visual e conexão'};
+const MMS=MMT.split('\n@').map(b=>b.replace(/^@/,'').trim()).filter(Boolean).map(b=>{const ls=b.split('\n');const h=ls[0].split('|');const o={lv:h[0],t:h[1],sub:h[2],k:h[3]==='sit'?'sit':'gram',C:[],P:'',R:[],E:[],X:[],D:'',N:''};ls.slice(1).forEach(l=>{const m=l.match(/^([CPREXDN]): (.*)$/);if(!m)return;const k=m[1],v=m[2];if(k==='C')o.C.push(v);else if(k==='P')o.P=v;else if(k==='D')o.D=v;else if(k==='N')o.N=v;else o[k].push(v.split('|'))});return o});
+MMS.sort((a,b)=>['A1','A2','B1','B2','C1','C2'].indexOf(a.lv)-['A1','A2','B1','B2','C1','C2'].indexOf(b.lv)||(a.k===b.k?0:a.k==='sit'?-1:1));
+const LVC={A1:'#2E7D4F',A2:'#B08A00',B1:'#2C5DA8',B2:'#6B3FA0',C1:'#C2352B',C2:'#16305C'};
+let mmMode=store.get('mmMode','full');
+let mmType=store.get('mmType','all');
+const MMTY=[['all','Todos os temas'],['sit','Situações do dia a dia'],['gram','Gramática e pronúncia']];
+document.getElementById('mmType').innerHTML=MMTY.map(([k,t])=>`<button data-k="${k}">${t} (${k==='all'?MMS.length:MMS.filter(m=>m.k===k).length})</button>`).join('');
+document.querySelectorAll('#mmType button').forEach(b=>b.onclick=()=>{mmType=b.dataset.k;store.set('mmType',mmType);renderMM()});
+function renderMM(){
+  document.querySelectorAll('#mmType button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===mmType)));
+  const box=document.getElementById('mmaps');
+  box.innerHTML=MMS.map((m,i)=>((mapLv!=='Todos'&&m.lv!==mapLv)||(mmType!=='all'&&m.k!==mmType))?'':`<details class="mm" id="mm${i}"><summary><span class="mlvb" style="background:${LVC[m.lv]}">${m.lv}</span><span class="mt"><b>${m.t}</b><span>${m.k==='sit'?'Situação · ':''}${m.sub}</span></span><span class="chev">›</span></summary><div class="mmb">
+<div class="blk" style="--bc:var(--m2)"><h4><i>1</i>${MMC.C}</h4><ul>${m.C.map(c=>`<li>${c}</li>`).join('')}</ul>${m.P?`<div class="pense"><b>Pense assim:</b> ${m.P}</div>`:''}</div>
+<div class="blk" style="--bc:var(--m1)"><h4><i>2</i>${MMC.R}</h4>${m.R.map(r=>`<div class="rrw"><b>${r[0]}</b><span>${r[1]||''}</span></div>`).join('')}</div>
+<div class="blk" style="--bc:var(--m3)"><h4><i>3</i>${MMC.E}</h4>${m.E.map((e,j)=>`<div class="exr"><button class="play sm" data-m="${i}" data-j="${j}" aria-label="Ouvir">${PLAY}</button><span class="t"><b>${e[0]}</b><span>${e[1]}</span></span></div>`).join('')}</div>
+<div class="blk" style="--bc:var(--m4)"><h4><i>4</i>${MMC.X}</h4>${m.X.map(x=>`<div class="err"><span class="no">✗ ${x[0]}</span><span class="ok">✓ ${x[1]}</span><span>${x[2]}</span></div>`).join('')}</div>
+<div class="blk" style="--bc:var(--m5)"><h4><i>5</i>${MMC.D}</h4><div>${m.D}</div>${m.N&&MMS.some(x=>x.t===m.N)?`<button class="nxt" data-next="${m.N}">Próximo tema: ${m.N} →</button>`:''}</div>
+</div></details>`).join('');
+  box.querySelectorAll('.play').forEach(b=>b.onclick=()=>say(MMS[+b.dataset.m].E[+b.dataset.j][0]));
+  box.querySelectorAll('.nxt').forEach(b=>b.onclick=()=>{const k=MMS.findIndex(x=>x.t===b.dataset.next);if(k<0)return;if((mapLv!=='Todos'&&MMS[k].lv!==mapLv)||(mmType!=='all'&&MMS[k].k!==mmType)){mapLv='Todos';mmType='all';store.set('mapLv',mapLv);store.set('mmType',mmType);renderMaps()}const d=document.getElementById('mm'+k);d.open=true;d.scrollIntoView({block:'start'})});
+}
+function setMM(m){mmMode=m;store.set('mmMode',m);document.getElementById('mmaps').hidden=m!=='full';document.getElementById('mmType').hidden=m!=='full';document.getElementById('maps').hidden=m==='full';document.getElementById('mmFull').setAttribute('aria-pressed',String(m==='full'));document.getElementById('mmQuick').setAttribute('aria-pressed',String(m!=='full'))}
+document.getElementById('mmFull').onclick=()=>setMM('full');document.getElementById('mmQuick').onclick=()=>setMM('quick');
+{const _rm=renderMaps;renderMaps=function(){_rm();renderMM()}}
+document.getElementById('mmFull').textContent='Mapas completos ('+MMS.length+')';document.getElementById('mmQuick').textContent='Mapas rápidos ('+M.length+')';
+renderMaps();setMM(mmMode);
+
+/* ---------- Músicas ---------- */
+const MU=MUS.trim().split('\n').map(l=>l.split('|'));
+let musLv=store.get('musLv','Todos'),musDone=store.get('musDone',[]);
+document.getElementById('musFilter').innerHTML=['Todos','A1','A2','B1','B2'].map(l=>`<button data-l="${l}">${l==='Todos'?'Todas':l}</button>`).join('');
+function renderMus(){
+  document.querySelectorAll('#musFilter button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===musLv)));
+  document.getElementById('musList').innerHTML=MU.map((m,i)=>(musLv!=='Todos'&&m[0]!==musLv)?'':`<div class="mus"><div class="mh"><span class="mlvb" style="background:${LVC[m[0]]};color:#fff;font:800 .8rem var(--f-mono);padding:3px 7px;border-radius:7px">${m[0]}</span><b>${m[1]}</b><span>${m[2]} · ${m[3]}</span></div><div><b>Tema:</b> ${m[4]}</div><div class="chips">${m[5].split(',').map(w=>`<button class="chip" data-w="${w.trim()}">${w.trim()} 🔊</button>`).join('')}</div><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><a class="yt" href="https://www.youtube.com/results?search_query=${encodeURIComponent(m[1]+' '+m[2]+' letra')}" target="_blank" rel="noopener">Ouvir no YouTube →</a><label style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="mu${i}" data-i="${i}" ${musDone.includes(i)?'checked':''} style="width:22px;height:22px;accent-color:var(--m1)">Ouvi e treinei</label></div></div>`).join('');
+  document.querySelectorAll('#musList .chip').forEach(b=>b.onclick=()=>say(b.dataset.w));
+  document.querySelectorAll('#musList input').forEach(c=>c.onchange=()=>{const n=+c.dataset.i;musDone=c.checked?[...musDone,n]:musDone.filter(x=>x!==n);store.set('musDone',musDone);if(c.checked)touchDay()});
+}
+document.querySelectorAll('#musFilter button').forEach(b=>b.onclick=()=>{musLv=b.dataset.l;store.set('musLv',musLv);renderMus()});
+renderMus();
+document.getElementById('goMus').onclick=()=>show('musicas');
+
+/* ---------- Phrasal verbs ---------- */
+const PVL=PV.trim().split('\n').map(l=>l.split('|'));
+function renderPV(){
+  const q=(document.getElementById('pvSearch').value||'').trim().toLowerCase();
+  const rows=PVL.filter(v=>!q||v[0].includes(q)||v[1].toLowerCase().includes(q)||v[3].toLowerCase().includes(q));
+  document.getElementById('pvList').innerHTML=rows.length?rows.map(v=>`<div class="pvr"><button data-s="${v[0]}"><span class="v">${v[0]} 🔊</span></button><span class="m">${v[1]}</span><span class="pr">${v[2]}</span><button class="e" data-s="${v[3].replace(/"/g,'&quot;')}">${v[3]} 🔊<span>${v[4]}</span></button></div>`).join(''):'<div class="wempty">Nenhuma expressão encontrada.</div>';
+  document.querySelectorAll('#pvList button').forEach(b=>b.onclick=()=>say(b.dataset.s));
+}
+document.getElementById('pvSearch').oninput=renderPV;
+document.getElementById('pvSub').textContent=PVL.length+' expressões com verbo que o espanhol usa o tempo todo (como echar de menos e tener ganas de), com exemplo e tradução. Toque na expressão ou no exemplo para ouvir.';
+renderPV();
+
+/* ---------- SOS ---------- */
+{const sl=document.getElementById('sosList');
+sl.innerHTML=SOS.map(g=>`<div class="ngroup"><h3>${g.t}</h3><p>${g.d}</p><div class="wl-head"><span>Português</span><span>English</span><span>Pronúncia</span></div>${g.r.trim().split('\n').map(l=>{const w=l.split('|');return `<button class="wrow" data-en="${w[0].replace(/"/g,'&quot;')}" aria-label="Ouvir ${w[0].replace(/"/g,'')}"><span>${w[1]}</span><span>${w[0]}</span><span>${w[2]}</span></button>`}).join('')}</div>`).join('');
+sl.querySelectorAll('.wrow').forEach(r=>r.onclick=()=>{say(r.dataset.en.replace(' / ',', '));sl.querySelectorAll('.on').forEach(x=>x.classList.remove('on'));r.classList.add('on')});}
 
 /* ---------- Plano ---------- */
 const P=[
