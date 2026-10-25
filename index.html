@@ -90,6 +90,36 @@
 .fct .big{font-size:3.4rem}.fct .pt{font:800 1.3rem var(--f-display);color:#1E8E4A}.fct .en{font:900 1.6rem var(--f-display)}.fct .pr{font:800 1.15rem var(--f-body);background:#FFF3C4;color:#2A2100;border-radius:10px;padding:4px 10px;justify-self:center}
 .fct .lbl{font:800 .72rem var(--f-mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .fbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+body.onhome header .brand,body.onhome header .ver,body.onhome header .bar,body.onhome main .speed,body.onhome main .warn{display:none!important}
+body.onhome header .wrap{padding-top:6px}
+body.onhome main .wrap{padding-top:12px}
+.hero{position:relative;overflow:hidden;background:#8E1B1B;color:#fff;border-radius:24px;padding:26px 18px 20px;isolation:isolate;box-shadow:0 10px 30px rgba(70,10,10,.28)}
+.hero:before{content:"";position:absolute;right:-120px;top:-110px;width:330px;height:330px;border-radius:50%;background:#F2C230;opacity:.13;z-index:-1}
+.hero:after{content:"";position:absolute;left:-90px;bottom:-120px;width:300px;height:300px;border-radius:50%;background:#3E0808;opacity:.35;z-index:-1}
+.hflag{position:absolute;right:18px;top:20px;font-size:2.3rem;line-height:1}
+.hk{font:700 .68rem var(--f-mono);letter-spacing:.24em;text-transform:uppercase;color:#F2C230;padding-right:56px}
+.ht{font:800 clamp(2.4rem,12vw,3.6rem)/.95 var(--f-display);margin:12px 0 0;color:#fff;letter-spacing:-.02em}
+.ht span{display:inline-block;background:#F2C230;color:#2A2100;border-radius:14px;padding:0 12px 4px;margin-top:4px}
+.hs{font:800 1.18rem/1.2 var(--f-display);margin:18px 0 4px}
+.hd{margin:0;opacity:.88;font-size:.98rem}
+.hprog{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:14px 0 4px;font:600 .8rem var(--f-mono);opacity:.95}
+.hcont{border:0;border-radius:999px;background:#F2C230;color:#2A2100;font:800 .9rem var(--f-body);padding:9px 14px;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 0}
+.htile{display:flex;align-items:center;gap:10px;text-align:left;min-height:64px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.32);border-radius:16px;color:#fff;padding:10px 12px;cursor:pointer;font:inherit;transition:transform .12s,background .12s}
+.htile:hover{background:rgba(255,255,255,.14)}.htile:active{transform:scale(.97)}
+.htile .ti{font-size:1.65rem;line-height:1;flex:0 0 auto}
+.htile b{display:block;font:800 .95rem/1.15 var(--f-body)}.htile small{display:block;font-size:.76rem;opacity:.78;margin-top:2px;line-height:1.2}
+.htile.big{grid-column:1/-1;background:rgba(242,194,48,.16);border-color:rgba(242,194,48,.7)}
+.hlv{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:16px 0 0}
+.hlv button{border:1.5px solid rgba(255,255,255,.75);border-radius:10px;color:#fff;font:700 .85rem var(--f-mono);padding:8px 0;cursor:pointer}
+.hfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:22px}
+.ha{font:800 1rem/1.2 var(--f-display)}.hv{font:600 .68rem/1.4 var(--f-mono);text-align:right;opacity:.85}
+.hinst{display:block;width:100%;margin-top:14px;border:1.5px dashed rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:14px;padding:10px;font:700 .92rem var(--f-body);cursor:pointer}
+@media (max-width:520px){.htile:not(.big){flex-direction:column;align-items:flex-start;gap:8px;min-height:112px;padding:12px}.htile:not(.big) .ti{font-size:1.9rem}}
+@media (max-width:340px){.hlv{grid-template-columns:repeat(3,1fr)}}
+body.onhome .credit{display:none}
+@media (prefers-reduced-motion:reduce){.htile{transition:none}}
 </style>
 <title>Espanhol Prático</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -324,7 +354,8 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
     <div class="ver" id="ver"></div>
     <div class="bar" aria-hidden="true"><i id="barfill"></i></div>
     <nav role="tablist" aria-label="Seções">
-      <button role="tab" data-tab="aula" aria-selected="true">Aula</button>
+      <button role="tab" data-tab="inicio" aria-selected="true">Início</button>
+      <button role="tab" data-tab="aula" aria-selected="false">Aula</button>
       <button role="tab" data-tab="tradutor" aria-selected="false">Tradutor</button>
       <button role="tab" data-tab="niveis" aria-selected="false">Níveis</button>
       <button role="tab" data-tab="livro" aria-selected="false">Livro</button>
@@ -353,7 +384,22 @@ h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0 0 4px
     <button data-rate="1" aria-pressed="false">Normal</button>
   </div>
 
-  <section id="aula" data-panel>
+  <section id="inicio" data-panel>
+    <div class="hero">
+      <span class="hflag" aria-hidden="true">🇪🇸</span>
+      <div class="hk">Curso completo de espanhol da Espanha</div>
+      <h1 class="ht">Espanhol<br><span>Prático</span></h1>
+      <div class="hs">Espanhol do zero ao avançado</div>
+      <p class="hd" id="hGreet">Para a vida pessoal, o trabalho e a escola. Escolha por onde começar.</p>
+      <div class="hprog"><span id="hDay"></span><button class="hcont" id="hCont" hidden></button></div>
+      <div class="hgrid" id="hGrid" role="list"></div>
+      <div class="hlv" id="hLv" aria-label="Níveis"></div>
+      <div class="hfoot"><div class="ha">Desenvolvido por Carlos André</div><div class="hv" id="hVer"></div></div>
+      <button class="hinst" id="hInst" hidden>📲 Instalar o app no celular</button>
+    </div>
+  </section>
+
+  <section id="aula" data-panel hidden>
     <h2>Uma situação por vez</h2>
     <p class="sub">Escolha onde vai usar: vida pessoal, trabalho ou escola. Cada aula mostra o nível, do 1 (mais simples) ao 4. Ouça, repita três vezes e avance quando quiser.</p>
     <details class="pguide"><summary>Como ler a pronúncia</summary>
@@ -579,7 +625,7 @@ function updateStats(){
 
 /* ---------- Abas ---------- */
 const tabs=document.querySelectorAll('nav button');
-function show(id){tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.tab===id)));document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.id!==id);store.set('tab',id);window.scrollTo(0,0)}
+function show(id){tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.tab===id)));document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.id!==id);store.set('tab',id);if(id!=='inicio')store.set('lastTab',id);document.body.classList.toggle('onhome',id==='inicio');if(id==='inicio'&&typeof window.renderHome==='function')window.renderHome();const nb=document.querySelector('nav [data-tab="'+id+'"]');if(nb&&nb.scrollIntoView)nb.scrollIntoView({block:'nearest',inline:'center'});window.scrollTo(0,0)}
 tabs.forEach(t=>t.onclick=()=>show(t.dataset.tab));
 
 /* ---------- Nome ---------- */
@@ -4212,8 +4258,8 @@ const box=document.getElementById('exBox');
 let exMode='F',fLv=store.get('fLv','Todos'),fBest=store.get('fBest',{});
 const TOT=17;
 document.getElementById('exSub').textContent=FICHAS.length+' fichas com '+TOT+' questões cada ('+FICHAS.length*TOT+' questões), do A1 ao B2, no estilo das fichas impressas: complete, ligue, escolha e corrija o erro. E o treino rápido, com as frases dos '+MMS.length+' mapas mentais.';
-function setMode(m){exMode=m;document.getElementById('exModeF').setAttribute('aria-pressed',String(m==='F'));document.getElementById('exModeT').setAttribute('aria-pressed',String(m==='T'));m==='F'?listF():treinoMenu()}
-document.getElementById('exModeF').onclick=()=>setMode('F');document.getElementById('exModeT').onclick=()=>setMode('T');
+function exSetMode(m){exMode=m;document.getElementById('exModeF').setAttribute('aria-pressed',String(m==='F'));document.getElementById('exModeT').setAttribute('aria-pressed',String(m==='T'));m==='F'?listF():treinoMenu()}
+document.getElementById('exModeF').onclick=()=>exSetMode('F');document.getElementById('exModeT').onclick=()=>exSetMode('T');
 function listF(){
   const lv=['Todos','A1','A2','B1','B2'];
   box.innerHTML=`<div class="lvf" id="fLvB">${lv.map(l=>`<button data-l="${l}" aria-pressed="${l===fLv}">${l==='Todos'?'Todas':l}</button>`).join('')}</div><div class="fgrid">${FICHAS.map((f,i)=>(fLv!=='Todos'&&f.lv!==fLv)?'':`<button class="fcardb" data-i="${i}"><span class="fe">${f.e}</span><span><b>${esc(f.t)}</b><small><span class="slv" style="background:${LVCX[f.lv]};color:#fff;font:800 .7rem var(--f-mono);padding:1px 6px;border-radius:6px;margin-right:6px">${f.lv}</span>Ficha ${String(i+1).padStart(3,'0')} · ${esc(f.sub)}</small></span><span class="fs">${fBest[f.t]!=null?'⭐ '+fBest[f.t]+'/'+TOT:'Nova'}</span></button>`).join('')}</div>`;
@@ -4281,7 +4327,7 @@ function runT(qs,title,key){
   let i=0,sc=0;const wrong=[];
   function q(){const x=qs[i];
     box.innerHTML=`<button class="btn ghost" id="tBack" style="margin:0 0 8px">← Sair do treino</button><div class="tprog"><i style="width:${i/qs.length*100}%"></i></div><div class="tq"><div class="tqk">${esc(title)} · ${i+1} de ${qs.length} · ${esc(x.type)}</div><div class="tqp" ${x.listen||x.play?'role="button" tabindex="0" id="tSay" style="cursor:pointer"':''}>${x.listen?'🔊 Toque para ouvir de novo':esc(x.p)+(x.play?' 🔊':'')}</div><div class="fopts">${x.o.map(o=>`<button data-v="${esc(o)}">${esc(o)}</button>`).join('')}</div><div id="tFb"></div></div>`;
-    document.getElementById('tBack').onclick=()=>setMode(key&&key.startsWith('map:')?'T':'T');
+    document.getElementById('tBack').onclick=()=>exSetMode(key&&key.startsWith('map:')?'T':'T');
     const ts=document.getElementById('tSay');if(ts)ts.onclick=()=>say(x.say);if(x.listen)say(x.say);
     box.querySelectorAll('.tq .fopts button').forEach(b=>b.onclick=()=>{const ok=b.dataset.v===x.a;box.querySelectorAll('.tq .fopts button').forEach(y=>{y.disabled=true;if(y.dataset.v===x.a)y.classList.add('ok')});if(!ok){b.classList.add('no');wrong.push(x)}else sc++;
       say(x.say);document.getElementById('tFb').innerHTML=`${!ok&&x.why?`<p class="fnote">${esc(x.why)}</p>`:''}<div class="cta"><button class="btn" id="tNx">${i+1<qs.length?'Próxima →':'Ver resultado'}</button></div>`;
@@ -4522,8 +4568,53 @@ srch.oninput=()=>{shown=40;render()};
 render();
 }
 
+/* ---------- Início (a cara do app) ---------- */
+{
+const nlines=t=>String(t||'').trim().split('\n').filter(l=>l.split('|').length>=3).length;
+const nWords=Object.values(RAW).reduce((a,t)=>a+nlines(t),0);
+const nWeeks=P.reduce((a,m)=>a+m.w.length,0);
+const fmt=n=>n.toLocaleString('pt-BR');
+const T=[
+ ['aula','☕',L.length+' aulas do dia a dia','Uma situação por vez, com áudio',1],
+ ['tradutor','🎙️','Tradutor de voz','Fale e ouça na hora'],
+ ['niveis','🪜','Níveis A1 a C2','Do zero ao avançado'],
+ ['livro','📘','Livro e aulas','Español en Marcha'],
+ ['mapas','🧠',fmt(MMS.length+M.length)+' mapas mentais','Ilustrados'],
+ ['exerc','✏️',(window.FICHAS?FICHAS.length:24)+' fichas','Exercícios e treino'],
+ ['flash','🃏',fmt(window.FC_TOTAL||0)+' flashcards','Escrito x falado'],
+ ['phrasal','🧲',fmt(PVL.length)+' expressões','Com verbos'],
+ ['palavras','📚',fmt(nWords)+' palavras','Com pronúncia'],
+ ['nativo','💬','Frases nativas',N.length+' grupos'],
+ ['historias','📖',S.length+' leituras','Bilíngues, com áudio'],
+ ['musicas','🎵',MU.length+' músicas','Por nível'],
+ ['rotina','🗓️','Rotina','Dicas da professora'],
+ ['plano','🗺️','Trilha',nWeeks+' temas para marcar'],
+ ['sos','🆘','SOS','Emergências · 112'],
+];
+const LV=[['A1','#2E7D4F'],['A2','#B08A00'],['B1','#2C5DA8'],['B2','#6B3FA0'],['C1','#C2352B'],['C2','#16305C']];
+const g=document.getElementById('hGrid');
+g.innerHTML=T.map(([id,e,t,d,big])=>`<button class="htile${big?' big':''}" data-go="${id}" role="listitem"><span class="ti" aria-hidden="true">${e}</span><span><b>${t}</b><small>${d}</small></span></button>`).join('');
+g.querySelectorAll('.htile').forEach(b=>b.onclick=()=>show(b.dataset.go));
+const lv=document.getElementById('hLv');
+lv.innerHTML=LV.map(([k,c],i)=>`<button data-i="${i}" style="background:${c}" aria-label="Abrir o nível ${k}">${k}</button>`).join('');
+lv.querySelectorAll('button').forEach(b=>b.onclick=()=>{nvSel=+b.dataset.i;store.set('nvSel',nvSel);renderNiveis();show('niveis')});
+const NAMES={};document.querySelectorAll('nav button').forEach(b=>NAMES[b.dataset.tab]=b.textContent);
+window.renderHome=function(){
+  const n=(document.getElementById('uname').value||'').trim();
+  document.getElementById('hGreet').textContent=(n?'Olá, '+n+'! ':'')+'Para a vida pessoal, o trabalho e a escola. Escolha por onde começar.';
+  document.getElementById('hDay').textContent=document.getElementById('day').textContent;
+  document.getElementById('hVer').innerHTML=(document.getElementById('ver').textContent||'').replace(' (',' <br>(');
+  const last=store.get('lastTab',null),c=document.getElementById('hCont');
+  if(last&&last!=='inicio'&&NAMES[last]){c.hidden=false;c.textContent='▶ Continuar: '+NAMES[last];c.onclick=()=>show(last)}else c.hidden=true;
+  const ib=document.getElementById('installBtn'),hi=document.getElementById('hInst');
+  hi.hidden=!ib||ib.hidden;hi.onclick=()=>ib&&ib.click();
+};
+addEventListener('beforeinstallprompt',()=>setTimeout(window.renderHome,50));
+addEventListener('appinstalled',()=>setTimeout(window.renderHome,50));
+}
+
 updateStats();
-show(store.get('tab','aula'));
+show('inicio');
 </script>
 
 <script>
